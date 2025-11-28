@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2563eb">
+    <title>Bank Soal PAI - Persiapan UAS</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f0f9ff;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        
+        .font-arab {
+            font-family: 'Amiri', serif;
+            line-height: 2.2;
+        }
+
+        /* Pola Latar Belakang Islamik Halus */
+        .islamic-bg {
+            background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #f0f9ff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+
+        /* Animasi */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        
+        /* Card Style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Hide Scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // --- ICONS ---
+        const Icons = {
+            Book: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>,
+            Check: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+            X: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
+            Trophy: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
+            Refresh: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>,
+            Home: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+            Back: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        };
+
+        // --- DATABASE SOAL LENGKAP (4, 5, 6, 7) ---
+        const chaptersData = {
+            4: {
+                title: "Dakwah & Khutbah",
+                desc: "Metode dakwah, syarat khatib, dan tablig.",
+                color: "from-blue-500 to-cyan-400",
+                questions: [
+                    { id: 1, text: "Hendaknya khutbah, tablig dan dakwah yang dilakukan tidak bersifat seremonial, tetapi mencapai sasaran. Sebab itu, semuanya perlu wujud nyata melalui hal-hal berikut ini, kecuali … .", options: ["bil lisāni wal hāl", "uswatun hasanah", "mau’idhah hasanah", "bil hikmah", "bil ra’yi"], correct: 4, explanation: "Bil ra'yi (dengan pendapat sendiri tanpa dasar) bukanlah metode yang tepat." },
+                    { id: 2, text: "Mulai zaman Nabi Adam As. sampai zaman Rasulullah Saw. serta diteruskan oleh generasi sampai akhir zaman, tujuan Dakwah Islamiyah tidak akan pernah berubah, yaitu … .", options: ["mengajar orang agar bisa membaca Al-Qur’an dengan tartil", "mengubah perilaku manusia yang telah menyimpang dari aturan Allah", "mengajak manusia mentaati perintah Allah dan menjauhi larangan-Nya", "menyeru manusia tentang indahnya surga dan seramnya neraka", "menerapkan kaidah hukum fiqh dalam semua aspek kehidupan"], correct: 2, explanation: "Tujuan inti dakwah adalah tauhid dan ketaatan kepada Allah." },
+                    { id: 3, text: "Dakwah harus memiliki sasaran yang jelas, karena itu harus menggunakan metode. Berlandaskan Q.S. al-Nahl/16: 125, dijelaskan metode yang dilakukan dai berikut ini, kecuali … .", options: ["dakwah disampaikan dengan cara hikmah", "dalam berdakwah harus di jalan Allah Swt.", "dengan cara yang indah dan menyenangkan", "apabila diperlukan boleh dengan cara berdebat kusir", "adanya dialog yang baik antara dai dan yang didakwahi"], correct: 3, explanation: "Debat kusir dilarang, yang diperbolehkan adalah debat dengan cara yang baik (mujadalah)." },
+                    { id: 4, text: "Perhatikan Hadis di bawah ini!\n\nبَلِّغُوا عَنِّي وَلَوْ آيَةً\n(Ballighū 'annī wa lau āyah)\n\nBanyak hal yang memengaruhi keberhasilan tablig. Namun, ada hal terpenting, sesuai dengan isi kandungan Hadis, yaitu: ...", options: ["ketenteraman saat melakukan tablig", "metode, strategi, dan cara yang dipakai", "keterlibatan semua pihak menggalang dana", "tablig itu tidak mengenal derajat dan martabat", "kewajiban setiap mubalig menyesuaikan kemampuan"], correct: 4, explanation: "Kewajiban menyampaikan walau satu ayat sesuai kemampuan." },
+                    { id: 5, text: "Perhatikan Q.S. al-Jumu’ah/62: 9 berikut ini!\n\nيَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا نُودِىَ لِلصَّلَوٰةِ مِن يَوْمِ ٱلْجُمُعَةِ فَٱسْعَوْا۟ إِلَىٰ ذِكْرِ ٱللَّهِ وَذَرُوا۟ ٱلْبَيْعَ\n\nIsi yang terkandung dari ayat tersebut adalah … .", options: ["kewajiban melakukan shalat", "menghentikan kegiatan jual beli", "bersiap-siap mendengarkan khutbah", "segera ke masjid untuk Shalat Jum’at", "kewajiban melakukan 2 kali"], correct: 3, explanation: "Perintah bersegera mengingat Allah (Shalat Jumat) saat adzan." },
+                    { id: 6, text: "Adanya khutbah menjadi bagian penting dari Shalat Jum’at. Khutbah bukan sekadar dilaksanakan, namun ada juga fungsi lain dari khutbah, yaitu … .", options: ["mengingatkan kembali tentang kehidupan yang benar", "timbulnya kesadaran mendalam tentang kewajiban shalat", "membebaskan seorang muslim dari kewajiban shalat", "gugurnya kewajiban shalat bagi seorang muslim", "terbebasnya kewajiban karena ada udzur"], correct: 0, explanation: "Khutbah sebagai pengingat (tazkirah) kehidupan yang benar." },
+                    { id: 7, text: "Dakwah itu diwajibkan bagi setiap muslim. Ketentuan menjadi dai lebih longgar dibanding khatib. Salah satu yang bukan syarat menjadi dai adalah … .", options: ["memiliki ilmu dan pengetahuan yang memadai", "mengembangkan wawasan ke-Islam-an dan kebangsaan", "memilah ilmu sesuai dengan besar kecilnya manfaat yang didapat", "hidupnya harus sejalan dengan ajaran Islam yang disampaikan", "memberikan contoh dan teladan bagi diri dan pihak lain"], correct: 2, explanation: "Dai tidak boleh memilah ilmu berdasarkan keuntungan pribadi." },
+                    { id: 8, text: "Hanya orang tertentu yang dapat menjadi khatib. Di antara ketentuannya adalah muslim yang sudah balig, berakal sehat dan taat beribadah. Semua itu bagian dari …", options: ["rukun khutbah", "syarat khutbah", "tata tertib khatib", "adab khutbah", "syarat khatib"], correct: 4, explanation: "Kualifikasi personal (subjek) disebut Syarat Khatib." },
+                    { id: 9, text: "Menjadi pemimpin yang adil, begitu juga menjadi rakyat yang taat, menjadi harapan kita semua. Jika ada persoalan yang belum dapat dipecahkan, harus tetap dicari solusinya secara adil, yang maknanya adalah … .", options: ["mencari solusi dari beberapa pilihan yang sama-sama menyulitkan", "keterlibatan beberapa komponen masyarakat yang bersatu padu", "semua orang tanpa kecuali diperlakukan sama di mata hukum", "bersikap menyatukan dan mendamaikan masyarakat", "tertibnya lingkungan dari kesadaran"], correct: 2, explanation: "Equality before the law (persamaan di mata hukum)." },
+                    { id: 10, text: "Kehidupan saat ini sering kita temukan konflik kepentingan antar berbagai kelompok masyarakat. Semua itu harus kita hadapi dengan adil dan bijak. Jika tidak, muncul kelompok penyusup yang berdampak negatif bagi … .", options: ["kerusakan fasilitas umum dan kerugian fisik serta materi", "berlalunya waktu dan sumber daya masyarakat yang mengitari", "keamanan menjadi kondusif dan belum dapat dipisahkan", "sikap dari sebagian masyarakat yang ingin damai", "kelompok yang ingin terhindar dari problema"], correct: 0, explanation: "Konflik anarkis menyebabkan kerusakan fisik dan materi." }
+                ]
+            },
+            5: {
+                title: "Sejarah Ulama",
+                desc: "Peran tokoh ulama dalam sejarah Nusantara.",
+                color: "from-purple-500 to-pink-400",
+                questions: [
+                    { id: 1, text: "Saat jayanya kerajaan Islam, peran ulama sangat menonjol sebagai bagian dari pejabat elite. Adapun perannya yang paling penting adalah …", options: ["duduk menemani para pemimpin yang membidangi pemerintahan", "berbeda-beda peran sesuai wilayah atau daerah yang dikuasai", "menjadi penasehat di bidang keagamaan bagi kerajaan", "mempengaruhi pemimpin agar menegakkan aturan", "dikembalikan aturan bernegara yang menyimpang"], correct: 2, explanation: "Ulama berperan vital sebagai penasehat spiritual dan hukum agama (Mufti) bagi kesultanan." },
+                    { id: 2, text: "Syekh Nawawi pernah menjadi imam di Masjidil Haram, mengajar di Haramain, dan mendapatkan gelar Sayyidul Hijaz. Saat itu, yang termasuk Hijaz adalah wilayah … .", options: ["Timur Tengah seluruhnya", "Makkah, Madinah, dan Damaskus", "Palestina, Yordania dan Yaman", "Saudi Arabia, Irak dan Iran", "Jazirah Arab, Makkah, Madinah"], correct: 4, explanation: "Hijaz adalah wilayah di bagian barat Arab Saudi yang mencakup dua kota suci, Makkah dan Madinah." },
+                    { id: 3, text: "Sampai saat ini, karya-karya beliau masih dipelajari, dikaji, dan ditelaah di pesantren. Misalnya kitab Sullam al-Munâjah dan Nashâih al-‘Ibâd. Itu adalah karya tulis dari …", options: ["Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani", "Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Nuruddin bin Ali ar-Raniri"], correct: 0, explanation: "Syekh Nawawi al-Bantani adalah penulis kitab Tafsir Marah Labid, Nashaihul Ibad, dan Sullam al-Munajah." },
+                    { id: 4, text: "Setiap tanah yang dipijak, selalu melakukan dakwah, bahkan saat diasingkan, beliau bahkan diberi gelar oleh Nelson Madela (Presiden Afrika Selatan) sebagai ‘Salah Seorang Putra Afrika Terbaik’. Beliau adalah …", options: ["Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Nuruddin bin Ali ar-Raniri", "Hamzah Fansuri"], correct: 0, explanation: "Syekh Yusuf al-Makasari diasingkan ke Afrika Selatan dan berdakwah di sana hingga wafat." },
+                    { id: 5, text: "Syekh Abdus Samad merupakan tokoh kunci pembuka dan pelopor perkembangan intelektualisme Nusantara Indonesia. Karyanya yang terkenal dan sampai saat ini masih dipergunakan adalah …", options: ["Kaifiyāt al-Dzikir", "Al-Tafsir al-Munîr li al-Mu’âlim", "Al-Tausyîh/Quwt al-Habîb al-Gharîb", "Hidayatus Salikin dan Siyarus Salikin", "An-Nafhatu As Sailaniyah."], correct: 3, explanation: "Hidayatus Salikin dan Siyarus Salikin adalah master piece Syekh Abdus Samad al-Palimbani dalam bidang tasawuf." },
+                    { id: 6, text: "Beliau adalah negarawan, ahli fikih, teolog, sufi, sejarawan dan sastrawan penting dalam sejarah Melayu pada abad ke-17. Perannya dalam perkembangan Islam di Nusantara tidak dapat diabaikan. Beliau adalah …", options: ["Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani", "Syekh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Syekh Nuruddin bin Ali ar-Raniri"], correct: 4, explanation: "Nuruddin ar-Raniri adalah Mufti Kesultanan Aceh yang sangat produktif menulis dan menentang ajaran Wujudiyah yang dianggap sesat saat itu." },
+                    { id: 7, text: "Syekh Abdul Rauf dapat dikatakan sebagai poros sejumlah ulama Nusantara. Adapun nama muridnya yang paling berjasa, sehingga mampu mendakwahkan Islam kepada kaum bangsawan Kerajaan Pagaruyung adalah …", options: ["Abu Abdul Mu’thi Nawawi", "Abul Mahasin Tajul Khalwati", "Syekh Burhanudin Ulakan", "Sholeh bin Umar", "Ali ar-Raniri"], correct: 3, explanation: "Sesuai kunci jawaban: Sholeh bin Umar." },
+                    { id: 8, text: "Kiai Sholeh Darat menjadi salah satu pengajar di Makkah. Muridnya berasal dari seluruh penjuru dunia. Berikut ini, murid dan santrinya yang berhasil di didik, kecuali …", options: ["Hadratu Syekh KH Hasyim Asy’ari", "KH Ahmad Dahlan", "RA. Kartini", "Iskandar Zulkarnain", "KH Amir Idris"], correct: 3, explanation: "Iskandar Zulkarnain adalah tokoh sejarah masa lampau, bukan murid Kiai Sholeh Darat." },
+                    { id: 9, text: "Sepanjang hayatnya, beliau tidak hanya fasih berbahasa Melayu, tetapi juga Jawa, Siam (Thailand), Hindi, Arab, dan Persia. Namun, karya tulisnya menggunakan Bahasa Melayu. Beliau adalah …", options: ["Mbah Sholeh Darat", "Muhammad Arsyad", "Bukhari al-Jauhari", "Syekh Hamzah Fansuri", "KH Dahlan Tremas"], correct: 3, explanation: "Hamzah Fansuri dikenal sebagai penyair sufi yang menguasai banyak bahasa." },
+                    { id: 10, text: "Ajaran pokok tarekat Syekh Yusuf berkisar pada usaha manusia untuk mendekatkan diri kepada Allah Swt. Di antara risalah yang ditulisnya berjudul an-Nafhatu as-Sailaniyah yang pokok isinya tentang …", options: ["memohon (berdoa) itu semestinya hanya kepada Allah Swt", "petunjuk-petunjuk bagi orang yang akan mulai memasuki tarekat", "berdiam diri tidak bicara, kecuali mengucapkan kalimat dzikir", "berwudhu terlebih dahulu, jika ada hadas (besar dan kecil)", "ada 20 macam adab berdzikir"], correct: 1, explanation: "Kitab an-Nafhatu as-Sailaniyah membahas tentang kaidah dan petunjuk bagi para salik (penempuh jalan tarekat)." }
+                ]
+            },
+            6: {
+                title: "Islam & Kerukunan",
+                desc: "Toleransi dan anti kekerasan (Q.S. Yunus 40-41).",
+                color: "from-emerald-500 to-teal-400",
+                questions: [
+                    { id: 1, text: "Perhatikan Q.S. Yūnus/10: 40, di bawah ini!\n\n.… وَمِنْهُمْ مَّنْ يُّؤْمِنُ بِهٖ وَمِنْهُمْ مَّنْ لَّا يُؤْمِنُ بِهٖۗ وَرَبُّكَ\n\nSambungan ayat di atas yang tepat adalah ….", options: ["أَعْلَمُ بِالْمُتَّقِينَ", "أَعْلَمُ بِالظَّالِمِينَ", "أَعْلَمُ بِالْمُفْسِدِينَ", "أَعْلَمُ بِالْمُحْسِنِينَ", "أَعْلَمُ بِالْكَافِرِينَ"], correct: 2, explanation: "Lanjutan ayat tersebut adalah 'wa rabbuka a'lamu bil-mufsidin'." },
+                    { id: 2, text: "Dalam Q.S. Yūnus/10: 41 ada kalimat … فَقُلْ لِّيْ عَمَلِيْ\nTerjemahan yang tepat untuk kalimat di atas adalah ….", options: ["maka dengarkanlah, “Bagiku pekerjaanku…", "maka dengarkanlah, Bagimu pekerjaanku…", "maka katakanlah, “Bagimu pekerjaanku…", "maka katakanlah, “Bagiku pekerjaanmu…", "maka katakanlah, “Bagiku pekerjaanku…"], correct: 4, explanation: "Arti 'Qul li 'amali' adalah 'Katakanlah: Bagiku pekerjaanku'." },
+                    { id: 3, text: "Diantara isi Q.S. Yūnus/10: 40-41 adalah agar umat Islam mempunyai sikap ….", options: ["wira’i", "zuhud", "qana’ah", "samhah (toleran)", "syaja’ah"], correct: 3, explanation: "Ayat ini mengajarkan sikap tasamuh atau samhah (toleransi) dalam menyikapi perbedaan iman." },
+                    { id: 4, text: "Perhatikan hukum bacaan pada ayat berikut!\n\nDari ayat yang digaris bawahi (terkait Q.S Yunus 40-41), bacaan tajwid yang benar dan urut sesuai opsi adalah….", options: ["idzhar syafawi, ikhfa’, ghunnah dan mad wajib munfasil", "ikhfa’ syafawi, ikhfa’, ghunnah, dan mad jaiz munfasil", "ikhfa, ikhfa’ syafawi, mad jaiz munfasil, dan ghunnah", "mad wajib muttasil, ghunnah, ikhfa, ikhfa’ syafawi", "ikhfa’, idzhar syafawi, ghunnah, dan mad jaiz munfasil"], correct: 1, explanation: "Urutan tajwid: ikhfa’ syafawi, ikhfa’, ghunnah, dan mad jaiz munfasil." },
+                    { id: 5, text: "Dalam Hadis Nabi SAW, Al Thufail bin ‘Amr meminta Nabi mendoakan binasa kabilah Daus. Respon Nabi Muhammad SAW adalah ….", options: ["Nabi berdoa agar mereka diazab dan dibinasakan", "Nabi berdoa agar mereka diazab bersama orang kufur", "Nabi berdoa: 'Ya Allah berilah petunjuk kepada kabilah Daus dan datangkanlah mereka.'", "Nabi berdoa agar mereka didatangkan bersama ahli ilmu", "Nabi berdoa agar mereka didatangkan bersama pemimpin adil"], correct: 2, explanation: "Rasulullah berdoa: 'Allahumahdi Dausan wa'ti bihim' (Ya Allah berilah petunjuk kaum Daus)." },
+                    { id: 6, text: "Perhatikan makna ayat Q.S. Al-Maidah/5: 32!\n\nTerjemahan yang tepat dari kandungan ayat tersebut adalah ….", options: ["Barangsiapa memelihara kehidupan seorang manusia, seakan memelihara semua manusia", "Barangsiapa memelihara kehidupan seorang manusia, seakan memelihara banyak manusia", "Barangsiapa memelihara kehidupan yang ada di bumi, seakan memelihara semua makhluk", "Barangsiapa memelihara kehidupan seluruh makhluk, seakan memelihara di alam semesta", "Barangsiapa memelihara kehidupan banyak manusia, seakan memelihara seluruh manusia"], correct: 0, explanation: "Menyelamatkan satu nyawa sama dengan menyelamatkan seluruh manusia." },
+                    { id: 7, text: "Perhatikan Q.S. Al-Maidah/ 5: 32!\n\nDari ayat tersebut, hukum bacaan tajwid secara urut yang tepat adalah ….", options: ["idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah kubra, ikhfa’, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’ syafawi, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’, iqlab, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad ’arid"], correct: 0, explanation: "Analisis tajwid pada potongan ayat Al-Maidah 32 sesuai opsi A." },
+                    { id: 8, text: "Pernyataan di bawah ini yang merupakan penerapan dari Q.S. Al-Maidah/ 5: 32 (memelihara kehidupan) adalah ….", options: ["melaksanakan shalat lima waktu di awal waktu", "melaksanakan shalat tahajud pada sepertiga malam", "memberikan santunan kepada anak yatim piatu", "berpuasa sunah setiap hari senin dan kamis", "membaca al-Quran setiap hari di rumah dan masjid"], correct: 2, explanation: "Memberikan santunan anak yatim adalah bentuk memelihara kehidupan (hifzdu nafs)." },
+                    { id: 9, text: "Rasulullah bersabda: 'Barangsiapa yang membunuh mu’ahid tidak akan mencium harumnya surga', padahal harumnya dapat dicium dari perjalanan ….", options: ["sepuluh tahun", "dua puluh tahun", "tiga puluh tahun", "empat puluh tahun", "lima puluh tahun"], correct: 3, explanation: "Hadis Riwayat Bukhari: Harum surga tercium dari jarak perjalanan 40 tahun." },
+                    { id: 10, text: "Dalam hadis riwayat Muslim, orang yang membawa pahala shalat tapi habis karena mencaci dan menzalimi orang lain disebut ….", options: ["al-mukhlis (orang ikhlas)", "al-muflis (orang bangkrut)", "al-muhsin (orang baik)", "al-dzalim (orang jahat)", "al-‘ashi (ahli maksiat)"], correct: 1, explanation: "Muflis adalah orang yang bangkrut di akhirat." }
+                ]
+            },
+            7: {
+                title: "Cabang Iman",
+                desc: "Sifat Zuhud, Ikhlas, Malu, dan Kehormatan.",
+                color: "from-orange-400 to-red-400",
+                questions: [
+                    { id: 1, text: "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan Al-Bukhāri, disebutkan bahwa yang dimaksud dengan kekayaan (yang hakiki) itu adalah ….", options: ["kekayaan harta", "kekayaan hati (jiwa)", "kekayaan pikiran", "kekayaan materi", "kekayaan intelektual"], correct: 1, explanation: "Kekayaan hakiki adalah kekayaan hati (ghina an-nafs)." },
+                    { id: 2, text: "Perhatikan Q.S. Al-Ahzab/33: 35!\n\n... وَٱلْحَٰفِظِينَ فُرُوجَهُمْ وَٱلْحَٰفِظَٰتِ\n\nPotongan ayat tersebut merupakan dalil tentang cabang iman yaitu ….", options: ["menjaga kehormatan", "ikhlas", "malu", "zuhud", "taqarrub"], correct: 0, explanation: "Al-Hafizhina furujahum: memelihara kemaluan/menjaga kehormatan." },
+                    { id: 3, text: "Di bawah ini yang merupakan pemahaman yang benar tentang sifat zuhud adalah . . . .", options: ["tidak boleh memiliki harta", "mencari harta dengan optimal mumpung hidup", "mengesampingkan kewajiban kerja", "mencari nafkah sepanjang waktu", "menjadikan harta dunia untuk kebahagiaan akhirat"], correct: 4, explanation: "Zuhud: harta di tangan, bukan di hati. Dijadikan alat untuk akhirat." },
+                    { id: 4, text: "Meninggalkan kenikmatan duniawi demi akhirat adalah ciri zuhud. Ciri lain orang yang zuhud adalah . . . .", options: ["senang mencela orang lain", "membenci orang yang mencela", "marah ketika dipuji", "sangat senang dipuji", "bersikap sederhana baik saat dipuji maupun dicela"], correct: 4, explanation: "Mental orang zuhud stabil, tidak terbang dipuji dan tidak tumbang dicela." },
+                    { id: 5, text: "Di bawah ini merupakan tingkatan ikhlas secara urut adalah ….", options: ["awam, khas, khawasul khas", "awam, khawasul khawas, khawas", "awam, khawas, khawasul khawas", "awam, khas, khawasul khawas", "awam, khawas, khawasul khas"], correct: 2, explanation: "Tingkatan: Awam, Khawas, Khawasul Khawas." },
+                    { id: 6, text: "Di bawah ini yang termasuk ciri-ciri orang ikhlas adalah ….", options: ["rajin jika dilihat orang", "senantiasa bersungguh-sungguh dalam beramal", "bergairah jika dipuji", "melakukan larangan Allah", "membedakan amal besar dan kecil"], correct: 1, explanation: "Istiqomah dan sungguh-sungguh baik sendirian maupun ramai." },
+                    { id: 7, text: "Di bawah ini merupakan manfaat ikhlas adalah ….", options: ["menambah kekayaan", "terhindar dari tipu daya setan", "menjadi terkenal", "mendapatkan pujian", "dicari banyak orang"], correct: 1, explanation: "Setan tidak bisa menyesatkan orang yang ikhlas (Q.S. Al-Hijr: 40)." },
+                    { id: 8, text: "Dalam Hadis Riwayat Tirmidzi, 'malu kepada Allah dengan sebenar-benarnya' adalah ….", options: ["ikut asuransi jiwa", "menabung di Bank Syari’ah", "menjaga kepala, perut dan isinya dari maksiat", "memasang CCTV", "melakukan jaga malam"], correct: 2, explanation: "Malu hakiki: menjaga kepala & perut, serta mengingat mati." },
+                    { id: 9, text: "Perhatikan pernyataan berikut!\n1) menghindari maksiat\n2) menghantar kebaikan\n3) mengurangi rezeki\n4) dekat dengan Allah\n\nManfaat sikap malu adalah ….", options: ["1, 2, 3", "1, 3, 4", "2, 3, 4", "2, 4, 1", "3, 5, 1"], correct: 3, explanation: "Malu membawa kebaikan, menjauhi maksiat, mendekatkan ke Allah." },
+                    { id: 10, text: "Penerapan sifat malu yang tepat di bawah ini adalah….", options: ["malu tidak mengerjakan tugas", "malu menghadiri pengajian", "malu diejek teman jika berjilbab", "malu salat di masjid", "malu tidak punya HP baru"], correct: 0, explanation: "Malu jika melanggar kewajiban/aturan." }
+                ]
+            }
+        };
+
+        const SplashScreen = ({ onFinish }) => {
+            useEffect(() => {
+                const timer = setTimeout(onFinish, 2000);
+                return () => clearTimeout(timer);
+            }, [onFinish]);
+
+            return (
+                <div className="fixed inset-0 bg-blue-600 flex flex-col items-center justify-center z-50 text-white p-6">
+                    <div className="absolute inset-0 islamic-bg opacity-20"></div>
+                    <div className="w-24 h-24 mb-6 animate-float bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-2xl border border-white/20">
+                        <Icons.Book />
+                    </div>
+                    <h1 className="text-4xl font-extrabold mb-2 tracking-tight text-center">Bank Soal PAI</h1>
+                    <p className="text-blue-200 font-medium text-center">Persiapan UAS Kelas XII</p>
+                    <div className="mt-8 flex gap-2">
+                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                    </div>
+                </div>
+            );
+        };
+
+        const MainMenu = ({ onStart }) => {
+            const menuItems = [4, 5, 6, 7];
+
+            return (
+                <div className="min-h-screen p-4 md:p-6 pb-20 flex flex-col items-center max-w-lg mx-auto">
+                    <div className="fixed inset-0 islamic-bg -z-10"></div>
+                    
+                    <header className="w-full flex justify-between items-center mb-8 mt-2 glass-card p-4 rounded-2xl shadow-sm">
+                        <div className="flex items-center gap-3 text-blue-700">
+                            <div className="bg-blue-100 p-2 rounded-lg"><Icons.Book /></div>
+                            <div>
+                                <h1 className="font-bold text-lg leading-none">Bank Soal</h1>
+                                <p className="text-xs text-blue-500 font-medium mt-1">PAI - Kelas XII</p>
+                            </div>
+                        </div>
+                    </header>
+
+                    <main className="w-full space-y-4">
+                        {menuItems.map((babNum) => {
+                            const data = chaptersData[babNum];
+                            return (
+                                <button 
+                                    key={babNum}
+                                    onClick={() => onStart(babNum)}
+                                    className="w-full text-left bg-white rounded-2xl p-5 shadow-lg shadow-blue-900/5 active:scale-95 transition-all duration-200 border border-slate-100 relative overflow-hidden group"
+                                >
+                                    <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${data.color} rounded-bl-full opacity-10`}></div>
+                                    
+                                    <div className="flex justify-between items-start mb-2 relative z-10">
+                                        <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-slate-100 text-slate-600`}>
+                                            Bab {babNum}
+                                        </span>
+                                        <span className="text-xs font-semibold text-slate-400">10 Soal</span>
+                                    </div>
+                                    
+                                    <h3 className="text-lg font-bold text-slate-800 mb-1 relative z-10">{data.title}</h3>
+                                    <p className="text-slate-500 text-xs line-clamp-2 relative z-10">{data.desc}</p>
+                                </button>
+                            );
+                        })}
+                    </main>
+                    
+                    <footer className="mt-8 text-center text-xs text-slate-400 font-medium">
+                        &copy; 2024 Quiz PAI • Semangat Belajar!
+                    </footer>
+                </div>
+            );
+        };
+
+        const QuizGame = ({ chapterId, onComplete, onHome }) => {
+            const data = chaptersData[chapterId];
+            const questions = data.questions;
+            
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const [selectedOption, setSelectedOption] = useState(null);
+            const [isLocked, setIsLocked] = useState(false);
+            const [score, setScore] = useState(0);
+            const [answers, setAnswers] = useState([]);
+
+            const question = questions[currentIndex];
+            const progress = ((currentIndex + 1) / questions.length) * 100;
+
+            const handleOptionClick = (index) => {
+                if (isLocked) return;
+                
+                // Haptic Feedback for Android
+                if (navigator.vibrate) navigator.vibrate(50);
+                
+                setSelectedOption(index);
+                setIsLocked(true);
+
+                const isCorrect = index === question.correct;
+                if (isCorrect) setScore(s => s + 1);
+
+                setAnswers([...answers, {
+                    questionId: question.id,
+                    userAnswer: index,
+                    isCorrect: isCorrect
+                }]);
+
+                setTimeout(() => {
+                    if (currentIndex < questions.length - 1) {
+                        setCurrentIndex(c => c + 1);
+                        setSelectedOption(null);
+                        setIsLocked(false);
+                    } else {
+                        onComplete(score + (isCorrect ? 1 : 0), [...answers, { questionId: question.id, userAnswer: index, isCorrect: isCorrect }]);
+                    }
+                }, 1000); // Sedikit lebih cepat untuk mobile
+            };
+
+            return (
+                <div className="min-h-screen bg-slate-50 flex flex-col max-w-lg mx-auto">
+                    <div className="fixed inset-0 islamic-bg -z-10"></div>
+                    
+                    {/* Header Fixed */}
+                    <div className="bg-white/90 backdrop-blur-md sticky top-0 z-20 px-4 py-3 border-b border-slate-200">
+                        <div className="flex justify-between items-center mb-3">
+                            <button onClick={onHome} className="p-2 -ml-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+                                <Icons.Back />
+                            </button>
+                            <div className="text-xs font-bold bg-slate-100 px-3 py-1 rounded-full text-slate-600">
+                                {currentIndex + 1} / {questions.length}
+                            </div>
+                        </div>
+                        <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div 
+                                className={`h-full bg-gradient-to-r ${data.color} transition-all duration-300 ease-out`}
+                                style={{ width: `${progress}%` }}
+                            ></div>
+                        </div>
+                    </div>
+
+                    {/* Question Content */}
+                    <div className="flex-1 p-5 pb-24 overflow-y-auto no-scrollbar">
+                        <div className="bg-white rounded-2xl p-5 mb-6 shadow-sm border border-slate-100 min-h-[150px] flex flex-col justify-center">
+                            <div className="text-base font-bold text-slate-800 leading-relaxed whitespace-pre-line">
+                                {question.text.split('\n').map((line, i) => {
+                                    const isArabic = /[\u0600-\u06FF]/.test(line);
+                                    return <div key={i} className={isArabic ? "font-arab text-2xl text-right my-3 text-slate-800 leading-loose bg-slate-50 p-3 rounded-lg border border-slate-100" : "mb-2"}>{line}</div>
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="space-y-3">
+                            {question.options.map((option, idx) => {
+                                const letters = ["A", "B", "C", "D", "E"];
+                                let btnClass = "bg-white border-2 border-slate-100 text-slate-600";
+                                
+                                if (isLocked) {
+                                    if (idx === question.correct) {
+                                        btnClass = "bg-green-50 border-green-500 text-green-700 shadow-md";
+                                    } else if (idx === selectedOption) {
+                                        btnClass = "bg-red-50 border-red-500 text-red-700";
+                                    } else {
+                                        btnClass = "opacity-40 border-transparent bg-slate-50";
+                                    }
+                                } else {
+                                    btnClass += " active:bg-blue-50 active:border-blue-300 active:scale-[0.98]";
+                                }
+
+                                return (
+                                    <button
+                                        key={idx}
+                                        onClick={() => handleOptionClick(idx)}
+                                        disabled={isLocked}
+                                        className={`w-full p-4 rounded-xl text-left font-medium transition-all duration-200 flex items-start gap-3 select-none ${btnClass}`}
+                                    >
+                                        <div className={`w-6 h-6 rounded flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${
+                                            isLocked && idx === question.correct ? "bg-green-500 text-white" : 
+                                            isLocked && idx === selectedOption ? "bg-red-500 text-white" :
+                                            "bg-slate-200 text-slate-500"
+                                        }`}>
+                                            {letters[idx]}
+                                        </div>
+                                        <span className="text-sm leading-snug">{option}</span>
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const ResultScreen = ({ score, chapterId, userAnswers, onRetry, onHome }) => {
+            const data = chaptersData[chapterId];
+            const totalQuestions = data.questions.length;
+            const percentage = Math.round((score / totalQuestions) * 100);
+            
+            let message = "Belajar Lagi Yuk!";
+            let bgGradient = "from-slate-400 to-slate-500";
+            
+            if (percentage === 100) { message = "Sempurna!"; bgGradient = "from-yellow-400 to-orange-500"; }
+            else if (percentage >= 80) { message = "Hebat Sekali!"; bgGradient = "from-green-400 to-emerald-500"; }
+            else if (percentage >= 60) { message = "Lulus KKM"; bgGradient = "from-blue-400 to-cyan-500"; }
+
+            return (
+                <div className="min-h-screen bg-slate-50 p-5 max-w-lg mx-auto">
+                    <div className="fixed inset-0 islamic-bg -z-10"></div>
+                    
+                    <div className="bg-white rounded-3xl shadow-xl p-6 text-center mb-6 relative overflow-hidden border border-slate-100">
+                        <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${bgGradient}`}></div>
+                        
+                        <div className="w-20 h-20 bg-slate-50 rounded-full mx-auto flex items-center justify-center mb-3 text-yellow-500 shadow-inner">
+                            <Icons.Trophy />
+                        </div>
+                        
+                        <h2 className="text-2xl font-bold text-slate-800 mb-1">{message}</h2>
+                        <p className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Nilai Bab {chapterId}</p>
+                        
+                        <div className="text-5xl font-black text-slate-800 mb-6">
+                            {score}<span className="text-xl text-slate-400 font-medium">/{totalQuestions}</span>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-3">
+                            <button onClick={onRetry} className="flex items-center justify-center gap-2 bg-blue-600 active:bg-blue-700 text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-blue-200 active:scale-95 transition-all">
+                                <Icons.Refresh /> Ulangi
+                            </button>
+                            <button onClick={onHome} className="flex items-center justify-center gap-2 bg-slate-100 active:bg-slate-200 text-slate-600 py-3 rounded-xl font-bold text-sm active:scale-95 transition-all">
+                                <Icons.Home /> Menu
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4 pb-10">
+                        <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wide ml-1">Pembahasan</h3>
+                        {data.questions.map((q, i) => {
+                            const userAnswer = userAnswers.find(a => a.questionId === q.id)?.userAnswer;
+                            const isCorrect = userAnswer === q.correct;
+                            
+                            return (
+                                <div key={q.id} className={`bg-white rounded-xl p-4 border-l-4 shadow-sm ${isCorrect ? 'border-green-500' : 'border-red-500'}`}>
+                                    <div className="flex gap-3 mb-3">
+                                        <span className={`w-6 h-6 shrink-0 flex items-center justify-center rounded-full font-bold text-white text-xs ${isCorrect ? 'bg-green-500' : 'bg-red-500'}`}>
+                                            {i + 1}
+                                        </span>
+                                        <p className="font-medium text-slate-800 text-sm leading-relaxed">
+                                            {q.text.split('\n')[0]}
+                                        </p>
+                                    </div>
+
+                                    <div className="bg-slate-50 rounded-lg p-3 text-xs space-y-1.5 mb-3">
+                                        <div className="flex gap-2">
+                                            <span className="text-slate-400 font-medium">Kamu:</span>
+                                            <span className={isCorrect ? "text-green-600 font-bold" : "text-red-500 font-bold"}>
+                                                {q.options[userAnswer] || "-"}
+                                            </span>
+                                        </div>
+                                        {!isCorrect && (
+                                            <div className="flex gap-2">
+                                                <span className="text-slate-400 font-medium">Kunci:</span>
+                                                <span className="text-green-600 font-bold">
+                                                    {q.options[q.correct]}
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
+                                    
+                                    <p className="text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
+                                        <span className="font-bold text-blue-500">Info:</span> {q.explanation}
+                                    </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            );
+        };
+
+        const App = () => {
+            const [screen, setScreen] = useState('splash'); 
+            const [activeChapter, setActiveChapter] = useState(null);
+            const [quizData, setQuizData] = useState({ score: 0, answers: [] });
+
+            const startQuiz = (chapterId) => {
+                setActiveChapter(chapterId);
+                setScreen('quiz');
+            };
+            
+            const goHome = () => {
+                setActiveChapter(null);
+                setScreen('home');
+            };
+            
+            const finishQuiz = (finalScore, finalAnswers) => {
+                setQuizData({ score: finalScore, answers: finalAnswers });
+                setScreen('result');
+            };
+
+            return (
+                <>
+                    {screen === 'splash' && <SplashScreen onFinish={() => setScreen('home')} />}
+                    {screen === 'home' && <MainMenu onStart={startQuiz} />}
+                    {screen === 'quiz' && <QuizGame chapterId={activeChapter} onComplete={finishQuiz} onHome={goHome} />}
+                    {screen === 'result' && (
+                        <ResultScreen 
+                            score={quizData.score} 
+                            chapterId={activeChapter}
+                            userAnswers={quizData.answers}
+                            onRetry={() => startQuiz(activeChapter)}
+                            onHome={goHome}
+                        />
+                    )}
+                </>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
