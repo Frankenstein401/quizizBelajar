@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#2563eb">
-    <title>Bank Soal PAI - Persiapan UAS</title>
+    <meta name="theme-color" content="#4c1d95">
+    <title>Bank Soal Premium</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -13,317 +13,315 @@
     
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <script src="data.js"></script>
+
     <style>
+        /* --- GLOBAL STYLES --- */
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f0f9ff;
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f172a;
+            color: #fff;
             -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation;
+            overflow-x: hidden;
         }
-        
+
         .font-arab {
             font-family: 'Amiri', serif;
-            line-height: 2.2;
+            line-height: 2.4;
+            font-size: 1.6rem;
         }
 
-        /* Pola Latar Belakang Islamik Halus */
-        .islamic-bg {
-            background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #f0f9ff 0.5px);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-            opacity: 0.1;
-        }
-
-        /* Animasi */
+        /* --- ANIMATIONS --- */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        
-        /* Card Style */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
         }
 
-        /* Hide Scrollbar */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); transform: scale(1.05); }
+        }
+
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scale-in {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-blob {
+            animation: float 10s infinite;
+        }
+        
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        .animate-enter {
+            animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* --- GLASSMORPHISM --- */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-strong {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card-hover:active {
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- UTILS --- */
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* KaTeX Fixes */
+        .katex { font-size: 1.1em; color: inherit; }
+        .katex-display { margin: 0.5em 0; overflow-x: auto; overflow-y: hidden; }
     </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+<body>
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState, useEffect } = React;
+        const { useState, useEffect, useRef } = React;
+
+        // --- BACKGROUND COMPONENT (THE WOW FACTOR) ---
+        const AnimatedBackground = () => (
+            <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0f172a]">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob"></div>
+                <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob animation-delay-2000"></div>
+                <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob animation-delay-4000"></div>
+                {/* Grid Overlay */}
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+            </div>
+        );
 
         // --- ICONS ---
         const Icons = {
-            Book: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>,
-            Check: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
-            X: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
-            Trophy: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
-            Refresh: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>,
-            Home: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
-            Back: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            Book: () => <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>,
+            Calculator: () => <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>,
+            Check: () => <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+            X: () => <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
+            Trophy: () => <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
+            Refresh: () => <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>,
+            Home: () => <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+            Back: () => <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>,
+            Star: () => <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         };
 
-        // --- DATABASE SOAL LENGKAP (4, 5, 6, 7) ---
-        const chaptersData = {
-            4: {
-                title: "Dakwah & Khutbah",
-                desc: "Metode dakwah, syarat khatib, dan tablig.",
-                color: "from-blue-500 to-cyan-400",
-                questions: [
-                    { id: 1, text: "Hendaknya khutbah, tablig dan dakwah yang dilakukan tidak bersifat seremonial, tetapi mencapai sasaran. Sebab itu, semuanya perlu wujud nyata melalui hal-hal berikut ini, kecuali … .", options: ["bil lisāni wal hāl", "uswatun hasanah", "mau’idhah hasanah", "bil hikmah", "bil ra’yi"], correct: 4, explanation: "Bil ra'yi (dengan pendapat sendiri tanpa dasar) bukanlah metode yang tepat." },
-                    { id: 2, text: "Mulai zaman Nabi Adam As. sampai zaman Rasulullah Saw. serta diteruskan oleh generasi sampai akhir zaman, tujuan Dakwah Islamiyah tidak akan pernah berubah, yaitu … .", options: ["mengajar orang agar bisa membaca Al-Qur’an dengan tartil", "mengubah perilaku manusia yang telah menyimpang dari aturan Allah", "mengajak manusia mentaati perintah Allah dan menjauhi larangan-Nya", "menyeru manusia tentang indahnya surga dan seramnya neraka", "menerapkan kaidah hukum fiqh dalam semua aspek kehidupan"], correct: 2, explanation: "Tujuan inti dakwah adalah tauhid dan ketaatan kepada Allah." },
-                    { id: 3, text: "Dakwah harus memiliki sasaran yang jelas, karena itu harus menggunakan metode. Berlandaskan Q.S. al-Nahl/16: 125, dijelaskan metode yang dilakukan dai berikut ini, kecuali … .", options: ["dakwah disampaikan dengan cara hikmah", "dalam berdakwah harus di jalan Allah Swt.", "dengan cara yang indah dan menyenangkan", "apabila diperlukan boleh dengan cara berdebat kusir", "adanya dialog yang baik antara dai dan yang didakwahi"], correct: 3, explanation: "Debat kusir dilarang, yang diperbolehkan adalah debat dengan cara yang baik (mujadalah)." },
-                    { id: 4, text: "Perhatikan Hadis di bawah ini!\n\nبَلِّغُوا عَنِّي وَلَوْ آيَةً\n(Ballighū 'annī wa lau āyah)\n\nBanyak hal yang memengaruhi keberhasilan tablig. Namun, ada hal terpenting, sesuai dengan isi kandungan Hadis, yaitu: ...", options: ["ketenteraman saat melakukan tablig", "metode, strategi, dan cara yang dipakai", "keterlibatan semua pihak menggalang dana", "tablig itu tidak mengenal derajat dan martabat", "kewajiban setiap mubalig menyesuaikan kemampuan"], correct: 4, explanation: "Kewajiban menyampaikan walau satu ayat sesuai kemampuan." },
-                    { id: 5, text: "Perhatikan Q.S. al-Jumu’ah/62: 9 berikut ini!\n\nيَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا نُودِىَ لِلصَّلَوٰةِ مِن يَوْمِ ٱلْجُمُعَةِ فَٱسْعَوْا۟ إِلَىٰ ذِكْرِ ٱللَّهِ وَذَرُوا۟ ٱلْبَيْعَ\n\nIsi yang terkandung dari ayat tersebut adalah … .", options: ["kewajiban melakukan shalat", "menghentikan kegiatan jual beli", "bersiap-siap mendengarkan khutbah", "segera ke masjid untuk Shalat Jum’at", "kewajiban melakukan 2 kali"], correct: 3, explanation: "Perintah bersegera mengingat Allah (Shalat Jumat) saat adzan." },
-                    { id: 6, text: "Adanya khutbah menjadi bagian penting dari Shalat Jum’at. Khutbah bukan sekadar dilaksanakan, namun ada juga fungsi lain dari khutbah, yaitu … .", options: ["mengingatkan kembali tentang kehidupan yang benar", "timbulnya kesadaran mendalam tentang kewajiban shalat", "membebaskan seorang muslim dari kewajiban shalat", "gugurnya kewajiban shalat bagi seorang muslim", "terbebasnya kewajiban karena ada udzur"], correct: 0, explanation: "Khutbah sebagai pengingat (tazkirah) kehidupan yang benar." },
-                    { id: 7, text: "Dakwah itu diwajibkan bagi setiap muslim. Ketentuan menjadi dai lebih longgar dibanding khatib. Salah satu yang bukan syarat menjadi dai adalah … .", options: ["memiliki ilmu dan pengetahuan yang memadai", "mengembangkan wawasan ke-Islam-an dan kebangsaan", "memilah ilmu sesuai dengan besar kecilnya manfaat yang didapat", "hidupnya harus sejalan dengan ajaran Islam yang disampaikan", "memberikan contoh dan teladan bagi diri dan pihak lain"], correct: 2, explanation: "Dai tidak boleh memilah ilmu berdasarkan keuntungan pribadi." },
-                    { id: 8, text: "Hanya orang tertentu yang dapat menjadi khatib. Di antara ketentuannya adalah muslim yang sudah balig, berakal sehat dan taat beribadah. Semua itu bagian dari …", options: ["rukun khutbah", "syarat khutbah", "tata tertib khatib", "adab khutbah", "syarat khatib"], correct: 4, explanation: "Kualifikasi personal (subjek) disebut Syarat Khatib." },
-                    { id: 9, text: "Menjadi pemimpin yang adil, begitu juga menjadi rakyat yang taat, menjadi harapan kita semua. Jika ada persoalan yang belum dapat dipecahkan, harus tetap dicari solusinya secara adil, yang maknanya adalah … .", options: ["mencari solusi dari beberapa pilihan yang sama-sama menyulitkan", "keterlibatan beberapa komponen masyarakat yang bersatu padu", "semua orang tanpa kecuali diperlakukan sama di mata hukum", "bersikap menyatukan dan mendamaikan masyarakat", "tertibnya lingkungan dari kesadaran"], correct: 2, explanation: "Equality before the law (persamaan di mata hukum)." },
-                    { id: 10, text: "Kehidupan saat ini sering kita temukan konflik kepentingan antar berbagai kelompok masyarakat. Semua itu harus kita hadapi dengan adil dan bijak. Jika tidak, muncul kelompok penyusup yang berdampak negatif bagi … .", options: ["kerusakan fasilitas umum dan kerugian fisik serta materi", "berlalunya waktu dan sumber daya masyarakat yang mengitari", "keamanan menjadi kondusif dan belum dapat dipisahkan", "sikap dari sebagian masyarakat yang ingin damai", "kelompok yang ingin terhindar dari problema"], correct: 0, explanation: "Konflik anarkis menyebabkan kerusakan fisik dan materi." }
-                ]
-            },
-            5: {
-                title: "Sejarah Ulama",
-                desc: "Peran tokoh ulama dalam sejarah Nusantara.",
-                color: "from-purple-500 to-pink-400",
-                questions: [
-                    { id: 1, text: "Saat jayanya kerajaan Islam, peran ulama sangat menonjol sebagai bagian dari pejabat elite. Adapun perannya yang paling penting adalah …", options: ["duduk menemani para pemimpin yang membidangi pemerintahan", "berbeda-beda peran sesuai wilayah atau daerah yang dikuasai", "menjadi penasehat di bidang keagamaan bagi kerajaan", "mempengaruhi pemimpin agar menegakkan aturan", "dikembalikan aturan bernegara yang menyimpang"], correct: 2, explanation: "Ulama berperan vital sebagai penasehat spiritual dan hukum agama (Mufti) bagi kesultanan." },
-                    { id: 2, text: "Syekh Nawawi pernah menjadi imam di Masjidil Haram, mengajar di Haramain, dan mendapatkan gelar Sayyidul Hijaz. Saat itu, yang termasuk Hijaz adalah wilayah … .", options: ["Timur Tengah seluruhnya", "Makkah, Madinah, dan Damaskus", "Palestina, Yordania dan Yaman", "Saudi Arabia, Irak dan Iran", "Jazirah Arab, Makkah, Madinah"], correct: 4, explanation: "Hijaz adalah wilayah di bagian barat Arab Saudi yang mencakup dua kota suci, Makkah dan Madinah." },
-                    { id: 3, text: "Sampai saat ini, karya-karya beliau masih dipelajari, dikaji, dan ditelaah di pesantren. Misalnya kitab Sullam al-Munâjah dan Nashâih al-‘Ibâd. Itu adalah karya tulis dari …", options: ["Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani", "Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Nuruddin bin Ali ar-Raniri"], correct: 0, explanation: "Syekh Nawawi al-Bantani adalah penulis kitab Tafsir Marah Labid, Nashaihul Ibad, dan Sullam al-Munajah." },
-                    { id: 4, text: "Setiap tanah yang dipijak, selalu melakukan dakwah, bahkan saat diasingkan, beliau bahkan diberi gelar oleh Nelson Madela (Presiden Afrika Selatan) sebagai ‘Salah Seorang Putra Afrika Terbaik’. Beliau adalah …", options: ["Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Nuruddin bin Ali ar-Raniri", "Hamzah Fansuri"], correct: 0, explanation: "Syekh Yusuf al-Makasari diasingkan ke Afrika Selatan dan berdakwah di sana hingga wafat." },
-                    { id: 5, text: "Syekh Abdus Samad merupakan tokoh kunci pembuka dan pelopor perkembangan intelektualisme Nusantara Indonesia. Karyanya yang terkenal dan sampai saat ini masih dipergunakan adalah …", options: ["Kaifiyāt al-Dzikir", "Al-Tafsir al-Munîr li al-Mu’âlim", "Al-Tausyîh/Quwt al-Habîb al-Gharîb", "Hidayatus Salikin dan Siyarus Salikin", "An-Nafhatu As Sailaniyah."], correct: 3, explanation: "Hidayatus Salikin dan Siyarus Salikin adalah master piece Syekh Abdus Samad al-Palimbani dalam bidang tasawuf." },
-                    { id: 6, text: "Beliau adalah negarawan, ahli fikih, teolog, sufi, sejarawan dan sastrawan penting dalam sejarah Melayu pada abad ke-17. Perannya dalam perkembangan Islam di Nusantara tidak dapat diabaikan. Beliau adalah …", options: ["Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani", "Syekh Yusuf Abul Mahasin Tajul Khalwati al-Makasari", "Abdus Samad bin Abdullah al-Jawi al-Palimbani", "Muhammad Sholeh bin Umar al-Samarani", "Syekh Nuruddin bin Ali ar-Raniri"], correct: 4, explanation: "Nuruddin ar-Raniri adalah Mufti Kesultanan Aceh yang sangat produktif menulis dan menentang ajaran Wujudiyah yang dianggap sesat saat itu." },
-                    { id: 7, text: "Syekh Abdul Rauf dapat dikatakan sebagai poros sejumlah ulama Nusantara. Adapun nama muridnya yang paling berjasa, sehingga mampu mendakwahkan Islam kepada kaum bangsawan Kerajaan Pagaruyung adalah …", options: ["Abu Abdul Mu’thi Nawawi", "Abul Mahasin Tajul Khalwati", "Syekh Burhanudin Ulakan", "Sholeh bin Umar", "Ali ar-Raniri"], correct: 3, explanation: "Sesuai kunci jawaban: Sholeh bin Umar." },
-                    { id: 8, text: "Kiai Sholeh Darat menjadi salah satu pengajar di Makkah. Muridnya berasal dari seluruh penjuru dunia. Berikut ini, murid dan santrinya yang berhasil di didik, kecuali …", options: ["Hadratu Syekh KH Hasyim Asy’ari", "KH Ahmad Dahlan", "RA. Kartini", "Iskandar Zulkarnain", "KH Amir Idris"], correct: 3, explanation: "Iskandar Zulkarnain adalah tokoh sejarah masa lampau, bukan murid Kiai Sholeh Darat." },
-                    { id: 9, text: "Sepanjang hayatnya, beliau tidak hanya fasih berbahasa Melayu, tetapi juga Jawa, Siam (Thailand), Hindi, Arab, dan Persia. Namun, karya tulisnya menggunakan Bahasa Melayu. Beliau adalah …", options: ["Mbah Sholeh Darat", "Muhammad Arsyad", "Bukhari al-Jauhari", "Syekh Hamzah Fansuri", "KH Dahlan Tremas"], correct: 3, explanation: "Hamzah Fansuri dikenal sebagai penyair sufi yang menguasai banyak bahasa." },
-                    { id: 10, text: "Ajaran pokok tarekat Syekh Yusuf berkisar pada usaha manusia untuk mendekatkan diri kepada Allah Swt. Di antara risalah yang ditulisnya berjudul an-Nafhatu as-Sailaniyah yang pokok isinya tentang …", options: ["memohon (berdoa) itu semestinya hanya kepada Allah Swt", "petunjuk-petunjuk bagi orang yang akan mulai memasuki tarekat", "berdiam diri tidak bicara, kecuali mengucapkan kalimat dzikir", "berwudhu terlebih dahulu, jika ada hadas (besar dan kecil)", "ada 20 macam adab berdzikir"], correct: 1, explanation: "Kitab an-Nafhatu as-Sailaniyah membahas tentang kaidah dan petunjuk bagi para salik (penempuh jalan tarekat)." }
-                ]
-            },
-            6: {
-                title: "Islam & Kerukunan",
-                desc: "Toleransi dan anti kekerasan (Q.S. Yunus 40-41).",
-                color: "from-emerald-500 to-teal-400",
-                questions: [
-                    { id: 1, text: "Perhatikan Q.S. Yūnus/10: 40, di bawah ini!\n\n.… وَمِنْهُمْ مَّنْ يُّؤْمِنُ بِهٖ وَمِنْهُمْ مَّنْ لَّا يُؤْمِنُ بِهٖۗ وَرَبُّكَ\n\nSambungan ayat di atas yang tepat adalah ….", options: ["أَعْلَمُ بِالْمُتَّقِينَ", "أَعْلَمُ بِالظَّالِمِينَ", "أَعْلَمُ بِالْمُفْسِدِينَ", "أَعْلَمُ بِالْمُحْسِنِينَ", "أَعْلَمُ بِالْكَافِرِينَ"], correct: 2, explanation: "Lanjutan ayat tersebut adalah 'wa rabbuka a'lamu bil-mufsidin'." },
-                    { id: 2, text: "Dalam Q.S. Yūnus/10: 41 ada kalimat … فَقُلْ لِّيْ عَمَلِيْ\nTerjemahan yang tepat untuk kalimat di atas adalah ….", options: ["maka dengarkanlah, “Bagiku pekerjaanku…", "maka dengarkanlah, Bagimu pekerjaanku…", "maka katakanlah, “Bagimu pekerjaanku…", "maka katakanlah, “Bagiku pekerjaanmu…", "maka katakanlah, “Bagiku pekerjaanku…"], correct: 4, explanation: "Arti 'Qul li 'amali' adalah 'Katakanlah: Bagiku pekerjaanku'." },
-                    { id: 3, text: "Diantara isi Q.S. Yūnus/10: 40-41 adalah agar umat Islam mempunyai sikap ….", options: ["wira’i", "zuhud", "qana’ah", "samhah (toleran)", "syaja’ah"], correct: 3, explanation: "Ayat ini mengajarkan sikap tasamuh atau samhah (toleransi) dalam menyikapi perbedaan iman." },
-                    { id: 4, text: "Perhatikan hukum bacaan pada ayat berikut!\n\nDari ayat yang digaris bawahi (terkait Q.S Yunus 40-41), bacaan tajwid yang benar dan urut sesuai opsi adalah….", options: ["idzhar syafawi, ikhfa’, ghunnah dan mad wajib munfasil", "ikhfa’ syafawi, ikhfa’, ghunnah, dan mad jaiz munfasil", "ikhfa, ikhfa’ syafawi, mad jaiz munfasil, dan ghunnah", "mad wajib muttasil, ghunnah, ikhfa, ikhfa’ syafawi", "ikhfa’, idzhar syafawi, ghunnah, dan mad jaiz munfasil"], correct: 1, explanation: "Urutan tajwid: ikhfa’ syafawi, ikhfa’, ghunnah, dan mad jaiz munfasil." },
-                    { id: 5, text: "Dalam Hadis Nabi SAW, Al Thufail bin ‘Amr meminta Nabi mendoakan binasa kabilah Daus. Respon Nabi Muhammad SAW adalah ….", options: ["Nabi berdoa agar mereka diazab dan dibinasakan", "Nabi berdoa agar mereka diazab bersama orang kufur", "Nabi berdoa: 'Ya Allah berilah petunjuk kepada kabilah Daus dan datangkanlah mereka.'", "Nabi berdoa agar mereka didatangkan bersama ahli ilmu", "Nabi berdoa agar mereka didatangkan bersama pemimpin adil"], correct: 2, explanation: "Rasulullah berdoa: 'Allahumahdi Dausan wa'ti bihim' (Ya Allah berilah petunjuk kaum Daus)." },
-                    { id: 6, text: "Perhatikan makna ayat Q.S. Al-Maidah/5: 32!\n\nTerjemahan yang tepat dari kandungan ayat tersebut adalah ….", options: ["Barangsiapa memelihara kehidupan seorang manusia, seakan memelihara semua manusia", "Barangsiapa memelihara kehidupan seorang manusia, seakan memelihara banyak manusia", "Barangsiapa memelihara kehidupan yang ada di bumi, seakan memelihara semua makhluk", "Barangsiapa memelihara kehidupan seluruh makhluk, seakan memelihara di alam semesta", "Barangsiapa memelihara kehidupan banyak manusia, seakan memelihara seluruh manusia"], correct: 0, explanation: "Menyelamatkan satu nyawa sama dengan menyelamatkan seluruh manusia." },
-                    { id: 7, text: "Perhatikan Q.S. Al-Maidah/ 5: 32!\n\nDari ayat tersebut, hukum bacaan tajwid secara urut yang tepat adalah ….", options: ["idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah kubra, ikhfa’, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’ syafawi, ghunnah, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’, iqlab, dan mad thabi’i", "idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad ’arid"], correct: 0, explanation: "Analisis tajwid pada potongan ayat Al-Maidah 32 sesuai opsi A." },
-                    { id: 8, text: "Pernyataan di bawah ini yang merupakan penerapan dari Q.S. Al-Maidah/ 5: 32 (memelihara kehidupan) adalah ….", options: ["melaksanakan shalat lima waktu di awal waktu", "melaksanakan shalat tahajud pada sepertiga malam", "memberikan santunan kepada anak yatim piatu", "berpuasa sunah setiap hari senin dan kamis", "membaca al-Quran setiap hari di rumah dan masjid"], correct: 2, explanation: "Memberikan santunan anak yatim adalah bentuk memelihara kehidupan (hifzdu nafs)." },
-                    { id: 9, text: "Rasulullah bersabda: 'Barangsiapa yang membunuh mu’ahid tidak akan mencium harumnya surga', padahal harumnya dapat dicium dari perjalanan ….", options: ["sepuluh tahun", "dua puluh tahun", "tiga puluh tahun", "empat puluh tahun", "lima puluh tahun"], correct: 3, explanation: "Hadis Riwayat Bukhari: Harum surga tercium dari jarak perjalanan 40 tahun." },
-                    { id: 10, text: "Dalam hadis riwayat Muslim, orang yang membawa pahala shalat tapi habis karena mencaci dan menzalimi orang lain disebut ….", options: ["al-mukhlis (orang ikhlas)", "al-muflis (orang bangkrut)", "al-muhsin (orang baik)", "al-dzalim (orang jahat)", "al-‘ashi (ahli maksiat)"], correct: 1, explanation: "Muflis adalah orang yang bangkrut di akhirat." }
-                ]
-            },
-            7: {
-                title: "Cabang Iman",
-                desc: "Sifat Zuhud, Ikhlas, Malu, dan Kehormatan.",
-                color: "from-orange-400 to-red-400",
-                questions: [
-                    { id: 1, text: "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan Al-Bukhāri, disebutkan bahwa yang dimaksud dengan kekayaan (yang hakiki) itu adalah ….", options: ["kekayaan harta", "kekayaan hati (jiwa)", "kekayaan pikiran", "kekayaan materi", "kekayaan intelektual"], correct: 1, explanation: "Kekayaan hakiki adalah kekayaan hati (ghina an-nafs)." },
-                    { id: 2, text: "Perhatikan Q.S. Al-Ahzab/33: 35!\n\n... وَٱلْحَٰفِظِينَ فُرُوجَهُمْ وَٱلْحَٰفِظَٰتِ\n\nPotongan ayat tersebut merupakan dalil tentang cabang iman yaitu ….", options: ["menjaga kehormatan", "ikhlas", "malu", "zuhud", "taqarrub"], correct: 0, explanation: "Al-Hafizhina furujahum: memelihara kemaluan/menjaga kehormatan." },
-                    { id: 3, text: "Di bawah ini yang merupakan pemahaman yang benar tentang sifat zuhud adalah . . . .", options: ["tidak boleh memiliki harta", "mencari harta dengan optimal mumpung hidup", "mengesampingkan kewajiban kerja", "mencari nafkah sepanjang waktu", "menjadikan harta dunia untuk kebahagiaan akhirat"], correct: 4, explanation: "Zuhud: harta di tangan, bukan di hati. Dijadikan alat untuk akhirat." },
-                    { id: 4, text: "Meninggalkan kenikmatan duniawi demi akhirat adalah ciri zuhud. Ciri lain orang yang zuhud adalah . . . .", options: ["senang mencela orang lain", "membenci orang yang mencela", "marah ketika dipuji", "sangat senang dipuji", "bersikap sederhana baik saat dipuji maupun dicela"], correct: 4, explanation: "Mental orang zuhud stabil, tidak terbang dipuji dan tidak tumbang dicela." },
-                    { id: 5, text: "Di bawah ini merupakan tingkatan ikhlas secara urut adalah ….", options: ["awam, khas, khawasul khas", "awam, khawasul khawas, khawas", "awam, khawas, khawasul khawas", "awam, khas, khawasul khawas", "awam, khawas, khawasul khas"], correct: 2, explanation: "Tingkatan: Awam, Khawas, Khawasul Khawas." },
-                    { id: 6, text: "Di bawah ini yang termasuk ciri-ciri orang ikhlas adalah ….", options: ["rajin jika dilihat orang", "senantiasa bersungguh-sungguh dalam beramal", "bergairah jika dipuji", "melakukan larangan Allah", "membedakan amal besar dan kecil"], correct: 1, explanation: "Istiqomah dan sungguh-sungguh baik sendirian maupun ramai." },
-                    { id: 7, text: "Di bawah ini merupakan manfaat ikhlas adalah ….", options: ["menambah kekayaan", "terhindar dari tipu daya setan", "menjadi terkenal", "mendapatkan pujian", "dicari banyak orang"], correct: 1, explanation: "Setan tidak bisa menyesatkan orang yang ikhlas (Q.S. Al-Hijr: 40)." },
-                    { id: 8, text: "Dalam Hadis Riwayat Tirmidzi, 'malu kepada Allah dengan sebenar-benarnya' adalah ….", options: ["ikut asuransi jiwa", "menabung di Bank Syari’ah", "menjaga kepala, perut dan isinya dari maksiat", "memasang CCTV", "melakukan jaga malam"], correct: 2, explanation: "Malu hakiki: menjaga kepala & perut, serta mengingat mati." },
-                    { id: 9, text: "Perhatikan pernyataan berikut!\n1) menghindari maksiat\n2) menghantar kebaikan\n3) mengurangi rezeki\n4) dekat dengan Allah\n\nManfaat sikap malu adalah ….", options: ["1, 2, 3", "1, 3, 4", "2, 3, 4", "2, 4, 1", "3, 5, 1"], correct: 3, explanation: "Malu membawa kebaikan, menjauhi maksiat, mendekatkan ke Allah." },
-                    { id: 10, text: "Penerapan sifat malu yang tepat di bawah ini adalah….", options: ["malu tidak mengerjakan tugas", "malu menghadiri pengajian", "malu diejek teman jika berjilbab", "malu salat di masjid", "malu tidak punya HP baru"], correct: 0, explanation: "Malu jika melanggar kewajiban/aturan." }
-                ]
-            }
-        };
-
-        const SplashScreen = ({ onFinish }) => {
+        // --- MATH RENDERER COMPONENT ---
+        const MathText = ({ text, className = "" }) => {
+            const containerRef = useRef(null);
             useEffect(() => {
-                const timer = setTimeout(onFinish, 2000);
-                return () => clearTimeout(timer);
-            }, [onFinish]);
+                if (containerRef.current && window.renderMathInElement) {
+                    window.renderMathInElement(containerRef.current, {
+                        delimiters: [{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}],
+                        throwOnError: false
+                    });
+                }
+            }, [text]);
 
             return (
-                <div className="fixed inset-0 bg-blue-600 flex flex-col items-center justify-center z-50 text-white p-6">
-                    <div className="absolute inset-0 islamic-bg opacity-20"></div>
-                    <div className="w-24 h-24 mb-6 animate-float bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-2xl border border-white/20">
-                        <Icons.Book />
+                <div ref={containerRef} className={className}>
+                    {text.split('\n').map((line, i) => {
+                        const isAr = /[\u0600-\u06FF]/.test(line);
+                        return <div key={i} className={isAr ? "font-arab text-2xl text-right my-2 leading-relaxed" : "mb-1 leading-relaxed"}>{line}</div>
+                    })}
+                </div>
+            );
+        };
+
+        // ========== 1. SPLASH SCREEN ==========
+        const SplashScreen = ({ onFinish }) => {
+            useEffect(() => { const timer = setTimeout(onFinish, 2800); return () => clearTimeout(timer); }, [onFinish]);
+            return (
+                <div className="fixed inset-0 flex flex-col items-center justify-center z-50 p-6">
+                    <div className="relative w-32 h-32 mb-8">
+                        <div className="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
+                        <div className="relative w-full h-full glass rounded-3xl flex items-center justify-center text-blue-200 border border-blue-400/30 shadow-2xl animate-[pulse-glow_3s_infinite]">
+                            <div className="w-16 h-16"><Icons.Book /></div>
+                        </div>
                     </div>
-                    <h1 className="text-4xl font-extrabold mb-2 tracking-tight text-center">Bank Soal PAI</h1>
-                    <p className="text-blue-200 font-medium text-center">Persiapan UAS Kelas XII</p>
-                    <div className="mt-8 flex gap-2">
-                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
-                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                        <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                    <h1 className="text-5xl font-extrabold mb-3 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-purple-200 animate-enter">
+                        Bank Soal
+                    </h1>
+                    <p className="text-lg text-blue-200/80 font-medium animate-enter" style={{animationDelay: '0.1s'}}>
+                        Persiapan Ujian Sekolah
+                    </p>
+                    <div className="mt-12 flex gap-2">
+                        <div className="w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+                        <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                        <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
                     </div>
                 </div>
             );
         };
 
-        const MainMenu = ({ onStart }) => {
-            const menuItems = [4, 5, 6, 7];
-
+        // ========== 2. SUBJECT MENU ==========
+        const SubjectMenu = ({ onSelectSubject }) => {
+            const subjects = Object.keys(window.QUIZ_DATABASE);
             return (
-                <div className="min-h-screen p-4 md:p-6 pb-20 flex flex-col items-center max-w-lg mx-auto">
-                    <div className="fixed inset-0 islamic-bg -z-10"></div>
-                    
-                    <header className="w-full flex justify-between items-center mb-8 mt-2 glass-card p-4 rounded-2xl shadow-sm">
-                        <div className="flex items-center gap-3 text-blue-700">
-                            <div className="bg-blue-100 p-2 rounded-lg"><Icons.Book /></div>
-                            <div>
-                                <h1 className="font-bold text-lg leading-none">Bank Soal</h1>
-                                <p className="text-xs text-blue-500 font-medium mt-1">PAI - Kelas XII</p>
-                            </div>
-                        </div>
+                <div className="min-h-screen p-6 flex flex-col items-center max-w-lg mx-auto animate-enter">
+                    <header className="w-full mb-8 mt-4">
+                        <h2 className="text-sm font-bold text-blue-300 uppercase tracking-widest mb-1">Selamat Datang</h2>
+                        <h1 className="text-3xl font-bold text-white">Mau belajar apa hari ini?</h1>
                     </header>
-
-                    <main className="w-full space-y-4">
-                        {menuItems.map((babNum) => {
-                            const data = chaptersData[babNum];
+                    <div className="w-full space-y-5">
+                        {subjects.map((subKey, i) => {
+                            const sub = window.QUIZ_DATABASE[subKey];
+                            const IconComp = Icons[sub.icon] || Icons.Book;
                             return (
-                                <button 
-                                    key={babNum}
-                                    onClick={() => onStart(babNum)}
-                                    className="w-full text-left bg-white rounded-2xl p-5 shadow-lg shadow-blue-900/5 active:scale-95 transition-all duration-200 border border-slate-100 relative overflow-hidden group"
-                                >
-                                    <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${data.color} rounded-bl-full opacity-10`}></div>
-                                    
-                                    <div className="flex justify-between items-start mb-2 relative z-10">
-                                        <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide bg-slate-100 text-slate-600`}>
-                                            Bab {babNum}
-                                        </span>
-                                        <span className="text-xs font-semibold text-slate-400">10 Soal</span>
+                                <button key={subKey} onClick={() => onSelectSubject(subKey)} 
+                                    className="w-full glass rounded-[2rem] p-1 relative overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/20"
+                                    style={{animationDelay: `${i * 0.1}s`}}>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                    <div className="bg-[#0f172a]/40 backdrop-blur-xl rounded-[1.8rem] p-6 flex items-center gap-5 border border-white/5">
+                                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg bg-gradient-to-br ${sub.color}`}>
+                                            <div className="w-8 h-8"><IconComp /></div>
+                                        </div>
+                                        <div className="text-left flex-1">
+                                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-200 transition-colors">{sub.label}</h3>
+                                            <p className="text-sm text-slate-400">Latihan Soal & Pembahasan</p>
+                                        </div>
+                                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
+                                        </div>
                                     </div>
-                                    
-                                    <h3 className="text-lg font-bold text-slate-800 mb-1 relative z-10">{data.title}</h3>
-                                    <p className="text-slate-500 text-xs line-clamp-2 relative z-10">{data.desc}</p>
                                 </button>
                             );
                         })}
-                    </main>
-                    
-                    <footer className="mt-8 text-center text-xs text-slate-400 font-medium">
-                        &copy; 2024 Quiz PAI • Semangat Belajar!
-                    </footer>
+                    </div>
                 </div>
             );
         };
 
-        const QuizGame = ({ chapterId, onComplete, onHome }) => {
-            const data = chaptersData[chapterId];
+        // ========== 3. CHAPTER MENU ==========
+        const ChapterMenu = ({ subjectKey, onStart, onBack }) => {
+            const subject = window.QUIZ_DATABASE[subjectKey];
+            const chapters = Object.keys(subject.chapters);
+            return (
+                <div className="min-h-screen p-6 flex flex-col items-center max-w-lg mx-auto animate-enter">
+                    <header className="w-full mb-8 mt-2 flex items-center gap-4">
+                        <button onClick={onBack} className="p-3 glass rounded-full text-white hover:bg-white/10 transition-all"><Icons.Back /></button>
+                        <div>
+                            <div className="text-xs font-bold text-blue-300 uppercase tracking-wider">Mata Pelajaran</div>
+                            <h1 className="font-bold text-2xl text-white">{subject.label}</h1>
+                        </div>
+                    </header>
+                    <div className="w-full space-y-4">
+                        {chapters.map((chapNum, i) => {
+                            const data = subject.chapters[chapNum];
+                            return (
+                                <button key={chapNum} onClick={() => onStart(chapNum)}
+                                    className="w-full text-left glass rounded-3xl p-6 relative overflow-hidden group transition-all duration-200 active:scale-95 hover:bg-white/10"
+                                    style={{animationDelay: `${i * 0.1}s`}}>
+                                    <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${subject.color} rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity`}></div>
+                                    <div className="flex justify-between items-start mb-2 relative z-10">
+                                        <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider bg-gradient-to-r ${subject.color} text-white shadow-lg`}>BAB {chapNum}</span>
+                                        <span className="text-xs font-medium text-slate-400 bg-black/20 px-2 py-1 rounded-lg">{data.questions.length} Soal</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-1 relative z-10">{data.title}</h3>
+                                    <p className="text-slate-400 text-sm line-clamp-1 relative z-10">{data.desc}</p>
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        };
+
+        // ========== 4. QUIZ GAME ==========
+        const QuizGame = ({ subjectKey, chapterId, onComplete, onHome }) => {
+            const data = window.QUIZ_DATABASE[subjectKey].chapters[chapterId];
+            const color = window.QUIZ_DATABASE[subjectKey].color;
             const questions = data.questions;
             
-            const [currentIndex, setCurrentIndex] = useState(0);
-            const [selectedOption, setSelectedOption] = useState(null);
-            const [isLocked, setIsLocked] = useState(false);
+            const [idx, setIdx] = useState(0);
+            const [sel, setSel] = useState(null);
+            const [locked, setLocked] = useState(false);
             const [score, setScore] = useState(0);
-            const [answers, setAnswers] = useState([]);
+            const [ans, setAns] = useState([]);
 
-            const question = questions[currentIndex];
-            const progress = ((currentIndex + 1) / questions.length) * 100;
-
-            const handleOptionClick = (index) => {
-                if (isLocked) return;
+            const handleOpt = (index) => {
+                if (locked) return;
+                if (navigator.vibrate) navigator.vibrate(40);
                 
-                // Haptic Feedback for Android
-                if (navigator.vibrate) navigator.vibrate(50);
+                setSel(index); setLocked(true);
+                const isCor = index === questions[idx].correct;
+                if (isCor) setScore(s => s + 1);
                 
-                setSelectedOption(index);
-                setIsLocked(true);
-
-                const isCorrect = index === question.correct;
-                if (isCorrect) setScore(s => s + 1);
-
-                setAnswers([...answers, {
-                    questionId: question.id,
-                    userAnswer: index,
-                    isCorrect: isCorrect
-                }]);
-
+                setAns([...ans, { qId: questions[idx].id, uAns: index, isCor }]);
+                
                 setTimeout(() => {
-                    if (currentIndex < questions.length - 1) {
-                        setCurrentIndex(c => c + 1);
-                        setSelectedOption(null);
-                        setIsLocked(false);
-                    } else {
-                        onComplete(score + (isCorrect ? 1 : 0), [...answers, { questionId: question.id, userAnswer: index, isCorrect: isCorrect }]);
-                    }
-                }, 1000); // Sedikit lebih cepat untuk mobile
+                    if (idx < questions.length - 1) { setIdx(i => i + 1); setSel(null); setLocked(false); }
+                    else { onComplete(score + (isCor ? 1 : 0), [...ans, { qId: questions[idx].id, uAns: index, isCor }]); }
+                }, 1500);
             };
 
             return (
-                <div className="min-h-screen bg-slate-50 flex flex-col max-w-lg mx-auto">
-                    <div className="fixed inset-0 islamic-bg -z-10"></div>
-                    
+                <div className="min-h-screen flex flex-col max-w-lg mx-auto">
                     {/* Header Fixed */}
-                    <div className="bg-white/90 backdrop-blur-md sticky top-0 z-20 px-4 py-3 border-b border-slate-200">
-                        <div className="flex justify-between items-center mb-3">
-                            <button onClick={onHome} className="p-2 -ml-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
-                                <Icons.Back />
-                            </button>
-                            <div className="text-xs font-bold bg-slate-100 px-3 py-1 rounded-full text-slate-600">
-                                {currentIndex + 1} / {questions.length}
+                    <div className="glass-strong sticky top-0 z-20 px-6 py-4">
+                        <div className="flex justify-between items-center mb-4">
+                            <button onClick={onHome} className="p-2 -ml-2 text-slate-300 hover:text-white transition-colors"><Icons.Back /></button>
+                            <div className="flex flex-col items-end">
+                                <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">Progress</span>
+                                <span className="text-sm font-bold text-white">{idx + 1} <span className="text-slate-500">/ {questions.length}</span></span>
                             </div>
                         </div>
-                        <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                            <div 
-                                className={`h-full bg-gradient-to-r ${data.color} transition-all duration-300 ease-out`}
-                                style={{ width: `${progress}%` }}
-                            ></div>
+                        <div className="h-1.5 w-full bg-slate-700/50 rounded-full overflow-hidden">
+                            <div className={`h-full bg-gradient-to-r ${color} transition-all duration-500 ease-out shadow-[0_0_10px_rgba(59,130,246,0.5)]`} style={{ width: `${((idx + 1) / questions.length) * 100}%` }}></div>
                         </div>
                     </div>
 
-                    {/* Question Content */}
-                    <div className="flex-1 p-5 pb-24 overflow-y-auto no-scrollbar">
-                        <div className="bg-white rounded-2xl p-5 mb-6 shadow-sm border border-slate-100 min-h-[150px] flex flex-col justify-center">
-                            <div className="text-base font-bold text-slate-800 leading-relaxed whitespace-pre-line">
-                                {question.text.split('\n').map((line, i) => {
-                                    const isArabic = /[\u0600-\u06FF]/.test(line);
-                                    return <div key={i} className={isArabic ? "font-arab text-2xl text-right my-3 text-slate-800 leading-loose bg-slate-50 p-3 rounded-lg border border-slate-100" : "mb-2"}>{line}</div>
-                                })}
+                    {/* Content */}
+                    <div className="flex-1 p-6 pb-24 overflow-y-auto no-scrollbar animate-enter">
+                        {/* Question Card */}
+                        <div className="glass rounded-[2rem] p-1 mb-6">
+                            <div className="bg-[#1e293b]/60 backdrop-blur-xl rounded-[1.9rem] p-6 min-h-[160px] flex flex-col justify-center border border-white/5">
+                                <MathText text={questions[idx].text} className="text-lg font-medium text-white/90" />
                             </div>
                         </div>
 
+                        {/* Options */}
                         <div className="space-y-3">
-                            {question.options.map((option, idx) => {
-                                const letters = ["A", "B", "C", "D", "E"];
-                                let btnClass = "bg-white border-2 border-slate-100 text-slate-600";
-                                
-                                if (isLocked) {
-                                    if (idx === question.correct) {
-                                        btnClass = "bg-green-50 border-green-500 text-green-700 shadow-md";
-                                    } else if (idx === selectedOption) {
-                                        btnClass = "bg-red-50 border-red-500 text-red-700";
-                                    } else {
-                                        btnClass = "opacity-40 border-transparent bg-slate-50";
-                                    }
-                                } else {
-                                    btnClass += " active:bg-blue-50 active:border-blue-300 active:scale-[0.98]";
+                            {questions[idx].options.map((opt, i) => {
+                                let stateStyle = "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10";
+                                if (locked) {
+                                    if (i === questions[idx].correct) stateStyle = "bg-green-500/20 border-green-500 text-green-200 shadow-[0_0_15px_rgba(34,197,94,0.2)]";
+                                    else if (i === sel) stateStyle = "bg-red-500/20 border-red-500 text-red-200";
+                                    else stateStyle = "opacity-30 bg-black/20 border-transparent";
                                 }
-
                                 return (
-                                    <button
-                                        key={idx}
-                                        onClick={() => handleOptionClick(idx)}
-                                        disabled={isLocked}
-                                        className={`w-full p-4 rounded-xl text-left font-medium transition-all duration-200 flex items-start gap-3 select-none ${btnClass}`}
-                                    >
-                                        <div className={`w-6 h-6 rounded flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${
-                                            isLocked && idx === question.correct ? "bg-green-500 text-white" : 
-                                            isLocked && idx === selectedOption ? "bg-red-500 text-white" :
-                                            "bg-slate-200 text-slate-500"
-                                        }`}>
-                                            {letters[idx]}
+                                    <button key={i} onClick={() => handleOpt(i)} disabled={locked}
+                                        className={`w-full p-5 rounded-2xl text-left border transition-all duration-200 active:scale-[0.98] flex gap-4 items-center ${stateStyle}`}>
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs border transition-all ${locked && i === questions[idx].correct ? "bg-green-500 border-green-500 text-white" : locked && i === sel ? "bg-red-500 border-red-500 text-white" : "border-slate-500 text-slate-400"}`}>
+                                            {locked && i === questions[idx].correct ? <Icons.Check /> : locked && i === sel ? <Icons.X /> : ["A","B","C","D","E"][i]}
                                         </div>
-                                        <span className="text-sm leading-snug">{option}</span>
+                                        <div className="flex-1"><MathText text={opt} className="text-sm font-medium" /></div>
                                     </button>
                                 )
                             })}
@@ -333,83 +331,83 @@
             );
         };
 
-        const ResultScreen = ({ score, chapterId, userAnswers, onRetry, onHome }) => {
-            const data = chaptersData[chapterId];
-            const totalQuestions = data.questions.length;
-            const percentage = Math.round((score / totalQuestions) * 100);
+        // ========== 5. RESULT SCREEN ==========
+        const ResultScreen = ({ score, subjectKey, chapterId, answers, onRetry, onHome }) => {
+            const data = window.QUIZ_DATABASE[subjectKey].chapters[chapterId];
+            const pct = Math.round((score / data.questions.length) * 100);
             
-            let message = "Belajar Lagi Yuk!";
-            let bgGradient = "from-slate-400 to-slate-500";
-            
-            if (percentage === 100) { message = "Sempurna!"; bgGradient = "from-yellow-400 to-orange-500"; }
-            else if (percentage >= 80) { message = "Hebat Sekali!"; bgGradient = "from-green-400 to-emerald-500"; }
-            else if (percentage >= 60) { message = "Lulus KKM"; bgGradient = "from-blue-400 to-cyan-500"; }
+            // Confetti Effect
+            useEffect(() => {
+                if (pct === 100) {
+                    const jsConfetti = new JSConfetti();
+                    jsConfetti.addConfetti({ emojis: ['🏆', '⭐', '✨', '🔥'], confettiNumber: 50 });
+                }
+            }, [pct]);
+
+            let title = "Jangan Menyerah!", sub = "Setiap kesalahan adalah pelajaran.";
+            let gradeColor = "text-slate-400";
+            if (pct === 100) { title = "Sempurna!"; sub = "Kamu menguasai materi ini!"; gradeColor = "text-yellow-400"; }
+            else if (pct >= 80) { title = "Luar Biasa!"; sub = "Sedikit lagi sempurna."; gradeColor = "text-green-400"; }
+            else if (pct >= 60) { title = "Lulus KKM"; sub = "Tingkatkan lagi belajarmu."; gradeColor = "text-blue-400"; }
 
             return (
-                <div className="min-h-screen bg-slate-50 p-5 max-w-lg mx-auto">
-                    <div className="fixed inset-0 islamic-bg -z-10"></div>
-                    
-                    <div className="bg-white rounded-3xl shadow-xl p-6 text-center mb-6 relative overflow-hidden border border-slate-100">
-                        <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${bgGradient}`}></div>
-                        
-                        <div className="w-20 h-20 bg-slate-50 rounded-full mx-auto flex items-center justify-center mb-3 text-yellow-500 shadow-inner">
-                            <Icons.Trophy />
-                        </div>
-                        
-                        <h2 className="text-2xl font-bold text-slate-800 mb-1">{message}</h2>
-                        <p className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Nilai Bab {chapterId}</p>
-                        
-                        <div className="text-5xl font-black text-slate-800 mb-6">
-                            {score}<span className="text-xl text-slate-400 font-medium">/{totalQuestions}</span>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 gap-3">
-                            <button onClick={onRetry} className="flex items-center justify-center gap-2 bg-blue-600 active:bg-blue-700 text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-blue-200 active:scale-95 transition-all">
-                                <Icons.Refresh /> Ulangi
-                            </button>
-                            <button onClick={onHome} className="flex items-center justify-center gap-2 bg-slate-100 active:bg-slate-200 text-slate-600 py-3 rounded-xl font-bold text-sm active:scale-95 transition-all">
-                                <Icons.Home /> Menu
-                            </button>
+                <div className="min-h-screen p-6 max-w-lg mx-auto animate-enter">
+                    {/* Score Card */}
+                    <div className="glass rounded-[2.5rem] p-8 text-center mb-8 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent"></div>
+                        <div className="relative z-10">
+                            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white mb-6 shadow-[0_0_30px_rgba(234,179,8,0.4)] animate-[pulse-glow_3s_infinite]">
+                                <div className="w-12 h-12"><Icons.Trophy /></div>
+                            </div>
+                            <h2 className={`text-3xl font-extrabold mb-2 ${gradeColor}`}>{title}</h2>
+                            <p className="text-slate-400 text-sm mb-6">{sub}</p>
+                            
+                            <div className="flex justify-center items-end gap-2 mb-8">
+                                <span className="text-6xl font-black text-white tracking-tighter">{score}</span>
+                                <span className="text-xl text-slate-500 font-medium mb-2">/ {data.questions.length}</span>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <button onClick={onRetry} className="bg-white text-slate-900 py-3.5 rounded-xl font-bold text-sm hover:bg-blue-50 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg">
+                                    <Icons.Refresh /> Ulangi
+                                </button>
+                                <button onClick={onHome} className="bg-white/10 text-white py-3.5 rounded-xl font-bold text-sm hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center gap-2">
+                                    <Icons.Home /> Menu
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="space-y-4 pb-10">
-                        <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wide ml-1">Pembahasan</h3>
+                    {/* Review */}
+                    <h3 className="text-lg font-bold text-white mb-4 px-2">Pembahasan Jawaban</h3>
+                    <div className="space-y-4 pb-12">
                         {data.questions.map((q, i) => {
-                            const userAnswer = userAnswers.find(a => a.questionId === q.id)?.userAnswer;
-                            const isCorrect = userAnswer === q.correct;
-                            
+                            const uAns = answers.find(a => a.qId === q.id)?.uAns;
+                            const isCor = uAns === q.correct;
                             return (
-                                <div key={q.id} className={`bg-white rounded-xl p-4 border-l-4 shadow-sm ${isCorrect ? 'border-green-500' : 'border-red-500'}`}>
+                                <div key={q.id} className="glass rounded-2xl p-5 border border-white/5">
                                     <div className="flex gap-3 mb-3">
-                                        <span className={`w-6 h-6 shrink-0 flex items-center justify-center rounded-full font-bold text-white text-xs ${isCorrect ? 'bg-green-500' : 'bg-red-500'}`}>
-                                            {i + 1}
-                                        </span>
-                                        <p className="font-medium text-slate-800 text-sm leading-relaxed">
-                                            {q.text.split('\n')[0]}
-                                        </p>
+                                        <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-1 ${isCor ? 'bg-green-500 text-black' : 'bg-red-500 text-white'}`}>{i+1}</div>
+                                        <div className="flex-1"><MathText text={q.text} className="text-sm font-medium text-slate-200" /></div>
                                     </div>
-
-                                    <div className="bg-slate-50 rounded-lg p-3 text-xs space-y-1.5 mb-3">
+                                    <div className="bg-black/20 rounded-xl p-4 text-xs space-y-2">
                                         <div className="flex gap-2">
-                                            <span className="text-slate-400 font-medium">Kamu:</span>
-                                            <span className={isCorrect ? "text-green-600 font-bold" : "text-red-500 font-bold"}>
-                                                {q.options[userAnswer] || "-"}
-                                            </span>
+                                            <span className="text-slate-500 w-12 shrink-0">Kamu:</span>
+                                            <span className={`font-bold ${isCor ? 'text-green-400' : 'text-red-400'}`}><MathText text={q.options[uAns]||"-"} /></span>
                                         </div>
-                                        {!isCorrect && (
+                                        {!isCor && (
                                             <div className="flex gap-2">
-                                                <span className="text-slate-400 font-medium">Kunci:</span>
-                                                <span className="text-green-600 font-bold">
-                                                    {q.options[q.correct]}
-                                                </span>
+                                                <span className="text-slate-500 w-12 shrink-0">Kunci:</span>
+                                                <span className="text-green-400 font-bold"><MathText text={q.options[q.correct]} /></span>
                                             </div>
                                         )}
                                     </div>
-                                    
-                                    <p className="text-slate-600 text-xs leading-relaxed border-t border-slate-100 pt-2">
-                                        <span className="font-bold text-blue-500">Info:</span> {q.explanation}
-                                    </p>
+                                    <div className="mt-3 pt-3 border-t border-white/5">
+                                        <div className="flex gap-2 text-xs leading-relaxed text-slate-400">
+                                            <span className="text-blue-400 font-bold shrink-0">Info:</span>
+                                            <MathText text={q.explanation} />
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         })}
@@ -418,46 +416,26 @@
             );
         };
 
+        // ========== APP ROOT ==========
         const App = () => {
-            const [screen, setScreen] = useState('splash'); 
-            const [activeChapter, setActiveChapter] = useState(null);
-            const [quizData, setQuizData] = useState({ score: 0, answers: [] });
-
-            const startQuiz = (chapterId) => {
-                setActiveChapter(chapterId);
-                setScreen('quiz');
-            };
-            
-            const goHome = () => {
-                setActiveChapter(null);
-                setScreen('home');
-            };
-            
-            const finishQuiz = (finalScore, finalAnswers) => {
-                setQuizData({ score: finalScore, answers: finalAnswers });
-                setScreen('result');
-            };
+            const [scr, setScr] = useState('splash');
+            const [sub, setSub] = useState(null);
+            const [chap, setChap] = useState(null);
+            const [res, setRes] = useState(null);
 
             return (
                 <>
-                    {screen === 'splash' && <SplashScreen onFinish={() => setScreen('home')} />}
-                    {screen === 'home' && <MainMenu onStart={startQuiz} />}
-                    {screen === 'quiz' && <QuizGame chapterId={activeChapter} onComplete={finishQuiz} onHome={goHome} />}
-                    {screen === 'result' && (
-                        <ResultScreen 
-                            score={quizData.score} 
-                            chapterId={activeChapter}
-                            userAnswers={quizData.answers}
-                            onRetry={() => startQuiz(activeChapter)}
-                            onHome={goHome}
-                        />
-                    )}
+                    <AnimatedBackground />
+                    {scr === 'splash' && <SplashScreen onFinish={() => setScr('subject')} />}
+                    {scr === 'subject' && <SubjectMenu onSelectSubject={(s) => { setSub(s); setScr('chapter'); }} />}
+                    {scr === 'chapter' && <ChapterMenu subjectKey={sub} onStart={(c) => { setChap(c); setScr('quiz'); }} onBack={() => { setSub(null); setScr('subject'); }} />}
+                    {scr === 'quiz' && <QuizGame subjectKey={sub} chapterId={chap} onComplete={(s, a) => { setRes({s, a}); setScr('result'); }} onHome={() => { setSub(null); setChap(null); setScr('subject'); }} />}
+                    {scr === 'result' && <ResultScreen score={res.s} answers={res.a} subjectKey={sub} chapterId={chap} onRetry={() => setScr('quiz')} onHome={() => { setSub(null); setChap(null); setScr('subject'); }} />}
                 </>
             );
         };
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
     </script>
 </body>
 </html>
