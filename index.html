@@ -174,9 +174,44 @@
             Send: () => <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>,
         };
 
+        // ─── MATRIX PREPROCESSOR ───
+        const convertMatrixToKatex = (matrixStr) => {
+            try {
+                const inner = matrixStr.slice(2, matrixStr.length - 2);
+                const rows = inner.split(/\],\s*\[/);
+                const matrix = rows.map(row => row.split(',').map(e => e.trim()));
+                const katexRows = matrix.map(row => row.join(' & '));
+                return `$\\begin{pmatrix}${katexRows.join(' \\\\ ')}\\end{pmatrix}$`;
+            } catch(e) {
+                return matrixStr;
+            }
+        };
+
+        const preprocessText = (text) => {
+            if (!text || typeof text !== 'string') return text;
+            let result = '';
+            let i = 0;
+            while (i < text.length) {
+                if (text[i] === '[' && i + 1 < text.length && text[i + 1] === '[') {
+                    let depth = 0, j = i, endIdx = -1;
+                    while (j < text.length) {
+                        if (text[j] === '[') depth++;
+                        else if (text[j] === ']') { depth--; if (depth === 0) { endIdx = j; break; } }
+                        j++;
+                    }
+                    if (endIdx > -1) {
+                        result += convertMatrixToKatex(text.slice(i, endIdx + 1));
+                        i = endIdx + 1;
+                    } else { result += text[i]; i++; }
+                } else { result += text[i]; i++; }
+            }
+            return result;
+        };
+
         // ─── MATH TEXT ───
         const MT = ({ text = "", className = "" }) => {
             const ref = useRef(null);
+            const processed = preprocessText(String(text || ""));
             useEffect(() => {
                 if (ref.current && window.renderMathInElement) {
                     window.renderMathInElement(ref.current, {
@@ -188,9 +223,10 @@
             if (!text) return null;
             return (
                 <div ref={ref} className={className}>
-                    {String(text).split('\n').map((line, i) => {
+                    {processed.split('\n').map((line, i) => {
                         const isAr = /[\u0600-\u06FF]/.test(line);
-                        return <div key={i} className={isAr ? "font-arab text-2xl text-right my-2 leading-relaxed" : "mb-1 leading-relaxed"}>{line}</div>
+                        return <div key={i} className={isAr ? "font-arab text-2xl text-right my-2 leading-relaxed" : "mb-1 leading-relaxed"}
+                            style={{overflowX:'auto'}}>{line}</div>
                     })}
                 </div>
             );

@@ -2147,4 +2147,207 @@ window.QUIZ_DATABASE = {
       },
     },
   },
+  Matematika: {
+    label: "Matematika",
+    icon: "Calculator",
+    color: "from-green-500 to-emerald-400",
+    chapters: {
+      1: {
+        title: "Kumpulan Soal Ujian Sekolah",
+        desc: "Latihan soal Matriks, Barisan Deret, Statistika, dan Program Linear.",
+        questions: [
+          {
+            id: 2,
+            text: "Nilai a yang memenuhi persamaan matriks [[a + 2b], [3b]] = [[1], [-6]] adalah ...",
+            options: ["5", "-3", "-2", "3", "-5"],
+            correct: 0,
+            explanation:
+              "Dari baris kedua, 3b = -6 sehingga didapat b = -2. Substitusikan nilai b ke baris pertama: a + 2b = 1 menjadi a + 2(-2) = 1, sehingga a - 4 = 1 dan a = 5.",
+          },
+          {
+            id: 3,
+            text: "Diketahui A, B, C matriks berordo (2x2). Jika A = [[-3, 4], [5, -1]], B = [[1, -2], [3, 4]], dan 3A + C = 2B, maka C = ...",
+            options: [
+              "[[11, -8], [-9, 5]]",
+              "[[-7, -16], [15, -11]]",
+              "[[11, -8], [-9, 11]]",
+              "[[11, -16], [-9, 11]]",
+              "[[-7, 8], [21, 5]]",
+            ],
+            correct: 3,
+            explanation:
+              "Persamaan diubah menjadi C = 2B - 3A. 2B = [[2, -4], [6, 8]] dan 3A = [[-9, 12], [15, -3]]. C = [[2 - (-9), -4 - 12], [6 - 15, 8 - (-3)]] = [[11, -16], [-9, 11]].",
+          },
+          {
+            id: 4,
+            text: "Diketahui matriks A = [[2, 3], [1, 2], [4, 5]] dan B = [[-2, 0, 1], [3, -4, 0]], hasil dari AB adalah ...",
+            options: [
+              "[[5, -12, 2], [4, -8, 1], [7, -20, 4]]",
+              "[[5, 12, 2], [4, 8, 1], [7, 20, 4]]",
+              "[[5, 12, -2], [4, 8, -1], [7, 20, -4]]",
+              "[[5, 4, 7], [-12, -8, 1], [7, -20, 4]]",
+              "[[5, 4, 7], [-12, -8, -20], [7, 1, 4]]",
+            ],
+            correct: 0,
+            explanation:
+              "Kalikan baris matriks A dengan kolom matriks B. Baris 1 x Kolom 1: (2*-2) + (3*3) = 5. Lanjutkan untuk semua elemen baris dan kolom.",
+          },
+          {
+            id: 5,
+            text: "Suku ke-n suatu barisan bilangan dirumuskan Un = 15n - 3. Salah satu suku pada barisan tersebut bernilai 237 merupakan suku yang ke ...",
+            options: ["16", "19", "18", "20", "14"],
+            correct: 0,
+            explanation:
+              "Diketahui Un = 237. Maka 15n - 3 = 237. 15n = 240, sehingga n = 240 / 15 = 16.",
+          },
+          {
+            id: 6,
+            text: "Jumlah dari 33 suku pertama deret aritmetika adalah 891 dan suku pertamanya 7. Suku ke-33 adalah ...",
+            options: ["47", "51", "49", "45", "41"],
+            correct: 0,
+            explanation:
+              "Gunakan rumus Sn = n/2 * (a + Un). 891 = 33/2 * (7 + U33). 1782 = 33(7 + U33). 7 + U33 = 54, sehingga U33 = 47.",
+          },
+          {
+            id: 7,
+            text: "Suku pertama barisan geometri adalah 4 dan suku ke-4 adalah 32. Suku ke-7 adalah ...",
+            options: ["256", "186", "196", "128", "512"],
+            correct: 0,
+            explanation:
+              "Cari rasio (r): U4 = a * r^3 -> 32 = 4 * r^3 -> r^3 = 8 -> r = 2. U7 = a * r^6 = 4 * (2^6) = 4 * 64 = 256.",
+          },
+          {
+            id: 8,
+            text: "Dari deret geometri diketahui U2 = 6 dan U6 = 96. Jumlah lima suku pertama deret tersebut adalah ...",
+            options: ["93", "72", "96", "150", "160"],
+            correct: 0,
+            explanation:
+              "U6/U2 = r^4 -> 96/6 = 16 -> r = 2. Cari a: U2 = a*r -> 6 = a*2 -> a = 3. S5 = a(r^5 - 1)/(r - 1) = 3(32 - 1)/1 = 3 * 31 = 93.",
+          },
+          {
+            id: 9,
+            text: "Jumlah deret geometri tak hingga 8 + 4 + 2 + ... adalah ...",
+            options: ["16", "4", "12", "15", "32"],
+            correct: 0,
+            explanation:
+              "Suku pertama (a) = 8, Rasio (r) = 4/8 = 1/2. Rumus S_tak_hingga = a / (1 - r) = 8 / (1 - 1/2) = 8 / (1/2) = 16.",
+          },
+          {
+            id: 10,
+            text: "Seorang pedagang ingin membeli lemari dan rak buku tidak lebih dari 15 buah. Harga lemari Rp 150.000, harga rak buku Rp 100.000, uang tersedia Rp 1.800.000. Jika lemari = x dan rak buku = y, model matematikanya adalah ...",
+            options: [
+              "x + y <= 15 ; 3x + 2y <= 36 ; x >= 0 ; y >= 0",
+              "x + y <= 15 ; 2x + 3y <= 36 ; x >= 0 ; y >= 0",
+              "x + y <= 15 ; 2x + 3y >= 36 ; x >= 0 ; y >= 0",
+              "x + y <= 15 ; 3x + 2y >= 36 ; x >= 0 ; y >= 0",
+              "x + y >= 15 ; 3x + 2y <= 36 ; x >= 0 ; y >= 0",
+            ],
+            correct: 0,
+            explanation:
+              "Kapasitas barang: x + y <= 15. Modal: 150.000x + 100.000y <= 1.800.000 (disederhanakan dibagi 50.000 menjadi 3x + 2y <= 36). Syarat mutlak: x >= 0 dan y >= 0.",
+          },
+          {
+            id: 11,
+            text: "Kuartil kedua dari data tabel distribusi frekuensi (48-52: 10, 53-57: 12, 58-62: 14, 63-67: 8, 68-72: 6) adalah ...",
+            options: ["58,57", "60,27", "64,37", "66,57", "70,27"],
+            correct: 0,
+            explanation:
+              "Letak Q2 = 1/2 * 50 = 25 (berada di kelas 58-62). Tb = 57,5, p = 5, Fk = 22, f = 14. Q2 = 57,5 + ((25 - 22)/14) * 5 = 57,5 + 1,07 = 58,57.",
+          },
+          {
+            id: 12,
+            text: "Simpangan rata-rata dari data : 4, 5, 5, 6, 7 dan 9 adalah ....",
+            options: ["1,33", "0,25", "0,45", "0,60", "0,75"],
+            correct: 0,
+            explanation:
+              "Rata-rata = 36 / 6 = 6. Simpangan rata-rata = (|4-6| + |5-6| + |5-6| + |6-6| + |7-6| + |9-6|) / 6 = (2 + 1 + 1 + 0 + 1 + 3) / 6 = 8 / 6 = 1,33.",
+          },
+          {
+            id: 13,
+            text: "Median dari data pada tabel distribusi (41-45: 4, 46-50: 10, 51-55: 20, 56-60: 11, 61-65: 5) adalah ....",
+            options: ["53,25", "52,50", "52,75", "53", "53,50"],
+            correct: 0,
+            explanation:
+              "Letak Median = 1/2 * 50 = 25 (berada di kelas 51-55). Tb = 50,5, p = 5, Fk = 14, f = 20. Median = 50,5 + ((25 - 14)/20) * 5 = 50,5 + 2,75 = 53,25.",
+          },
+          {
+            id: 14,
+            text: "Modus dari data pada tabel distribusi frekuensi (70-74: 4, 75-79: 10, 80-84: 16, 85-89: 12, 90-94: 8) adalah ....",
+            options: ["82,5", "75,5", "77,3", "79,5", "80,3"],
+            correct: 0,
+            explanation:
+              "Kelas modus adalah 80-84 karena frekuensi tertinggi (16). Tb = 79,5, d1 = 16-10 = 6, d2 = 16-12 = 4, p = 5. Modus = 79,5 + (6 / (6+4)) * 5 = 79,5 + 3 = 82,5.",
+          },
+          {
+            id: 15,
+            text: "Persentil ke-60 dari distribusi frekuensi dengan total data 80 (kelas 160-169 berfrekuensi 25 dengan Fk sblmnya 24) adalah ....",
+            options: ["169,1", "159,5", "160,7", "175,5", "186,0"],
+            correct: 0,
+            explanation:
+              "Letak P60 = (60/100) * 80 = 48 (berada di kelas 160-169). Tb = 159,5, Fk = 24, f = 25, p = 10. P60 = 159,5 + ((48 - 24)/25) * 10 = 159,5 + 9,6 = 169,1.",
+          },
+          {
+            id: 16,
+            text: "Penyelesaian dari Sistem pertidaksamaan: 3x + 2y <= 36, x + 2y >= 20, x >= 0, dan y >= 0 terletak pada daerah....",
+            options: ["I", "II", "III", "IV", "V"],
+            correct: 2,
+            explanation:
+              "Garis 3x+2y=36 (memotong di 0,18 dan 12,0), tanda <= berarti arsir ke bawah. Garis x+2y=20 (memotong di 0,10 dan 20,0), tanda >= berarti arsir ke atas. Irisannya di kuadran 1 adalah daerah III.",
+          },
+          {
+            id: 17,
+            text: "Daerah yang diarsir pada grafik memotong sumbu Y di 5 dan 3, serta sumbu X di 2 dan 3. Sistem pertidaksamaan tersebut adalah....",
+            options: [
+              "5x + 2y <= 10 ; x + y <= 3 ; x >= 0 ; y >= 0",
+              "5x + 2y >= 10 ; x + y <= 3 ; x >= 0 ; y >= 0",
+              "5x + 2y <= 10 ; x + y >= 3 ; x >= 0 ; y >= 0",
+              "2x + 5y <= 10 ; x + y <= 3 ; x >= 0 ; y >= 0",
+              "2x + 5y >= 10 ; x + y >= 3 ; x >= 0 ; y >= 0",
+            ],
+            correct: 0,
+            explanation:
+              "Garis melalui (0,5) dan (2,0) adalah 5x+2y=10, arsir di bawah berarti <= 10. Garis melalui (0,3) dan (3,0) adalah x+y=3, arsir di bawah berarti <= 3.",
+          },
+          {
+            id: 18,
+            text: "Nilai maksimum dari fungsi obyektif f(x,y) = 5x + 4y pada grafik poligon dengan titik sudut P(0,3), O(4,6), N(6,4), M(9,2), L(7,0), K(4,0) terletak pada titik....",
+            options: ["M(9,2)", "N(6,4)", "O(4,6)", "L(7,0)", "P(0,3)"],
+            correct: 0,
+            explanation:
+              "Uji setiap titik ke fungsi 5x+4y. O(4,6)=44, N(6,4)=46, M(9,2)=53, L(7,0)=35. Nilai tertinggi adalah 53 pada titik M(9,2).",
+          },
+          {
+            id: 19,
+            text: "Daerah yang diarsir dibatasi garis yang melalui (0,8) & (4,0) serta (0,5) & (5,0). Nilai maksimum dari fungsi obyektif f(x,y) = 6x + 4y adalah ....",
+            options: ["26", "24", "20", "30", "32"],
+            correct: 0,
+            explanation:
+              "Garis 1: 2x+y=8. Garis 2: x+y=5. Titik potongnya (3,2). Uji titik sudut daerah (0,0), (4,0), (0,5), (3,2) ke f(x,y)=6x+4y. f(4,0)=24, f(0,5)=20, f(3,2)=26. Maksimum adalah 26.",
+          },
+          {
+            id: 20,
+            text: "Daerah penyelesaian dari sistem pertidaksamaan: 2x+3y >= 6 ; 2x+y <= 4 ; x >= 0 ; y >= 0 terletak pada daerah ....",
+            options: ["I", "II", "III", "IV", "V"],
+            correct: 2,
+            explanation:
+              "Garis 2x+3y=6 memotong di (0,2) dan (3,0); tanda >= berarti arsir ke atas. Garis 2x+y=4 memotong di (0,4) dan (2,0); tanda <= berarti arsir ke bawah. Irisan keduanya adalah daerah III.",
+          },
+          {
+            id: 21,
+            text: "Diketahui matriks A = [[1, -1, 3], [5, 2, -1]] dan B = [[-1, 2], [2, 0], [1, -1]]. Hasil dari A x B adalah ....",
+            options: [
+              "[[0, -1], [-2, 11]]",
+              "[[0, 1], [2, 11]]",
+              "[[0, 1], [-2, 11]]",
+              "[[0, -1], [2, -11]]",
+              "[[0, -1], [-2, -11]]",
+            ],
+            correct: 0,
+            explanation:
+              "A x B = [[(1*-1)+(-1*2)+(3*1), (1*2)+(-1*0)+(3*-1)], [(5*-1)+(2*2)+(-1*1), (5*2)+(2*0)+(-1*-1)]] = [[-1-2+3, 2+0-3], [-5+4-1, 10+0+1]] = [[0, -1], [-2, 11]].",
+          },
+        ],
+      },
+    },
+  },
 };
