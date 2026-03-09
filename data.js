@@ -2147,6 +2147,1072 @@ window.QUIZ_DATABASE = {
       },
     },
   },
+  // ══════════════════════════════════════════════════════════════════
+
+  // ══════════════════════════════════════════════════════════════════
+  //
+  // ╔══════════════════════════════════════════════════════════════╗
+  // ║              ANALISIS STRATEGIS KISI-KISI                   ║
+  // ╠══════════════════════════════════════════════════════════════╣
+  // ║                                                              ║
+  // ║  DISTRIBUSI TOPIK (45 soal):                                 ║
+  // ║  ─────────────────────────────────────────                    ║
+  // ║  Harmoni & Keberagaman        : 8 soal  (1-5, 8, 22-23)     ║
+  // ║  Jenis & Penyebab Konflik     : 7 soal  (6-7, 20, 24,       ║
+  // ║                                          31-33)              ║
+  // ║  Faktor Pendorong/Penghambat  : 4 soal  (34-36, 9)          ║
+  // ║  Penyelesaian Konflik         : 12 soal (13-19, 28, 41-45)  ║
+  // ║  Nilai Pancasila & Konflik    : 7 soal  (10-12, 25-27, 37)  ║
+  // ║  Peran Warga & Gagasan Solutif: 7 soal  (21, 29-30, 38-40)  ║
+  // ║                                                              ║
+  // ║  TOP 3 TOPIK PALING BANYAK KELUAR:                          ║
+  // ║  🥇 Penyelesaian Konflik (negosiasi/mediasi/arbitrase)      ║
+  // ║  🥈 Harmoni & Sikap dalam Keberagaman                       ║
+  // ║  🥉 Nilai Pancasila dalam Mengatasi Konflik                 ║
+  // ║                                                              ║
+  // ║  KUNCI SUKSES:                                               ║
+  // ║  • Hafal perbedaan NEGOSIASI vs MEDIASI vs ARBITRASE        ║
+  // ║  • Pahami 5 sila Pancasila & kaitannya dgn konflik          ║
+  // ║  • Bedakan EGOISME vs ETNOSENTRISME vs EKSKLUSIVISME        ║
+  // ║  • Hafal faktor pendorong vs penghambat harmoni             ║
+  // ║  • Pahami jenis konflik: SARA + ideologi + politik          ║
+  // ║                                                              ║
+  // ╚══════════════════════════════════════════════════════════════╝
+
+  PPKN: {
+    label: "Pendidikan Pancasila & Kewarganegaraan",
+    icon: "Book",
+    color: "from-rose-500 to-pink-400",
+    chapters: {
+      1: {
+        title: "Harmoni dalam Keberagaman",
+        desc: "Harmoni keberagaman SARA, toleransi, faktor penyebab & pencegah konflik, serta penyelesaian konflik sesuai Pancasila.",
+        questions: [
+          // ═══════════════════════════════════════════════════════════
+          // BLOK A: HARMONI & KEBERAGAMAN (Soal 1-5, 8)
+          // Kisi-kisi: Bentuk harmoni, sikap menumbuhkan harmoni,
+          //           tindakan mencerminkan harmoni, makna keberagaman,
+          //           pencegah konflik, toleransi
+          // Materi: Bab 1A - Pentingnya Harmoni dalam Keberagaman
+          //         Bab 1A.2 - Cara Menumbuhkan Harmoni
+          // ═══════════════════════════════════════════════════════════
+
+          {
+            id: 1,
+            type: "single",
+            // KISI-KISI #1: "Disajikan kasus, Peserta didik menentukan
+            //                bentuk harmoni dalam keberagaman agama"
+            // MATERI: Keberagaman agama - Indonesia mengakui 6 agama,
+            //         toleransi beragama, trikerukunan beragama
+            text: "Pak Harun pemilik warung makan yang berjualan pada pagi hingga sore hari. Pada siang hari di bulan puasa, Pak Harun hanya membuka pintu utama dari warung tersebut. Pak Harun juga tidak melayani pembeli yang hendak makan di tempat. Pak Harun hanya menerima pembelian dalam kemasan atau dibungkus.\n\nTindakan Pak Harun bermanfaat bagi terwujudnya harmoni dalam keberagaman….",
+            options: ["ras", "suku", "agama", "sosial budaya", "antargolongan"],
+            correct: 2,
+            explanation:
+              "Tindakan Pak Harun berkaitan dengan menghormati umat Islam yang sedang menjalankan ibadah puasa di bulan Ramadan. Ini merupakan bentuk harmoni dalam keberagaman AGAMA — sesuai materi tentang trikerukunan beragama dan toleransi antarumat beragama.",
+            kisikisi:
+              "Disajikan kasus → menentukan bentuk harmoni dalam keberagaman agama",
+            tipsBelajar:
+              "KUNCI: Identifikasi kata kunci dalam soal. 'Bulan puasa' = agama Islam = keberagaman AGAMA. Kalau soal menyebut ciri fisik = RAS, bahasa/kebiasaan daerah = SUKU.",
+          },
+
+          {
+            id: 2,
+            type: "single",
+            // KISI-KISI #2: "Peserta didik menentukan sikap yang
+            //                menumbuhkan harmoni"
+            // MATERI: Bab 1A.2e - Meningkatkan Sikap Simpati dan Empati
+            //         Simpati = rasa ketertarikan, Empati = perasaan mendalam + TINDAKAN
+            text: "Galih baru saja mendengar kabar bahwa rumah milik Jihan terbakar. Galih sebagai ketua kelas segera mengajak teman-teman untuk memberi bantuan kepada Jihan, baik dalam bentuk dana, pakaian, maupun makanan.\n\nTindakan Galih dapat menumbuhkan harmoni dalam keberagaman karena telah menunjukkan sikap….",
+            options: ["kritis", "disiplin", "simpati", "empati", "toleransi"],
+            correct: 3,
+            explanation:
+              "EMPATI ≠ SIMPATI. Simpati = ikut merasakan perasaan orang lain (hanya di level perasaan). Empati = turut merasakan DAN melakukan TINDAKAN NYATA untuk membantu. Galih BERTINDAK nyata (mengajak teman mengumpulkan bantuan), bukan sekadar merasa iba.",
+            kisikisi: "Menentukan sikap yang menumbuhkan harmoni",
+            tipsBelajar:
+              "RUMUS CEPAT: Ada TINDAKAN NYATA membantu? → EMPATI. Hanya merasa kasihan/iba? → SIMPATI. Ini jebakan klasik di ujian!",
+          },
+
+          {
+            id: 3,
+            type: "single",
+            // KISI-KISI #3: "Peserta didik mengidentifikasi tindakan
+            //                yang mencerminkan harmoni"
+            // MATERI: Keberagaman budaya sebagai kekayaan bangsa
+            text: "Indonesia memiliki keberagaman budaya dengan ciri khasnya masing-masing. Budaya Indonesia pernah diklaim oleh negara lain, seperti reog Ponorogo dan angklung. Saat klaim terjadi, seluruh masyarakat geram dan bersatu memperjuangkan kebudayaan tersebut.\n\nBerdasarkan pernyataan tersebut dapat disimpulkan bahwa….",
+            options: [
+              "kekuatan negara lain sangat kuat dan harus diwaspadai",
+              "keberagaman budaya menjadi kekayaan bangsa yang harus dijaga keberadaannya",
+              "budaya daerah dapat menjadi budaya nasional apabila mendapat pengakuan negara lain",
+              "keberagaman budaya harus diminimalisasi untuk mencegah terjadinya klaim di kemudian hari",
+              "kebudayaan Indonesia tidak akan diklaim apabila pemerintah mampu memperkuat struktur pemerintahan",
+            ],
+            correct: 1,
+            explanation:
+              "Keberagaman budaya adalah KEKAYAAN bangsa, bukan beban. Fakta bahwa seluruh masyarakat BERSATU saat budaya diklaim menunjukkan keberagaman justru memperkuat persatuan. Sesuai materi: keberagaman tidak menjadi penghalang persatuan, melainkan kekayaan dan kekuatan bangsa.",
+            kisikisi: "Mengidentifikasi tindakan yang mencerminkan harmoni",
+            tipsBelajar:
+              "Pilihan yang bernada NEGATIF terhadap keberagaman (diminimalisasi, dihapus, dibatasi) PASTI SALAH. Pancasila selalu memandang keberagaman sebagai POSITIF.",
+          },
+
+          {
+            id: 4,
+            type: "single",
+            // KISI-KISI #4: "Peserta didik menyimpulkan makna keberagaman budaya"
+            // → Soal ini sebenarnya tentang PENGHAMBAT harmoni (egoisme)
+            // MATERI: Bab 1A.4b - Faktor Penghambat: Egoisme, Etnosentrisme, Eksklusivisme
+            text: "Putri berangkat sekolah menggunakan angkutan umum. Putri mendapatkan kursi dan meletakkan tas di kursi sebelah yang kosong. Saat bus berhenti di halte, ada penumpang yang naik. Putri tetap asyik bermain telepon genggam dan enggan memberikan kursi kepada penumpang tersebut. Akhirnya, penumpang tersebut harus berdiri sepanjang perjalanan.\n\nTindakan Putri dapat menghambat terwujudnya harmoni dalam keberagaman karena adanya sikap….",
+            options: [
+              "primordialisme",
+              "konsumerisme",
+              "etnosentrisme",
+              "eksklusivisme",
+              "egoisme",
+            ],
+            correct: 4,
+            explanation:
+              "EGOISME = mementingkan diri sendiri tanpa peduli orang lain. Putri hanya memikirkan kenyamanan pribadinya. BUKAN etnosentrisme (mengunggulkan budaya sendiri) atau eksklusivisme (memisahkan diri dari masyarakat).",
+            kisikisi:
+              "Menyimpulkan makna keberagaman budaya → penghambat harmoni",
+            tipsBelajar:
+              "HAFAL 3 PENGHAMBAT: EGOISME (mentingin diri sendiri), ETNOSENTRISME (budaya sendiri paling hebat), EKSKLUSIVISME (menutup diri dari masyarakat). Soal akan kasih skenario → kamu tentukan yang mana.",
+          },
+
+          {
+            id: 5,
+            type: "single",
+            // KISI-KISI #5: "Peserta didik mengidentifikasi tindakan
+            //                pencegah konflik"
+            // MATERI: Cara menumbuhkan harmoni - toleransi, saling menghargai
+            text: "Adanya perbedaan suku, agama, ras, dan antargolongan tidak akan menimbulkan konflik dalam kehidupan masyarakat jika….",
+            options: [
+              "anggota masyarakat menganggap bahasa daerah sebagai pemicu konflik",
+              "kepentingan pribadi diutamakan daripada kepentingan bersama",
+              "tiap-tiap suku bangsa mengutamakan kepentingan pribadi",
+              "anggota masyarakat mengunggulkan kebudayaan daerah",
+              "masyarakat menghargai perbedaan warna kulit",
+            ],
+            correct: 4,
+            explanation:
+              "Saling MENGHARGAI perbedaan (termasuk warna kulit/ras) adalah kunci pencegahan konflik SARA. Pilihan lain justru memicu konflik: egoisme (B,C), etnosentrisme (D), dan sikap keliru terhadap bahasa daerah (A).",
+            kisikisi: "Mengidentifikasi tindakan pencegah konflik",
+            tipsBelajar:
+              "Teknik eliminasi: buang pilihan yang mengandung kata 'mengutamakan kepentingan pribadi', 'mengunggulkan', 'menganggap sebagai pemicu'. Pilihan yang bernada POSITIF dan INKLUSIF biasanya benar.",
+          },
+
+          {
+            id: 6,
+            type: "single",
+            // KISI-KISI #6: "Peserta didik menentukan jenis konflik
+            //                berdasarkan kasus"
+            // MATERI: Jenis konflik - antarsuku (perbedaan bahasa/kebiasaan daerah)
+            text: "Bu Tari adalah guru yang berasal dari suku Jawa. Beliau mengajar di DKI Jakarta. Meskipun bahasa Jawa menjadi bahasa kesehariannya, kini Bu Tari menggunakan bahasa Indonesia saat mengajar.\n\nTindakan Bu Tari dapat mencegah konflik karena….",
+            options: [
+              "mampu bekerja di kota metropolitan",
+              "bersedia mengajar di luar wilayah kesukuan",
+              "menggunakan bahasa Indonesia saat mengajar",
+              "melestarikan bahasa Jawa sebagai bahasa ibu",
+              "tidak membedakan peserta didik yang berbeda suku",
+            ],
+            correct: 2,
+            explanation:
+              "Menggunakan bahasa Indonesia sebagai bahasa pengantar di lingkungan yang beragam suku mencegah miskomunikasi dan konflik. Sesuai materi: bahasa Indonesia hadir sebagai bahasa persatuan yang mencegah konflik akibat keberagaman bahasa.",
+            kisikisi:
+              "Menentukan jenis konflik berdasarkan kasus → pencegahan melalui bahasa persatuan",
+            tipsBelajar:
+              "Kata kunci: 'bahasa daerah' vs 'bahasa Indonesia' = konteks keberagaman SUKU. Bahasa Indonesia = alat PEMERSATU.",
+          },
+
+          {
+            id: 7,
+            type: "single",
+            // KISI-KISI #7: "Peserta didik menyimpulkan faktor penyebab konflik"
+            // MATERI: Kerja sama dalam keberagaman, saling melengkapi
+            text: "Eko dan Leo memiliki postur tubuh yang berbeda. Eko berbadan tinggi dan kurus, Leo berbadan pendek dan gemuk. Saat kerja bakti, Leo hendak memotong ranting pohon yang menjuntai ke jalan, tetapi tidak mampu menggapainya dan akhirnya dibantu oleh Eko.\n\nTindakan Eko dapat mencegah terjadinya konflik karena….",
+            options: [
+              "mengedepankan sikap egoisme",
+              "mengutamakan kepentingan pribadi",
+              "mengembangkan sikap etnosentrisme",
+              "mampu bekerja sama dalam keberagaman",
+              "menghapuskan diskriminasi di lingkungan masyarakat",
+            ],
+            correct: 3,
+            explanation:
+              "Eko memanfaatkan kelebihannya (tinggi badan) untuk membantu Leo. Ini menunjukkan kerja sama dalam keberagaman — saling melengkapi kelebihan dan kekurangan masing-masing.",
+            kisikisi:
+              "Menyimpulkan faktor penyebab konflik → kebalikannya: kerja sama mencegah konflik",
+            tipsBelajar:
+              "Soal ini sebenarnya tentang PENCEGAH konflik (kebalikan dari penyebab). Kerja sama = saling melengkapi = harmoni.",
+          },
+
+          {
+            id: 8,
+            type: "single",
+            // KISI-KISI #8: "Peserta didik menentukan bentuk toleransi
+            //                dalam keberagaman"
+            // MATERI: Jenis konflik berdasarkan keberagaman RAS
+            text: "Lala berasal dari daerah X dan kuliah di daerah Y. Saat hendak ke kelas, Lala tersenggol oleh temannya hingga menyebabkan buku yang dibawa berserakan. Tanpa berpikir panjang, Lala langsung memaki dengan menyertakan kalimat tidak pantas terkait ciri fisik temannya.\n\nTindakan Lala tentu dapat menyebabkan konflik dalam keberagaman….",
+            options: ["ras", "suku", "agama", "sosial budaya", "antargolongan"],
+            correct: 0,
+            explanation:
+              "Kata kunci: 'CIRI FISIK'. Ciri fisik (warna kulit, bentuk wajah, rambut) berkaitan dengan RAS. Jika menyebut bahasa/kebiasaan = SUKU. Jika menyebut ibadah/ritual = AGAMA. Jika menyebut status/pekerjaan = ANTARGOLONGAN.",
+            kisikisi:
+              "Menentukan bentuk toleransi dalam keberagaman → identifikasi jenis keberagaman (ras)",
+            tipsBelajar:
+              "CHEAT SHEET JENIS KEBERAGAMAN:\n• Ciri fisik (kulit, wajah, rambut) → RAS\n• Bahasa, adat, kebiasaan daerah → SUKU\n• Ibadah, kitab suci, hari raya → AGAMA\n• Pekerjaan, pendidikan, status → ANTARGOLONGAN\n• Tarian, makanan, pakaian adat → SOSIAL BUDAYA",
+          },
+
+          // ═══════════════════════════════════════════════════════════
+          // BLOK B: PENYELESAIAN KONFLIK & NILAI PANCASILA (Soal 9-18)
+          // Kisi-kisi: Cara menyikapi perbedaan, sila yang sesuai,
+          //           solusi konflik agama, prinsip Pancasila,
+          //           hak pihak ketiga, musyawarah, toleransi
+          // Materi: Bab 1C - Strategi Mengatasi Konflik
+          //         Bab 1C.1 - Prinsip Mengatasi Konflik sesuai Pancasila
+          //         Bab 1C.2 - Metode Penyelesaian Konflik
+          // ═══════════════════════════════════════════════════════════
+
+          {
+            id: 9,
+            type: "single",
+            // KISI-KISI #9: "Peserta didik menentukan cara menyikapi
+            //                perbedaan pendapat"
+            // MATERI: Faktor penyebab konflik - perkembangan iptek
+            text: "Masyarakat Anti Fitnah Indonesia (Mafindo) meluncurkan aplikasi berbasis android bernama Hoax Buster Tools (HBT). Aplikasi ini dapat memberantas konten-konten negatif atau berita hoaks yang kini makin marak beredar di masyarakat.\n\nJika dikaitkan dengan faktor penyebab konflik dalam kelompok masyarakat, dapat disimpulkan bahwa….",
+            options: [
+              "hoaks terjadi karena adanya ketidakberdayaan masyarakat dalam bidang ekonomi",
+              "aplikasi yang telah diluncurkan mampu menghapuskan perbedaan pandangan politik",
+              "hoaks menjadi salah satu produk yang lahir karena adanya perkembangan iptek yang begitu pesat",
+              "ketidakmampuan menyesuaikan diri dengan lingkungan dapat menyebabkan maraknya hoaks",
+              "literasi masyarakat dapat meningkat sehingga konflik dapat dicegah karena tidak adanya hoaks",
+            ],
+            correct: 2,
+            explanation:
+              "Hoaks = produk dari perkembangan teknologi (media sosial, internet). Sesuai materi Bab 1B - Cakap Literasi: perkembangan teknologi yang begitu pesat bisa berdampak negatif, salah satunya munculnya konflik dalam keberagaman melalui hoaks.",
+            kisikisi:
+              "Menentukan cara menyikapi perbedaan pendapat → konteks: hoaks sebagai produk iptek",
+            tipsBelajar:
+              "Soal hoaks SELALU dikaitkan dengan faktor 'perkembangan IPTEK'. Bukan ekonomi, bukan demografis.",
+          },
+
+          {
+            id: 10,
+            type: "single",
+            // KISI-KISI #10: "Peserta didik menentukan sila yang sesuai"
+            // MATERI: Faktor penyebab konflik - kemiskinan/ketidakberdayaan ekonomi
+            text: "Pemerintah telah mengeluarkan program pelatihan kerja dan penyaluran tenaga kerja bagi masyarakat Indonesia. Konflik dalam kelompok masyarakat dapat diminimalisasi karena program tersebut mampu….",
+            options: [
+              "meningkatkan literasi masyarakat",
+              "mencegah terjadinya diskriminasi",
+              "menurunkan angka pengangguran",
+              "menghapuskan kesenjangan sosial",
+              "meningkatkan kehidupan yang demokratis",
+            ],
+            correct: 2,
+            explanation:
+              "Program pelatihan kerja + penyaluran tenaga kerja = menurunkan pengangguran. Sesuai materi: kemiskinan/pengangguran = faktor penyebab konflik ekonomi. Dengan menurunkan pengangguran, konflik bisa diminimalisasi.",
+            kisikisi:
+              "Menentukan sila yang sesuai → konteks: program pemerintah mengatasi faktor ekonomi konflik",
+            tipsBelajar:
+              "Hubungkan PROGRAM dengan TUJUAN LANGSUNG-nya. Pelatihan kerja → pengangguran turun. Jangan melompat ke jawaban yang terlalu luas (kesenjangan sosial, demokratis).",
+          },
+
+          {
+            id: 11,
+            type: "single",
+            // KISI-KISI #11: "Peserta didik menentukan solusi konflik agama"
+            // → Sebenarnya tentang musyawarah sesuai sila ke-4
+            // MATERI: Bab 1C.1d - Kerakyatan (Sila ke-4) → musyawarah
+            text: "Setiap orang memiliki hak menyampaikan pendapat. Pendapat yang beragam seringkali menimbulkan konflik. Oleh karena itu, perbedaan pendapat harus disikapi sesuai nilai-nilai Pancasila dengan cara….",
+            options: [
+              "menghindari perbedaan pendapat dalam musyawarah",
+              "melakukan musyawarah untuk menyelesaikan perbedaan pendapat",
+              "menggunakan kekerasan untuk menyelesaikan perbedaan pendapat",
+              "menolak pendapat orang lain yang bersifat merugikan secara pribadi",
+              "mengutamakan pendapat dari orang yang memiliki tingkat pendidikan tinggi",
+            ],
+            correct: 1,
+            explanation:
+              "Sila ke-4 Pancasila menghendaki penyelesaian perbedaan pendapat melalui MUSYAWARAH MUFAKAT. Musyawarah memberi ruang bagi semua pihak untuk berpendapat dan mencari solusi bersama.",
+            kisikisi:
+              "Menentukan solusi konflik agama → penyelesaian melalui musyawarah (sila ke-4)",
+            tipsBelajar:
+              "Jika soal bertanya 'sesuai nilai Pancasila' + 'perbedaan pendapat' → jawabannya SELALU musyawarah.",
+          },
+
+          {
+            id: 12,
+            type: "single",
+            // KISI-KISI #12: "Peserta didik menentukan prinsip Pancasila
+            //                 yang dilanggar"
+            // MATERI: Bab 1C.1b - Kemanusiaan yang Adil dan Beradab (Sila ke-2) → HAM
+            text: "Setiap orang memiliki hak asasi yang harus dijaga dan dihormati. Penyelesaian konflik dengan memperhatikan hak asasi manusia sesuai dengan prinsip sila….",
+            options: [
+              "Ketuhanan Yang Maha Esa",
+              "Kemanusiaan yang adil dan beradab",
+              "Persatuan Indonesia",
+              "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan",
+              "Keadilan sosial bagi seluruh rakyat Indonesia",
+            ],
+            correct: 1,
+            explanation:
+              "HAK ASASI MANUSIA (HAM) = sila ke-2 (Kemanusiaan yang adil dan beradab). Sila ini menekankan pengakuan harkat dan martabat manusia serta penghormatan terhadap hak asasi setiap individu.",
+            kisikisi:
+              "Menentukan prinsip Pancasila yang dilanggar → sila ke-2 dan HAM",
+            tipsBelajar:
+              "HAFAL KAITAN SILA-KONSEP:\n• Sila 1 → agama, ketuhanan, toleransi beragama\n• Sila 2 → HAM, kemanusiaan, martabat manusia\n• Sila 3 → persatuan, keragaman, nasionalisme\n• Sila 4 → musyawarah, demokrasi, pendapat\n• Sila 5 → keadilan, kesejahteraan, pemerataan",
+          },
+
+          {
+            id: 13,
+            type: "single",
+            // KISI-KISI #13: "Peserta didik menentukan hak pihak ketiga"
+            // → Konteks: dialog agama sesuai Pancasila
+            // MATERI: Bab 1C.1a - Ketuhanan Yang Maha Esa → toleransi beragama
+            text: "Agama menjadi salah satu keberagaman yang rawan terjadi konflik. Konflik antaragama harus diselesaikan sesuai dengan nilai-nilai Pancasila yang menghendaki adanya….",
+            options: [
+              "intoleransi antaragama",
+              "dialog antarumat beragama",
+              "penghapusan agama tertentu",
+              "satu agama sebagai agama resmi",
+              "perbedaan perlakuan antarumat beragama",
+            ],
+            correct: 1,
+            explanation:
+              "Pancasila menghendaki DIALOG antarumat beragama sebagai cara menyelesaikan konflik agama. Bukan intoleransi, penghapusan, atau diskriminasi. Sesuai sila ke-1: menghormati keyakinan masing-masing.",
+            kisikisi:
+              "Menentukan hak pihak ketiga → konteks: solusi konflik agama = dialog",
+            tipsBelajar:
+              "Soal tentang konflik AGAMA → jawaban yang tepat selalu bernada DIALOG, TOLERANSI, SALING MENGHORMATI. Bukan penghapusan atau penyeragaman.",
+          },
+
+          {
+            id: 14,
+            type: "single",
+            // KISI-KISI #14: "Peserta didik menentukan alasan musyawarah efektif"
+            // → Konteks: black campaign melanggar prinsip kemanusiaan
+            // MATERI: Bab 1C.1b - Kemanusiaan yang Adil dan Beradab
+            text: "Pemilihan kepala desa X diikuti oleh tiga kandidat. Tim sukses calon kepala desa A melakukan aksi black campaign terhadap calon kepala desa B maupun C. Tindakan itu dilakukan melalui media sosial.\n\nTindakan tim sukses calon kepala desa A dapat menyebabkan konflik karena bertentangan dengan prinsip….",
+            options: [
+              "ketuhanan",
+              "kemanusiaan",
+              "persatuan",
+              "kerakyatan",
+              "keadilan",
+            ],
+            correct: 1,
+            explanation:
+              "Black campaign = menyerang KEHORMATAN dan MARTABAT seseorang. Ini bertentangan dengan prinsip KEMANUSIAAN (sila ke-2) yang menghendaki setiap manusia diperlakukan secara adil dan beradab.",
+            kisikisi:
+              "Menentukan alasan musyawarah efektif → prinsip Pancasila yang dilanggar (kemanusiaan)",
+            tipsBelajar:
+              "Black campaign/fitnah/pencemaran nama baik = melanggar KEMANUSIAAN (sila 2). Kalau soal tentang 'menyerang pribadi/martabat' → sila 2.",
+          },
+
+          {
+            id: 15,
+            type: "single",
+            // KISI-KISI #15: "Peserta didik menentukan perilaku toleransi"
+            // → Hak mediator dalam penyelesaian konflik
+            // MATERI: Bab 1C.2b - Mediasi: mediator memberikan SARAN, tidak memaksa
+            text: "Ketika kedua belah pihak yang berkonflik tidak mampu menyelesaikan masalah, mereka diperkenankan menghadirkan mediator sebagai pihak ketiga. Pihak ketiga tersebut memiliki hak untuk….",
+            options: [
+              "menjadi saksi di persidangan",
+              "mengajukan kasasi ke Mahkamah Agung",
+              "mendaftarkan permasalahan ke meja hijau",
+              "melakukan penuntutan terhadap salah satu pihak",
+              "memberikan saran atas permasalahan yang terjadi",
+            ],
+            correct: 4,
+            explanation:
+              "MEDIATOR hanya berhak MEMBERIKAN SARAN, BUKAN memutuskan. Mediator bersifat netral dan tidak memaksa. Berbeda dengan ARBITER yang keputusannya MENGIKAT dan HARUS ditaati.",
+            kisikisi:
+              "Menentukan perilaku toleransi → hak mediator = memberikan saran",
+            tipsBelajar:
+              "PERBEDAAN KRUSIAL:\n• MEDIATOR → saran saja, TIDAK mengikat\n• ARBITER → keputusan MENGIKAT, HARUS ditaati\n• HAKIM → keputusan memiliki kekuatan HUKUM",
+          },
+
+          {
+            id: 16,
+            type: "single",
+            // KISI-KISI #16: "Peserta didik menyimpulkan cara menghindari konflik"
+            // MATERI: Bab 1C.2b - Mediasi: Komnas HAM sebagai mediator
+            text: "Komnas HAM menyikapi peristiwa konflik lahan warga di Pulau Rempang, Galang, dan Galang Baru yang berujung bentrok. Komnas HAM menyatakan tengah melakukan mediasi atas masalah tersebut dan berupaya menyelesaikan dugaan pelanggaran HAM serta pemulihan hak-hak korban.\n\nJika dikaitkan dengan metode penyelesaian konflik dapat disimpulkan bahwa….",
+            options: [
+              "Komnas HAM bertindak sebagai arbiter",
+              "Komnas HAM bertindak sebagai mediator",
+              "permasalahan dapat diselesaikan melalui proses peradilan",
+              "konflik lahan sebaiknya diselesaikan melalui musyawarah mufakat",
+              "negosiasi berjalan alot sehingga perlu mendatangkan Komnas HAM",
+            ],
+            correct: 1,
+            explanation:
+              "Soal menyebutkan 'melakukan MEDIASI' → berarti Komnas HAM bertindak sebagai MEDIATOR. Jawaban langsung dari kata kunci dalam soal.",
+            kisikisi:
+              "Menyimpulkan cara menghindari konflik → identifikasi peran mediator",
+            tipsBelajar:
+              "Trik: cari kata kunci dalam soal. 'Mediasi' = mediator. 'Arbitrase' = arbiter. Jangan overthink!",
+          },
+
+          {
+            id: 17,
+            type: "single",
+            // KISI-KISI #17: "Peserta didik menentukan sila terkait musyawarah"
+            // MATERI: Bab 1C.2d - Musyawarah Mufakat: semua pihak berpendapat
+            text: "Musyawarah menjadi salah satu metode penyelesaian konflik yang efektif karena….",
+            options: [
+              "melibatkan kekuatan militer",
+              "hasil keputusan akan dikodifikasikan",
+              "mengutamakan kepentingan pribadi",
+              "memungkinkan semua pihak untuk berpendapat",
+              "keputusan yang dihasilkan memiliki kekuatan hukum mengikat",
+            ],
+            correct: 3,
+            explanation:
+              "Musyawarah efektif karena SEMUA PIHAK diberi kesempatan berpendapat. Sesuai materi: musyawarah memberi ruang dialog tanpa dominasi satu pihak, mencerminkan sila ke-4 Pancasila.",
+            kisikisi:
+              "Menentukan sila terkait musyawarah → efektivitas musyawarah",
+            tipsBelajar:
+              "Musyawarah efektif BUKAN karena mengikat secara hukum (itu arbitrase/pengadilan), tapi karena semua pihak BISA BERPENDAPAT.",
+          },
+
+          {
+            id: 18,
+            type: "single",
+            // KISI-KISI #18: "Peserta didik menentukan sikap mencerminkan harmoni"
+            // MATERI: Toleransi dalam penyelesaian konflik
+            text: "Dalam penyelesaian konflik, Pancasila menghendaki adanya toleransi. Sikap tersebut dapat ditunjukkan dengan cara….",
+            options: [
+              "mengabaikan pendapat pihak lain",
+              "mengutamakan kepentingan individu",
+              "memaksakan pendapat kepada semua pihak",
+              "menghormati pendapat demi mencapai mufakat",
+              "menolak berbicara dengan pihak yang memiliki pendapat berbeda",
+            ],
+            correct: 3,
+            explanation:
+              "Toleransi = MENGHORMATI perbedaan pendapat dan berusaha mencapai MUFAKAT bersama. Bukan mengabaikan, memaksakan, atau menolak.",
+            kisikisi:
+              "Menentukan sikap mencerminkan harmoni → toleransi = menghormati + mufakat",
+            tipsBelajar:
+              "Jawaban yang mengandung kata 'menghormati' + 'mufakat/bersama' biasanya BENAR untuk soal toleransi.",
+          },
+
+          // ═══════════════════════════════════════════════════════════
+          // BLOK C: PERAN WARGA & APLIKASI (Soal 19-25)
+          // Kisi-kisi: Cara menghindari konflik, jenis konflik,
+          //           manfaat keberagaman, sikap pencegah, identifikasi,
+          //           faktor penyebab, kebijakan sila ke-2
+          // Materi: Bab 1D - Peran Warga Negara
+          //         Bab 1B.2 - Faktor Penyebab Konflik
+          // ═══════════════════════════════════════════════════════════
+
+          {
+            id: 19,
+            type: "single",
+            // KISI-KISI #19: "Peserta didik menentukan langkah efektif
+            //                 mencegah konflik"
+            // MATERI: Bab 1D.1a - Peran individu di keluarga: mediator
+            text: "Fika dan Beno kakak beradik. Saat musyawarah keluarga menentukan tempat rekreasi, Fika ingin ke pantai, Beno ingin ke kebun binatang. Ibu memberikan pendapat bahwa ke pantai sebaiknya dihindari karena musim hujan. Pendapat ibu diterima dan diputuskan rekreasi ke kebun binatang.\n\nWacana tersebut menegaskan bahwa konflik di lingkungan keluarga dapat dihindari ketika….",
+            options: [
+              "seluruh anggota memiliki pikiran yang terbuka",
+              "tidak adanya sikap menuduh antaranggota keluarga",
+              "ada anggota keluarga yang bertindak sebagai mediator",
+              "sikap terburu-buru dalam mengambil keputusan dapat dihindari",
+              "seluruh anggota keluarga menyampaikan pendapat secara bertanggung jawab",
+            ],
+            correct: 2,
+            explanation:
+              "Ibu berperan sebagai MEDIATOR — memberikan saran yang akhirnya diterima. Sesuai materi: di lingkungan keluarga, orang tua bisa menjadi mediator saat anak-anak berkonflik.",
+            kisikisi:
+              "Menentukan langkah efektif mencegah konflik → peran mediator dalam keluarga",
+            tipsBelajar:
+              "Siapa yang 'menengahi' = mediator. Di keluarga: orang tua. Di sekolah: guru/kepala sekolah. Di masyarakat: ketua RT/tokoh masyarakat.",
+          },
+
+          {
+            id: 20,
+            type: "single",
+            // KISI-KISI #20: "Peserta didik menentukan jenis konflik"
+            // MATERI: Bab 1D.1 - Tanggung jawab bersama mencegah konflik
+            text: "Keluarga Pak Gilang memiliki tata tertib yang harus ditaati oleh seluruh anggota keluarga. Salah satu aturan menyatakan bahwa setiap anggota keluarga tidak diperkenankan menyalakan televisi saat jam belajar.\n\nAturan tersebut akan mampu mencegah terjadinya konflik apabila….",
+            options: [
+              "memiliki landasan hukum yang kuat",
+              "dikodifikasikan secara rapi dan sistematis",
+              "adanya pihak yang menjadi arbiter di lingkungan keluarga",
+              "seluruh anggota bertanggung jawab melaksanakan aturan tersebut",
+              "seluruh anggota mampu menjadi mediator ketika adanya pihak yang berkonflik",
+            ],
+            correct: 3,
+            explanation:
+              "Aturan hanya efektif jika SEMUA anggota BERTANGGUNG JAWAB melaksanakannya. Sesuai materi Bab 1D.1: tanggung jawab berarti kewajiban menanggung segala sesuatu, termasuk konflik yang terjadi.",
+            kisikisi:
+              "Menentukan jenis konflik → efektivitas aturan: tanggung jawab bersama",
+            tipsBelajar:
+              "Aturan TANPA tanggung jawab pelaksanaan = sia-sia. Jawaban yang tepat selalu yang menekankan TANGGUNG JAWAB BERSAMA.",
+          },
+
+          {
+            id: 21,
+            type: "single",
+            // KISI-KISI #21: "Peserta didik menentukan manfaat keberagaman"
+            // MATERI: Bab 1D.1 - Peran sekolah: mediasi oleh kepala sekolah
+            text: "Siswa kelas X terlibat konflik dengan siswa kelas XI karena pertandingan sepak bola. Siswa kelas X merasa adanya tindakan curang kelas XI. Akibatnya, kedua kelas saling cekcok. Kepala sekolah memanggil perwakilan kelas untuk melakukan mediasi.\n\nUpaya yang telah dilakukan sekolah memuat konsekuensi bahwa….",
+            options: [
+              "pihak sekolah berhak memberikan skorsing kepada para siswa",
+              "guru perlu meninjau kembali aturan yang diberlakukan di sekolah",
+              "orang tua siswa memiliki kewajiban menanggung segala sesuatu yang terjadi",
+              "kepala sekolah berhak memberikan saran terbaik untuk menyelesaikan masalah",
+              "kepala sekolah wajib melakukan bimbingan dan pendidikan karakter bagi para siswa",
+            ],
+            correct: 3,
+            explanation:
+              "Kepala sekolah bertindak sebagai MEDIATOR → berhak memberikan SARAN terbaik. Ingat: mediator = saran, BUKAN memutuskan/menghukum.",
+            kisikisi:
+              "Menentukan manfaat keberagaman → konsekuensi mediasi di sekolah",
+            tipsBelajar:
+              "Kalau soal menyebut 'mediasi' → konsekuensinya = pihak ketiga MEMBERIKAN SARAN. Bukan skorsing (itu hukuman), bukan kewajiban ortu.",
+          },
+
+          {
+            id: 22,
+            type: "single",
+            // KISI-KISI #22: "Peserta didik menentukan sikap mencegah
+            //                 konflik agama"
+            // MATERI: Bab 1D.2a - Pencegahan konflik: sosialisasi, preventif
+            text: "Dandim 1710/Mimika memberikan sosialisasi tentang wawasan kebangsaan yang dihadiri 255 peserta dari berbagai komponen masyarakat. Materi berkaitan dengan empat pilar kebangsaan dalam bela negara.\n\nKegiatan tersebut merupakan salah satu upaya untuk….",
+            options: [
+              "mencegah konflik",
+              "menghentikan konflik",
+              "meminimalisasi konflik",
+              "merekonstruksi pelayanan publik",
+              "memulihkan keadaan pascakonflik",
+            ],
+            correct: 0,
+            explanation:
+              "SOSIALISASI wawasan kebangsaan = upaya PREVENTIF (PENCEGAHAN) konflik, bukan penghentian (represif) atau pemulihan (kuratif). Sesuai materi: cara preventif = mengembangkan toleransi, latihan bersama, sosialisasi.",
+            kisikisi:
+              "Menentukan sikap mencegah konflik agama → sosialisasi = pencegahan (preventif)",
+            tipsBelajar:
+              "HAFAL 3 JENIS UPAYA:\n• PREVENTIF = SEBELUM konflik (sosialisasi, pelatihan, pendidikan)\n• REPRESIF = SAAT konflik (penangkapan, pembubaran)\n• KURATIF = SETELAH konflik (pemulihan, rekonsiliasi, rehabilitasi)",
+          },
+
+          {
+            id: 23,
+            type: "single",
+            // KISI-KISI #23: "Peserta didik mengidentifikasi hal-hal
+            //                 yang tidak menimbulkan konflik"
+            // MATERI: Bab 1A.4a - Faktor pendorong: infrastruktur merata
+            text: "Pemerintah pusat dan pemerintah daerah memutuskan untuk bekerja sama membangun infrastruktur. Keputusan tersebut dilakukan untuk mendorong terwujudnya harmoni dalam keberagaman dengan cara….",
+            options: [
+              "melakukan pergantian kabinet",
+              "melakukan pembangunan secara merata",
+              "melakukan sosialisasi nilai-nilai Pancasila",
+              "menggalakkan pentingnya melestarikan budaya",
+              "mendaftarkan kebudayaan Indonesia ke UNESCO",
+            ],
+            correct: 1,
+            explanation:
+              "Pembangunan infrastruktur = pembangunan secara MERATA. Sesuai materi: infrastruktur yang merata mempermudah komunikasi antarmasyarakat dan mencegah kesenjangan sosial.",
+            kisikisi:
+              "Mengidentifikasi hal-hal yang tidak menimbulkan konflik → infrastruktur merata",
+            tipsBelajar:
+              "Infrastruktur = pemerataan pembangunan. Ini faktor PENDORONG harmoni menurut materi.",
+          },
+
+          {
+            id: 24,
+            type: "single",
+            // KISI-KISI #24: "Peserta didik menganalisis faktor penyebab konflik"
+            // MATERI: Jenis keberagaman SUKU → perbedaan kebiasaan berkomunikasi
+            text: 'Surya berasal dari Batak. Surya senantiasa menggunakan sapaan salam "Horas" yang diucapkan dengan lantang dan keras. Mendengar Surya mengucapkan salam, Erka yang berasal dari Jawa merasa dibentak oleh Surya.\n\nHal tersebut mencerminkan adanya potensi konflik yang disebabkan adanya keberagaman….',
+            options: ["ras", "suku", "agama", "sosial", "antargolongan"],
+            correct: 1,
+            explanation:
+              "Perbedaan CARA BERKOMUNIKASI antara suku Batak (lantang) dan Jawa (halus) = keberagaman SUKU. Kata kunci: 'Batak', 'Jawa', 'sapaan', 'kebiasaan' → SUKU.",
+            kisikisi: "Menganalisis faktor penyebab konflik → keberagaman suku",
+            tipsBelajar:
+              "Nama suku + kebiasaan/bahasa daerah = SUKU. Jangan tertipu kata 'dibentak' — ini bukan kekerasan fisik, tapi perbedaan kebiasaan berkomunikasi antar-SUKU.",
+          },
+
+          {
+            id: 25,
+            type: "single",
+            // KISI-KISI #25: "Peserta didik mampu menganalisis contoh
+            //                 kebijakan pemerintah yang mencerminkan
+            //                 nilai sila kedua Pancasila"
+            // → Konteks: ketidakberdayaan ekonomi sebagai penyebab konflik
+            // MATERI: Bab 1B.2c - Kemiskinan/ketidakberdayaan ekonomi
+            text: "Pak Fasola menjadi korban PHK perusahaan tekstil. Sebulan kemudian, anak Pak Fasola sakit dan harus segera dioperasi. Kebutuhan dana mendorong Pak Fasola melakukan tindak kriminal dan akhirnya tertangkap warga.\n\nWacana tersebut menunjukkan adanya konflik dalam kelompok masyarakat karena faktor….",
+            options: [
+              "demografis dan geografis",
+              "perbedaan pandangan politik",
+              "rendahnya tingkat pendidikan",
+              "rendahnya literasi masyarakat",
+              "ketidakberdayaan dalam bidang ekonomi",
+            ],
+            correct: 4,
+            explanation:
+              "PHK → tidak punya penghasilan → tidak bisa bayar operasi → terpaksa kriminal. Ini jelas faktor KETIDAKBERDAYAAN EKONOMI. Sesuai materi: kemiskinan/pengangguran menjadi salah satu faktor penyebab konflik.",
+            kisikisi:
+              "Menganalisis kebijakan sila ke-2 → faktor ekonomi sebagai penyebab konflik",
+            tipsBelajar:
+              "PHK + butuh uang + kriminal = EKONOMI. Jangan pilih 'pendidikan' atau 'literasi' — tidak ada indikasi di soal bahwa Pak Fasola kurang pendidikan.",
+          },
+
+          // ═══════════════════════════════════════════════════════════
+          // BLOK D: SOAL HOTS / ANALISIS LANJUTAN (Soal 26-45)
+          // Kisi-kisi: Sila ke-2, sila ke-5, negosiasi, simpati/empati,
+          //           pencegahan eskalasi, mediator, faktor pendorong/
+          //           penghambat, penyebab konflik, sila ke-3, gotong
+          //           royong, manfaat harmoni, peran generasi muda,
+          //           media sosial, bentuk penyelesaian konflik
+          // ═══════════════════════════════════════════════════════════
+
+          {
+            id: 26,
+            type: "single",
+            // KISI-KISI #26: "menganalisis contoh kebijakan pemerintah
+            //                 yang mencerminkan nilai sila kedua Pancasila"
+            text: "Pemerintah mencanangkan program bantuan hukum gratis bagi masyarakat tidak mampu. Program ini memastikan setiap warga negara memiliki akses yang sama terhadap keadilan di pengadilan.\n\nKebijakan tersebut mencerminkan nilai sila kedua Pancasila, yaitu….",
+            options: [
+              "mengutamakan kepentingan golongan tertentu",
+              "menjunjung tinggi nilai kemanusiaan tanpa diskriminasi",
+              "mengedepankan kekuatan hukum di atas segalanya",
+              "memprioritaskan pembangunan fisik nasional",
+              "menerapkan asas desentralisasi pemerintahan",
+            ],
+            correct: 1,
+            explanation:
+              "Bantuan hukum gratis = akses keadilan TANPA DISKRIMINASI status ekonomi. Ini mencerminkan sila ke-2: Kemanusiaan yang adil dan beradab — menjunjung tinggi harkat dan martabat manusia.",
+            kisikisi:
+              "Menganalisis kebijakan → sila ke-2 = kemanusiaan tanpa diskriminasi",
+          },
+
+          {
+            id: 27,
+            type: "single",
+            // KISI-KISI #27: "mengidentifikasi simbol sila Pancasila
+            //                 yang berkaitan dengan nilai keadilan sosial"
+            text: "Lambang sila kelima Pancasila adalah padi dan kapas. Simbol tersebut berkaitan dengan nilai keadilan sosial yang bermakna….",
+            options: [
+              "setiap warga negara wajib membela negara",
+              "kemakmuran dan kesejahteraan bagi seluruh rakyat Indonesia",
+              "setiap warga negara bebas memeluk agama masing-masing",
+              "kekuasaan tertinggi berada di tangan rakyat",
+              "persatuan bangsa di atas kepentingan pribadi",
+            ],
+            correct: 1,
+            explanation:
+              "Padi = pangan, kapas = sandang → kebutuhan dasar rakyat. Sila ke-5 = kemakmuran dan kesejahteraan bagi SELURUH rakyat, bukan kelompok tertentu.",
+            kisikisi:
+              "Mengidentifikasi simbol sila → padi & kapas = sila 5 = kesejahteraan",
+          },
+
+          {
+            id: 28,
+            type: "single",
+            // KISI-KISI #28: "mengidentifikasi metode penyelesaian konflik
+            //                 berdasarkan ciri-ciri komunikasi langsung"
+            text: "Dua warga bertetangga berselisih mengenai batas tanah. Keduanya sepakat untuk duduk bersama dan saling menyampaikan pendapat secara langsung tanpa melibatkan pihak ketiga.\n\nMetode penyelesaian konflik yang digunakan adalah….",
+            options: [
+              "mediasi",
+              "arbitrasi",
+              "negosiasi",
+              "konsiliasi",
+              "ajudikasi",
+            ],
+            correct: 2,
+            explanation:
+              "NEGOSIASI = komunikasi LANGSUNG antara pihak berkonflik TANPA pihak ketiga. Kata kunci: 'duduk bersama', 'langsung', 'tanpa melibatkan pihak ketiga'.",
+            kisikisi:
+              "Mengidentifikasi metode → tanpa pihak ketiga = NEGOSIASI",
+            tipsBelajar:
+              "RUMUS:\n• TANPA pihak ke-3 = NEGOSIASI\n• ADA pihak ke-3 yang MENYARANKAN = MEDIASI\n• ADA pihak ke-3 yang MEMUTUSKAN = ARBITRASE\n• Lewat PENGADILAN = AJUDIKASI/LITIGASI",
+          },
+
+          {
+            id: 29,
+            type: "single",
+            // KISI-KISI #29: "menganalisis contoh perilaku simpati dan empati"
+            text: "Seorang siswa melihat temannya menangis karena tidak bisa membayar uang praktikum. Siswa tersebut kemudian mengumpulkan dana bersama teman sekelas untuk membantu.\n\nTindakan siswa tersebut menunjukkan sikap simpati dan empati sebagai bentuk harmoni dalam keberagaman, karena….",
+            options: [
+              "memiliki kemampuan finansial yang lebih baik",
+              "ingin mendapat pujian dari guru",
+              "turut merasakan kesulitan orang lain dan bertindak nyata membantu",
+              "merasa kasihan tetapi tidak bisa berbuat apa-apa",
+              "menjalankan perintah ketua kelas",
+            ],
+            correct: 2,
+            explanation:
+              "MERASAKAN (simpati) + BERTINDAK NYATA (empati) = jawaban C. Sesuai materi: empati adalah perasaan mendalam yang DISERTAI TINDAKAN kemanusiaan.",
+            kisikisi:
+              "Menganalisis perilaku simpati/empati → merasakan + bertindak",
+          },
+
+          {
+            id: 30,
+            type: "single",
+            // KISI-KISI #30: "menganalisis cara yang tepat untuk mencegah
+            //                 eskalasi konflik dalam masyarakat"
+            text: "Di sebuah desa, terjadi ketegangan antarwarga karena isu provokatif di media sosial. Cara yang paling tepat untuk mencegah eskalasi konflik adalah….",
+            options: [
+              "memblokir semua akun media sosial warga desa",
+              "mengabaikan isu tersebut agar mereda sendiri",
+              "mengadakan pertemuan warga untuk klarifikasi dan dialog terbuka",
+              "melapor langsung ke kepolisian tanpa konfirmasi terlebih dahulu",
+              "menyebarkan informasi tandingan di media sosial",
+            ],
+            correct: 2,
+            explanation:
+              "DIALOG TERBUKA dan KLARIFIKASI = cara terbaik mencegah eskalasi. Sesuai materi: mencari penyebab konflik secara mendalam dan mencari solusi yang menguntungkan kedua pihak.",
+            kisikisi:
+              "Menganalisis cara mencegah eskalasi → dialog dan klarifikasi",
+          },
+
+          {
+            id: 31,
+            type: "single",
+            // KISI-KISI #31: "mengidentifikasi sikap yang tepat dalam
+            //                 menyelesaikan konflik berdasarkan ilustrasi"
+            text: "Di sebuah pasar, pedagang lama dan pedagang baru berselisih soal lokasi lapak. Kepala pasar mempertemukan keduanya dan memberikan solusi pembagian lokasi yang adil.\n\nSikap kepala pasar dalam menyelesaikan konflik berdasarkan ilustrasi tersebut adalah….",
+            options: [
+              "otoriter karena menentukan solusi sendiri",
+              "netral dan bijaksana sebagai mediator",
+              "memihak pedagang lama karena lebih senior",
+              "tidak peduli terhadap konflik yang terjadi",
+              "menyerahkan keputusan kepada pihak berwajib",
+            ],
+            correct: 1,
+            explanation:
+              "Kepala pasar MEMPERTEMUKAN + memberikan SOLUSI ADIL = mediator yang NETRAL dan BIJAKSANA. Mediator tidak memihak, tapi memfasilitasi penyelesaian.",
+            kisikisi:
+              "Mengidentifikasi sikap → mediator yang netral dan bijaksana",
+          },
+
+          {
+            id: 32,
+            type: "single",
+            // KISI-KISI #32: "mengidentifikasi faktor-faktor pendorong
+            //                 terjadinya konflik sosial"
+            text: "Perhatikan faktor-faktor berikut!\n1) Perbedaan kepentingan ekonomi\n2) Ketidakadilan dalam distribusi sumber daya\n3) Persaingan politik yang tidak sehat\n4) Sikap saling menghargai antarbudaya\n\nYang merupakan faktor pendorong terjadinya konflik sosial ditunjukkan oleh nomor….",
+            options: [
+              "1), 2), dan 3)",
+              "1), 2), dan 4)",
+              "1), 3), dan 4)",
+              "2), 3), dan 4)",
+              "1), 2), 3), dan 4)",
+            ],
+            correct: 0,
+            explanation:
+              "Nomor 4 (saling menghargai) = PENCEGAH konflik, bukan pendorong. Yang mendorong konflik: perbedaan ekonomi (1), ketidakadilan (2), persaingan politik (3).",
+            kisikisi:
+              "Mengidentifikasi faktor pendorong konflik → eliminasi yang positif",
+          },
+
+          {
+            id: 33,
+            type: "single",
+            // KISI-KISI #33: "mengidentifikasi faktor-faktor yang dapat
+            //                 menghambat atau mencegah konflik sosial"
+            text: "Perhatikan faktor-faktor berikut!\n1) Adanya lembaga mediasi di masyarakat\n2) Tingginya kesadaran hukum warga\n3) Budaya musyawarah yang masih kuat\n4) Sikap etnosentrisme di masyarakat\n\nYang merupakan faktor penghambat atau pencegah konflik sosial ditunjukkan oleh nomor….",
+            options: [
+              "1), 2), dan 3)",
+              "1), 2), dan 4)",
+              "2), 3), dan 4)",
+              "1), 3), dan 4)",
+              "1), 2), 3), dan 4)",
+            ],
+            correct: 0,
+            explanation:
+              "Nomor 4 (etnosentrisme) = PEMICU konflik, bukan pencegah. Yang mencegah: lembaga mediasi (1), kesadaran hukum (2), budaya musyawarah (3).",
+            kisikisi:
+              "Mengidentifikasi faktor penghambat konflik → eliminasi yang negatif",
+          },
+
+          {
+            id: 34,
+            type: "single",
+            // KISI-KISI #34: "menganalisis faktor penyebab konflik sosial
+            //                 berdasarkan ilustrasi kasus"
+            text: "Sebuah perusahaan perkebunan mengambil alih lahan milik masyarakat adat tanpa memberikan kompensasi yang layak. Masyarakat adat merasa dirugikan dan melakukan demonstrasi.\n\nFaktor penyebab konflik sosial pada ilustrasi tersebut adalah….",
+            options: [
+              "perbedaan pandangan politik",
+              "rendahnya tingkat pendidikan masyarakat",
+              "ketidakadilan dalam penguasaan sumber daya",
+              "perbedaan keyakinan dan agama",
+              "persaingan antarkelompok masyarakat",
+            ],
+            correct: 2,
+            explanation:
+              "Pengambilalihan lahan TANPA kompensasi layak = KETIDAKADILAN dalam penguasaan SUMBER DAYA. Sesuai materi: ketidakmerataan pembagian sumber daya bisa memicu konflik.",
+            kisikisi:
+              "Menganalisis faktor penyebab → ketidakadilan sumber daya",
+          },
+
+          {
+            id: 35,
+            type: "single",
+            // KISI-KISI #35: "mengidentifikasi faktor penghambat konflik
+            //                 sosial dalam masyarakat multikultural"
+            text: "Dalam masyarakat multikultural, faktor yang paling efektif menghambat terjadinya konflik sosial adalah….",
+            options: [
+              "dominasi satu kelompok budaya tertentu",
+              "pembatasan kebebasan berpendapat",
+              "sikap toleransi dan saling menghargai antarbudaya",
+              "penerapan hukum yang hanya menguntungkan mayoritas",
+              "pemisahan wilayah berdasarkan suku dan agama",
+            ],
+            correct: 2,
+            explanation:
+              "TOLERANSI dan SALING MENGHARGAI = faktor paling efektif mencegah konflik di masyarakat multikultural. Sesuai materi: mengedepankan sikap toleransi mampu menghapuskan diskriminasi.",
+            kisikisi:
+              "Mengidentifikasi faktor penghambat → toleransi dalam masyarakat multikultural",
+          },
+
+          {
+            id: 36,
+            type: "single",
+            // KISI-KISI #36: "mengidentifikasi faktor-faktor pendorong
+            //                 konflik sosial dalam kehidupan masyarakat"
+            text: "Perhatikan pernyataan berikut!\n1) Rendahnya tingkat pendidikan\n2) Kesenjangan ekonomi yang tinggi\n3) Provokasi melalui media sosial\n4) Adanya tokoh masyarakat yang menjadi pemersatu\n\nYang merupakan faktor pendorong konflik sosial dalam kehidupan masyarakat ditunjukkan oleh nomor….",
+            options: [
+              "1) dan 2) saja",
+              "3) dan 4) saja",
+              "1), 2), dan 3)",
+              "2), 3), dan 4)",
+              "1), 2), 3), dan 4)",
+            ],
+            correct: 2,
+            explanation:
+              "Nomor 4 (tokoh pemersatu) = PENCEGAH. Pendorong konflik: rendahnya pendidikan (1), kesenjangan ekonomi (2), provokasi medsos (3).",
+            kisikisi:
+              "Mengidentifikasi faktor pendorong → eliminasi faktor positif",
+          },
+
+          {
+            id: 37,
+            type: "single",
+            // KISI-KISI #37: "mengidentifikasi perilaku yang mencerminkan
+            //                 nilai sila ketiga Pancasila"
+            text: "Saat perayaan HUT RI, warga RT 05 yang terdiri dari berbagai suku dan agama bergotong royong menghias lingkungan dan mengadakan lomba bersama.\n\nPerilaku warga tersebut mencerminkan nilai sila ketiga Pancasila, yaitu….",
+            options: [
+              "mengutamakan ibadah kepada Tuhan Yang Maha Esa",
+              "menjunjung tinggi hak asasi setiap manusia",
+              "mengutamakan persatuan dan kesatuan di atas perbedaan",
+              "bermusyawarah dalam setiap pengambilan keputusan",
+              "mewujudkan keadilan ekonomi bagi seluruh warga",
+            ],
+            correct: 2,
+            explanation:
+              "Gotong royong dari BERBAGAI SUKU dan AGAMA untuk merayakan HUT RI = PERSATUAN DI ATAS PERBEDAAN = sila ke-3 (Persatuan Indonesia).",
+            kisikisi:
+              "Mengidentifikasi perilaku sila ke-3 → persatuan di atas perbedaan",
+          },
+
+          {
+            id: 38,
+            type: "single",
+            // KISI-KISI #38: "mengidentifikasi contoh perilaku harmoni
+            //                 dalam keberagaman di masyarakat"
+            text: "Di lingkungan perumahan, warga dari berbagai latar belakang budaya saling membantu saat ada yang mengadakan hajatan.\n\nContoh perilaku tersebut menunjukkan harmoni dalam keberagaman di masyarakat yang diwujudkan melalui….",
+            options: [
+              "sikap individualis yang kuat",
+              "kecenderungan membentuk kelompok eksklusif",
+              "semangat gotong royong tanpa membedakan latar belakang",
+              "persaingan antarwarga untuk menunjukkan kekayaan",
+              "sikap apatis terhadap tetangga yang berbeda budaya",
+            ],
+            correct: 2,
+            explanation:
+              "Saling membantu TANPA membedakan latar belakang = GOTONG ROYONG = wujud nyata harmoni dalam keberagaman.",
+            kisikisi:
+              "Mengidentifikasi perilaku harmoni → gotong royong tanpa diskriminasi",
+          },
+
+          {
+            id: 39,
+            type: "single",
+            // KISI-KISI #39: "mengidentifikasi manfaat terciptanya harmoni
+            //                 dalam keberagaman bagi bangsa Indonesia"
+            text: "Terciptanya harmoni dalam keberagaman memberikan manfaat bagi bangsa Indonesia, di antaranya….",
+            options: [
+              "memperkuat dominasi satu suku tertentu di pemerintahan",
+              "menghilangkan seluruh perbedaan budaya di masyarakat",
+              "memperkuat persatuan dan mempercepat kemajuan bangsa",
+              "menjadikan satu bahasa daerah sebagai bahasa nasional",
+              "menghapuskan semua tradisi lokal demi modernisasi",
+            ],
+            correct: 2,
+            explanation:
+              "Harmoni = persatuan + kemajuan. Sesuai materi: manfaat harmoni antara lain memperkuat persatuan dan kesatuan, terwujudnya kesejahteraan, dan meningkatnya kerja sama.",
+            kisikisi:
+              "Mengidentifikasi manfaat harmoni → persatuan + kemajuan bangsa",
+          },
+
+          {
+            id: 40,
+            type: "single",
+            // KISI-KISI #40: "mengidentifikasi peran generasi muda
+            //                 dalam menjaga harmoni dalam keberagaman"
+            text: "Generasi muda memiliki peran penting dalam menjaga harmoni dalam keberagaman. Salah satu peran yang dapat dilakukan adalah….",
+            options: [
+              "menyebarkan konten provokatif di media sosial untuk menarik perhatian",
+              "membentuk kelompok eksklusif berdasarkan suku di kampus",
+              "aktif mengikuti kegiatan lintas budaya dan menjadi duta perdamaian",
+              "mengabaikan perbedaan dengan tidak berinteraksi dengan kelompok lain",
+              "mengutamakan kepentingan kelompok sendiri dalam organisasi",
+            ],
+            correct: 2,
+            explanation:
+              "Generasi muda berperan melalui KEGIATAN LINTAS BUDAYA dan menjadi DUTA PERDAMAIAN — membangun jembatan antarkelompok masyarakat yang berbeda.",
+            kisikisi:
+              "Mengidentifikasi peran generasi muda → kegiatan lintas budaya",
+          },
+
+          {
+            id: 41,
+            type: "single",
+            // KISI-KISI #41: "menganalisis tindakan yang tepat untuk menjaga
+            //                 harmoni dalam keberagaman di era media sosial"
+            text: "Di era media sosial, tindakan yang tepat untuk menjaga harmoni dalam keberagaman adalah….",
+            options: [
+              "membagikan informasi tanpa memverifikasi kebenarannya",
+              "menggunakan media sosial untuk menyebarkan ujaran kebencian",
+              "melakukan tabayyun (klarifikasi) sebelum membagikan berita",
+              "memblokir semua orang yang memiliki pandangan berbeda",
+              "hanya berinteraksi dengan orang-orang yang satu pandangan",
+            ],
+            correct: 2,
+            explanation:
+              "TABAYYUN (klarifikasi/verifikasi) = tindakan bijak di era media sosial untuk mencegah hoaks dan ujaran kebencian. Sesuai materi: rendahnya literasi masyarakat bisa memicu konflik.",
+            kisikisi:
+              "Menganalisis tindakan di era medsos → tabayyun/klarifikasi",
+          },
+
+          {
+            id: 42,
+            type: "single",
+            // KISI-KISI #42: "menganalisis bentuk penyelesaian konflik
+            //                 berdasarkan ilustrasi kasus" (MEDIASI)
+            text: "Dua kelompok pemuda dari desa berbeda terlibat tawuran akibat kesalahpahaman saat pertandingan voli antardesa. Kepala desa kedua belah pihak kemudian mempertemukan perwakilan pemuda untuk duduk bersama, membahas permasalahan, dan mencari solusi secara kekeluargaan.\n\nBentuk penyelesaian konflik pada ilustrasi tersebut adalah….",
+            options: [
+              "arbitrasi",
+              "ajudikasi",
+              "mediasi",
+              "litigasi",
+              "koersi",
+            ],
+            correct: 2,
+            explanation:
+              "Kepala desa = pihak ke-3 yang MEMFASILITASI dan MEMPERTEMUKAN, bukan memutuskan secara mengikat. Solusi dicari secara KEKELUARGAAN = MEDIASI.",
+            kisikisi:
+              "Menganalisis bentuk penyelesaian → mediasi (pihak ke-3 memfasilitasi)",
+          },
+
+          {
+            id: 43,
+            type: "single",
+            // KISI-KISI #43: "menganalisis bentuk penyelesaian konflik
+            //                 berdasarkan ilustrasi kasus" (ARBITRASE)
+            text: "Warga kompleks perumahan berselisih dengan pengembang mengenai fasilitas umum yang dijanjikan. Setelah negosiasi gagal, kedua pihak sepakat menunjuk seorang ahli hukum untuk memutuskan solusi yang harus ditaati kedua belah pihak.\n\nBentuk penyelesaian konflik tersebut adalah….",
+            options: [
+              "mediasi",
+              "negosiasi",
+              "arbitrasi",
+              "konsiliasi",
+              "rekonsiliasi",
+            ],
+            correct: 2,
+            explanation:
+              "Ahli hukum yang MEMUTUSKAN + keputusan HARUS DITAATI = ARBITRASE. Kata kunci: 'memutuskan', 'harus ditaati' → berbeda dari mediasi (hanya saran).",
+            kisikisi:
+              "Menganalisis bentuk penyelesaian → arbitrase (keputusan mengikat)",
+          },
+
+          {
+            id: 44,
+            type: "single",
+            // KISI-KISI #44: "menganalisis bentuk penyelesaian konflik
+            //                 berdasarkan ilustrasi kasus" (AJUDIKASI)
+            text: "Sengketa tanah antara warga dan perusahaan tambang tidak berhasil diselesaikan melalui mediasi maupun arbitrasi. Akhirnya, kasus tersebut dibawa ke pengadilan untuk mendapatkan putusan hakim.\n\nBentuk penyelesaian konflik pada ilustrasi tersebut adalah….",
+            options: [
+              "negosiasi",
+              "mediasi",
+              "konsiliasi",
+              "arbitrasi",
+              "ajudikasi (litigasi)",
+            ],
+            correct: 4,
+            explanation:
+              "Dibawa ke PENGADILAN + putusan HAKIM = AJUDIKASI/LITIGASI. Ini adalah jalur hukum formal, berbeda dari negosiasi/mediasi/arbitrase yang di luar pengadilan.",
+            kisikisi:
+              "Menganalisis bentuk penyelesaian → ajudikasi (jalur pengadilan)",
+          },
+
+          {
+            id: 45,
+            type: "single",
+            // KISI-KISI #45: "menganalisis bentuk penyelesaian konflik
+            //                 berdasarkan ilustrasi kasus" (MEDIASI)
+            text: "Dua organisasi kepemudaan di sebuah kota berselisih mengenai penggunaan lapangan untuk kegiatan masing-masing. Lurah kemudian mengundang keduanya dan memfasilitasi perundingan. Setelah berdiskusi, kedua organisasi sepakat menggunakan lapangan secara bergantian sesuai jadwal yang disepakati bersama.\n\nBentuk penyelesaian konflik pada ilustrasi tersebut termasuk….",
+            options: [
+              "koersi",
+              "ajudikasi",
+              "arbitrasi",
+              "mediasi",
+              "dominasi",
+            ],
+            correct: 3,
+            explanation:
+              "Lurah MENGUNDANG dan MEMFASILITASI + solusi merupakan KESEPAKATAN BERSAMA (bukan keputusan lurah) = MEDIASI. Mediator hanya memfasilitasi, tidak memutuskan.",
+            kisikisi:
+              "Menganalisis bentuk penyelesaian → mediasi (fasilitasi + kesepakatan bersama)",
+          },
+        ],
+      },
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════════════
+  // CHEAT SHEET UJIAN - RINGKASAN POLA SOAL
+  // ══════════════════════════════════════════════════════════════════
+  //
+  // 🎯 POLA SOAL YANG SERING MUNCUL:
+  //
+  // 1. IDENTIFIKASI JENIS KEBERAGAMAN (Soal 1, 8, 24)
+  //    → Ciri fisik = RAS
+  //    → Bahasa/kebiasaan daerah = SUKU
+  //    → Ibadah/ritual = AGAMA
+  //    → Pekerjaan/status = ANTARGOLONGAN
+  //
+  // 2. BEDAKAN METODE PENYELESAIAN (Soal 15-16, 28, 42-45)
+  //    → Tanpa pihak ke-3 = NEGOSIASI
+  //    → Pihak ke-3 MENYARANKAN = MEDIASI
+  //    → Pihak ke-3 MEMUTUSKAN = ARBITRASE
+  //    → Via PENGADILAN = AJUDIKASI
+  //
+  // 3. HUBUNGKAN DENGAN SILA PANCASILA (Soal 11-14, 26-27, 37)
+  //    → Agama/toleransi beragama = SILA 1
+  //    → HAM/martabat/black campaign = SILA 2
+  //    → Persatuan/keragaman budaya = SILA 3
+  //    → Musyawarah/pendapat = SILA 4
+  //    → Keadilan/kesejahteraan = SILA 5
+  //
+  // 4. BEDAKAN SIMPATI vs EMPATI (Soal 2, 29)
+  //    → Hanya merasa = SIMPATI
+  //    → Merasa + BERTINDAK = EMPATI
+  //
+  // 5. BEDAKAN 3 PENGHAMBAT HARMONI (Soal 4)
+  //    → Mentingin diri sendiri = EGOISME
+  //    → Budaya sendiri paling hebat = ETNOSENTRISME
+  //    → Menutup diri = EKSKLUSIVISME
+  //
+  // 6. BEDAKAN 3 JENIS UPAYA (Soal 22)
+  //    → Sebelum konflik = PREVENTIF (sosialisasi, pendidikan)
+  //    → Saat konflik = REPRESIF (penangkapan, pembubaran)
+  //    → Setelah konflik = KURATIF (rekonsiliasi, rehabilitasi)
+  //
+  // 7. FAKTOR PENYEBAB KONFLIK (Soal 9-10, 25, 32-36)
   Matematika: {
     label: "Matematika",
     icon: "Calculator",
