@@ -3173,6 +3173,670 @@ window.QUIZ_DATABASE = {
     },
   },
 
+  BahasaInggris: {
+    label: "Bahasa Inggris",
+    icon: "BookOpen",
+    color: "from-blue-500 to-indigo-400",
+    chapters: {
+      // ========================================================
+      // CHAPTER 1: Soal 1-15 (Grammar & Functional Expressions)
+      // Topik: Passive Voice, Conditional, Modals, Cause-Effect,
+      //        Suggestion/Offer, Invitation, Opinion
+      // ========================================================
+      1: {
+        title: "Grammar & Functional Expressions",
+        desc: "Latihan soal Passive Voice, Conditional Sentences, Modals, Cause & Effect, Suggestion, dan Invitation.",
+        questions: [
+          // --- PASSIVE VOICE (1-3) ---
+          {
+            id: 1,
+            text: "The new bridge ... (build) by the government last year.",
+            options: [
+              "was built",
+              "is built",
+              "were built",
+              "has built",
+              "built",
+            ],
+            correct: 0,
+            explanation:
+              "Kalimat ini menggunakan Simple Past Passive karena ada keterangan waktu 'last year'. Rumusnya: was/were + V3. Subject 'The new bridge' (singular) → was built.",
+          },
+          {
+            id: 2,
+            text: "A lot of trees ... (plant) in this area since 2020.",
+            options: [
+              "have been planted",
+              "has been planted",
+              "were planted",
+              "are planted",
+              "had been planted",
+            ],
+            correct: 0,
+            explanation:
+              "Keterangan waktu 'since 2020' menunjukkan Present Perfect. Subject 'A lot of trees' (plural) → have been planted (Present Perfect Passive).",
+          },
+          {
+            id: 3,
+            text: "Choose the correct passive form: 'Someone is repairing the computer right now.'",
+            options: [
+              "The computer is being repaired right now.",
+              "The computer is repaired right now.",
+              "The computer was being repaired right now.",
+              "The computer has been repaired right now.",
+              "The computer will be repaired right now.",
+            ],
+            correct: 0,
+            explanation:
+              "Kalimat aktif Present Continuous ('is repairing') diubah ke passive menjadi 'is being + V3' → The computer is being repaired right now.",
+          },
+          // --- CONDITIONAL SENTENCES (4-5) ---
+          {
+            id: 4,
+            text: "If I ... (have) enough money, I would buy a new laptop.",
+            options: ["had", "have", "has", "will have", "having"],
+            correct: 0,
+            explanation:
+              "Ini adalah Conditional Type 2 (unreal condition di masa sekarang). Polanya: If + S + V2, S + would + V1. Maka jawabannya 'had'.",
+          },
+          {
+            id: 5,
+            text: "If she had studied harder, she ... the exam.",
+            options: [
+              "would have passed",
+              "will pass",
+              "would pass",
+              "passed",
+              "has passed",
+            ],
+            correct: 0,
+            explanation:
+              "Conditional Type 3 (pengandaian di masa lalu yang tidak terjadi). Polanya: If + S + had + V3, S + would have + V3. Jawabannya: would have passed.",
+          },
+          // --- MODALS (6-7) ---
+          {
+            id: 6,
+            text: "You look very pale. You ... see a doctor immediately.",
+            options: ["should", "would", "might", "could", "will"],
+            correct: 0,
+            explanation:
+              "'Should' digunakan untuk memberi saran (advice). Konteks kalimat menunjukkan pemberian saran karena lawan bicara terlihat pucat.",
+          },
+          {
+            id: 7,
+            text: "Students ... wear a uniform every day. It is a school regulation.",
+            options: ["must", "should", "can", "may", "might"],
+            correct: 0,
+            explanation:
+              "'Must' menunjukkan kewajiban (obligation). Karena ini adalah peraturan sekolah, maka bersifat wajib → must.",
+          },
+          // --- CAUSE & EFFECT (8-9) ---
+          {
+            id: 8,
+            text: "The flight was cancelled ... the heavy storm.",
+            options: [
+              "due to",
+              "so that",
+              "in order to",
+              "even though",
+              "although",
+            ],
+            correct: 0,
+            explanation:
+              "'Due to' digunakan untuk menyatakan sebab/alasan (cause). Kalimat ini bermakna: penerbangan dibatalkan karena badai hebat.",
+          },
+          {
+            id: 9,
+            text: "She studied very hard; ..., she got the highest score in the class.",
+            options: [
+              "as a result",
+              "because",
+              "due to",
+              "since",
+              "in order to",
+            ],
+            correct: 0,
+            explanation:
+              "'As a result' digunakan untuk menyatakan akibat/dampak (effect). Posisinya di awal klausa kedua, menunjukkan hasil dari tindakan sebelumnya.",
+          },
+          // --- SUGGESTION & OFFER (10-11) ---
+          {
+            id: 10,
+            text: "A: I have a terrible headache.\nB: ... taking some aspirin?",
+            options: [
+              "How about",
+              "Do you mind",
+              "Would you like",
+              "Can I help",
+              "Shall we",
+            ],
+            correct: 0,
+            explanation:
+              "'How about + V-ing?' adalah ungkapan untuk memberi saran (suggestion). Cocok dengan konteks memberi saran untuk sakit kepala.",
+          },
+          {
+            id: 11,
+            text: "A: You look so tired carrying those heavy bags.\nB: ... I help you carry some of them?",
+            options: ["Shall", "Will", "Do", "Must", "Would"],
+            correct: 0,
+            explanation:
+              "'Shall I ...?' adalah ungkapan untuk menawarkan bantuan (offering help). Digunakan saat kita mau menawarkan diri melakukan sesuatu untuk orang lain.",
+          },
+          // --- INVITATION (12-13) ---
+          {
+            id: 12,
+            text: "Which expression is used to invite someone?",
+            options: [
+              "Would you like to come to my birthday party?",
+              "I think you should go to the party.",
+              "You must attend the meeting.",
+              "Can you tell me about the party?",
+              "I went to the party last night.",
+            ],
+            correct: 0,
+            explanation:
+              "'Would you like to ...?' adalah ungkapan untuk mengundang seseorang (invitation). Pola ini sopan dan formal.",
+          },
+          {
+            id: 13,
+            text: "A: Would you like to join us for dinner tonight?\nB: ..., but I have another appointment.",
+            options: [
+              "I'd love to",
+              "I don't think so",
+              "I disagree",
+              "Sure, let's go",
+              "That's a great idea",
+            ],
+            correct: 0,
+            explanation:
+              "'I'd love to, but ...' adalah cara sopan menolak undangan (declining an invitation). Menunjukkan keinginan tetapi menyampaikan alasan tidak bisa hadir.",
+          },
+          // --- OPINION / AGREEMENT-DISAGREEMENT (14-15) ---
+          {
+            id: 14,
+            text: "A: I think online learning is more effective than offline learning.\nB: ... Online learning lacks direct interaction with teachers.",
+            options: [
+              "I don't think so.",
+              "I totally agree.",
+              "That's a good point.",
+              "You're absolutely right.",
+              "I couldn't agree more.",
+            ],
+            correct: 0,
+            explanation:
+              "Respon B memberikan alasan yang bertentangan ('lacks direct interaction'), menunjukkan ketidaksetujuan. 'I don't think so' adalah ungkapan disagreement yang sopan.",
+          },
+          {
+            id: 15,
+            text: "A: In my opinion, recycling should be mandatory for every household.\nB: ... It will definitely reduce waste in landfills.",
+            options: [
+              "I completely agree.",
+              "I'm not sure about that.",
+              "I beg to differ.",
+              "That's not entirely true.",
+              "I don't think so.",
+            ],
+            correct: 0,
+            explanation:
+              "Respon B mendukung pernyataan A dengan alasan 'reduce waste in landfills'. Ini menunjukkan persetujuan penuh. 'I completely agree' adalah ungkapan agreement.",
+          },
+        ],
+      },
+
+      // ========================================================
+      // CHAPTER 2: Soal 16-20 – Report Text (Coral Reefs)
+      // ========================================================
+      2: {
+        title: "Report Text – Coral Reefs",
+        desc: "Reading comprehension berdasarkan teks report tentang terumbu karang (Coral Reefs).",
+        passage:
+          "Coral reefs are underwater structures made from calcium carbonate secreted by corals. They are sometimes called 'rainforests of the sea' because of their rich biodiversity. Coral reefs support approximately 25% of all marine species, even though they cover less than 1% of the ocean floor.\n\nEcologically, coral reefs serve as breeding and feeding grounds for many fish species. They also protect coastlines from the damaging effects of wave action and tropical storms. Economically, coral reefs contribute to local economies through tourism, fishing, and recreation. It is estimated that coral reefs provide goods and services worth $375 billion each year to millions of people.\n\nHowever, coral reefs around the world are facing serious threats. Rising ocean temperatures caused by climate change lead to coral bleaching, a phenomenon in which corals expel the algae living in their tissues, causing them to turn white. Pollution from agricultural runoff and plastic waste also degrades reef ecosystems. Overfishing disrupts the natural balance of reef communities.\n\nIf these threats are not addressed, scientists predict that 90% of coral reefs could disappear by 2050. Conservation efforts such as marine protected areas, sustainable fishing practices, and reducing carbon emissions are essential to preserve these valuable ecosystems for future generations.",
+        questions: [
+          {
+            id: 16,
+            text: "Read the following text about Coral Reefs.\n\n[Passage: see passage field above]\n\nWhat is the purpose of the text?",
+            options: [
+              "To describe the general characteristics and significance of coral reefs",
+              "To persuade readers to stop fishing near coral reefs",
+              "To tell a story about the discovery of coral reefs",
+              "To explain how to build artificial coral reefs",
+              "To compare coral reefs with tropical rainforests",
+            ],
+            correct: 0,
+            explanation:
+              "Teks report bertujuan untuk mendeskripsikan sesuatu secara umum dan faktual. Teks ini menjelaskan karakteristik umum, peran ekologis-ekonomis, dan ancaman terhadap terumbu karang.",
+          },
+          {
+            id: 17,
+            text: "Based on the text, why are coral reefs ecologically important?",
+            options: [
+              "They serve as breeding and feeding grounds for many fish species",
+              "They are made from calcium carbonate",
+              "They provide tourism revenue",
+              "They cover 25% of the ocean floor",
+              "They produce oxygen for human consumption",
+            ],
+            correct: 0,
+            explanation:
+              "Paragraf kedua menyebutkan bahwa terumbu karang berfungsi sebagai tempat berkembang biak dan mencari makan bagi banyak spesies ikan (breeding and feeding grounds). Ini merupakan peran ekologis.",
+          },
+          {
+            id: 18,
+            text: "Why does the author mention tourism, fishing, and recreation in the text?",
+            options: [
+              "To show the economic value of coral reefs to human communities",
+              "To argue that coral reefs should be used for commercial purposes only",
+              "To explain how coral reefs are formed",
+              "To describe the types of fish found in coral reefs",
+              "To compare different industries related to the ocean",
+            ],
+            correct: 0,
+            explanation:
+              "Penulis menyebutkan sektor ekonomi (tourism, fishing, recreation) untuk menunjukkan nilai ekonomi terumbu karang bagi masyarakat. Ini bagian dari evaluasi tujuan penulis (C3).",
+          },
+          {
+            id: 19,
+            text: "According to the text, what causes coral bleaching?",
+            options: [
+              "Rising ocean temperatures due to climate change",
+              "Pollution from plastic waste",
+              "Overfishing in reef areas",
+              "Agricultural development near coastlines",
+              "Natural aging process of coral",
+            ],
+            correct: 0,
+            explanation:
+              "Teks menyatakan bahwa kenaikan suhu laut akibat perubahan iklim (rising ocean temperatures caused by climate change) menyebabkan coral bleaching.",
+          },
+          {
+            id: 20,
+            text: "What can be inferred about the long-term consequence if threats to coral reefs are not addressed?",
+            options: [
+              "Marine biodiversity will decline significantly as habitats disappear",
+              "New coral species will evolve to survive warmer waters",
+              "Fishing industries will become more profitable",
+              "Coral reefs will naturally recover over time",
+              "Tourism will increase due to rarity of coral reefs",
+            ],
+            correct: 0,
+            explanation:
+              "Jika 90% terumbu karang menghilang, 25% spesies laut yang bergantung padanya akan kehilangan habitat. Ini berarti keanekaragaman hayati laut akan menurun drastis. Ini adalah inferensi logis dari informasi dalam teks.",
+          },
+        ],
+      },
+
+      // ========================================================
+      // CHAPTER 3: Soal 21-25 – Report Text (Artificial Intelligence)
+      // ========================================================
+      3: {
+        title: "Report Text – Artificial Intelligence",
+        desc: "Reading comprehension berdasarkan teks report tentang Artificial Intelligence (AI).",
+        passage:
+          "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and make decisions. AI systems are designed to perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.\n\nThere are two main types of AI: narrow AI and general AI. Narrow AI, also known as weak AI, is designed to perform a specific task, such as virtual assistants like Siri or Alexa. General AI, or strong AI, would have the ability to understand, learn, and apply knowledge across a wide range of tasks, similar to human cognitive abilities. However, general AI remains largely theoretical and has not yet been achieved.\n\nAI is applied in numerous fields. In healthcare, AI assists doctors in diagnosing diseases more accurately by analyzing medical images. For example, AI algorithms can detect early signs of cancer in X-rays with a higher accuracy rate than human radiologists. In transportation, self-driving cars use AI to navigate roads safely. In education, AI-powered platforms personalize learning experiences for students.\n\nDespite its benefits, AI raises significant ethical concerns. Issues such as job displacement, data privacy, and algorithmic bias need to be addressed. Without proper regulation, AI could deepen existing social inequalities. Many experts argue that governments and organizations must develop comprehensive AI policies to ensure that its development benefits all of society.",
+        questions: [
+          {
+            id: 21,
+            text: "Read the following text about Artificial Intelligence.\n\n[Passage: see passage field above]\n\nWhat is the main purpose of the text?",
+            options: [
+              "To describe what AI is, its types, applications, and ethical concerns",
+              "To persuade readers to stop using AI technology",
+              "To tell the history of how AI was invented",
+              "To compare AI with human intelligence in detail",
+              "To explain how to create an AI program",
+            ],
+            correct: 0,
+            explanation:
+              "Sebagai teks report, tujuan utamanya adalah mendeskripsikan dan menginformasikan tentang AI secara umum: definisi, jenis, aplikasi, dan kekhawatiran etis.",
+          },
+          {
+            id: 22,
+            text: "How does the text organize the information about AI?",
+            options: [
+              "Definition → Types → Applications → Ethical concerns",
+              "History → Development → Current state → Future",
+              "Problem → Cause → Effect → Solution",
+              "Comparison → Contrast → Conclusion",
+              "Introduction → Climax → Resolution",
+            ],
+            correct: 0,
+            explanation:
+              "Teks disusun dari definisi AI (paragraf 1), jenis-jenis AI (paragraf 2), aplikasi di berbagai bidang (paragraf 3), dan kekhawatiran etis (paragraf 4). Ini menunjukkan struktur: Definition → Types → Applications → Ethical concerns.",
+          },
+          {
+            id: 23,
+            text: "Why does the author mention the example of AI detecting cancer in X-rays?",
+            options: [
+              "To illustrate how AI can be practically beneficial in healthcare",
+              "To prove that AI is better than humans in all tasks",
+              "To encourage people to replace doctors with AI",
+              "To show that AI can only work in the medical field",
+              "To explain the technical process of AI programming",
+            ],
+            correct: 0,
+            explanation:
+              "Contoh deteksi kanker digunakan untuk mengilustrasikan manfaat praktis AI di bidang kesehatan. Ini menguatkan argumen bahwa AI memiliki aplikasi nyata yang berguna.",
+          },
+          {
+            id: 24,
+            text: "Based on the text, which of the following is a characteristic of narrow AI?",
+            options: [
+              "It is designed to perform a specific task only",
+              "It can understand and apply knowledge across all fields",
+              "It has the same cognitive abilities as humans",
+              "It has already surpassed human intelligence",
+              "It does not require any programming",
+            ],
+            correct: 0,
+            explanation:
+              "Teks menyatakan bahwa narrow AI (weak AI) dirancang untuk melakukan tugas spesifik (perform a specific task), contohnya asisten virtual seperti Siri atau Alexa.",
+          },
+          {
+            id: 25,
+            text: "What can be inferred if AI development continues without proper regulation?",
+            options: [
+              "Social inequalities could become worse in society",
+              "AI will automatically become fair and unbiased",
+              "All jobs will be replaced by machines immediately",
+              "People will stop using technology altogether",
+              "AI development will slow down naturally",
+            ],
+            correct: 0,
+            explanation:
+              "Teks menyatakan 'Without proper regulation, AI could deepen existing social inequalities.' Ini berarti tanpa regulasi yang tepat, ketidaksetaraan sosial bisa semakin buruk.",
+          },
+        ],
+      },
+
+      // ========================================================
+      // CHAPTER 4: Soal 26-30 – Report Text (Volcanoes)
+      // ========================================================
+      4: {
+        title: "Report Text – Volcanoes",
+        desc: "Reading comprehension berdasarkan teks report tentang gunung berapi (Volcanoes).",
+        passage:
+          "A volcano is a rupture in the crust of a planetary-mass object, such as Earth, that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface. Volcanoes are found on every continent, including Antarctica, and on the ocean floor.\n\nVolcanoes are classified into three main types based on their shape and eruption pattern. Shield volcanoes, such as those in Hawaii, have broad, gentle slopes built by the flow of low-viscosity lava. Stratovolcanoes, like Mount Merapi in Indonesia, are characterized by steep slopes and explosive eruptions. Cinder cone volcanoes are the simplest type and are built from particles of lava blown into the air.\n\nDespite the destructive power of volcanic eruptions, volcanoes provide several benefits to humans and the environment. Volcanic soil is extremely fertile, making areas near volcanoes ideal for agriculture. Geothermal energy harnessed from volcanic activity is a clean and renewable source of power. Volcanic landscapes also attract millions of tourists each year, boosting local economies.\n\nHowever, living near an active volcano poses significant risks. Eruptions can cause massive destruction through lava flows, pyroclastic flows, and ashfall. Volcanic gases such as sulfur dioxide can be harmful to human health and the environment. Modern monitoring systems, including seismographs and satellite imaging, help scientists predict eruptions and issue early warnings, potentially saving thousands of lives. Without these monitoring systems, communities near volcanoes would face much greater danger during eruptions.",
+        questions: [
+          {
+            id: 26,
+            text: "Read the following text about Volcanoes.\n\n[Passage: see passage field above]\n\nWhat is the main purpose of the text?",
+            options: [
+              "To describe volcanoes, their types, benefits, and risks in a factual manner",
+              "To persuade people to move away from volcanic areas",
+              "To tell a story about a volcanic eruption",
+              "To explain how to survive a volcanic eruption",
+              "To compare volcanoes on different planets",
+            ],
+            correct: 0,
+            explanation:
+              "Teks report bertujuan untuk mendeskripsikan dan melaporkan informasi faktual. Teks ini menjelaskan definisi, klasifikasi, manfaat, dan risiko gunung berapi secara objektif.",
+          },
+          {
+            id: 27,
+            text: "How does the author organize the information in the second paragraph?",
+            options: [
+              "By classifying volcanoes into three types with examples",
+              "By listing the most dangerous volcanoes in the world",
+              "By explaining the process of volcanic eruptions chronologically",
+              "By comparing volcanoes with earthquakes",
+              "By describing one specific volcano in detail",
+            ],
+            correct: 0,
+            explanation:
+              "Paragraf kedua mengklasifikasikan gunung berapi menjadi tiga jenis (shield, stratovolcano, cinder cone) dengan contoh masing-masing. Ini menunjukkan pola pengembangan klasifikasi.",
+          },
+          {
+            id: 28,
+            text: "Why does the author mention the benefits of volcanoes such as fertile soil and geothermal energy?",
+            options: [
+              "To provide a balanced view that volcanoes are not only destructive but also beneficial",
+              "To encourage people to live near volcanoes",
+              "To argue that volcanic eruptions are not dangerous",
+              "To explain how volcanoes are formed",
+              "To compare volcanic energy with solar energy",
+            ],
+            correct: 0,
+            explanation:
+              "Penulis menyebutkan manfaat gunung berapi untuk memberikan pandangan yang seimbang (balanced view). Setelah membahas manfaat, penulis juga membahas risikonya di paragraf berikutnya.",
+          },
+          {
+            id: 29,
+            text: "What can be inferred about communities that choose to live near active volcanoes?",
+            options: [
+              "They likely benefit from fertile agricultural land despite the risks",
+              "They are unaware of the dangers of volcanic eruptions",
+              "They have no other place to live",
+              "They want to study volcanoes professionally",
+              "They do not need any monitoring systems",
+            ],
+            correct: 0,
+            explanation:
+              "Dari teks, tanah vulkanik sangat subur dan cocok untuk pertanian. Dapat diinferensi bahwa masyarakat tinggal di dekat gunung berapi karena mendapat manfaat pertanian, meski ada risiko.",
+          },
+          {
+            id: 30,
+            text: "Based on the text, what would most likely happen if modern monitoring systems were not used?",
+            options: [
+              "More people would be killed or injured during volcanic eruptions",
+              "Volcanic eruptions would become less frequent",
+              "Communities would develop their own technology",
+              "Volcanoes would stop erupting naturally",
+              "Tourism near volcanoes would increase significantly",
+            ],
+            correct: 0,
+            explanation:
+              "Teks menyatakan bahwa tanpa sistem monitoring, komunitas di dekat gunung berapi akan menghadapi bahaya yang jauh lebih besar. Ini berarti lebih banyak korban jiwa dan luka saat erupsi.",
+          },
+        ],
+      },
+
+      // ========================================================
+      // CHAPTER 5: Soal 31-40 – Pilihan Ganda Kompleks
+      // (Multiple correct answers)
+      // Kunci: 31=A,B,D | 32=A,C,D | 33=A,B,C | 34=A,B,D
+      //        35=A,C,E | 36=A,C,E | 37=A,C,E | 38=A,C,D
+      //        39=A,B,D | 40=A,C,E
+      // ========================================================
+      5: {
+        title: "Pilihan Ganda Kompleks",
+        desc: "Soal pilihan ganda kompleks (pilih lebih dari satu jawaban benar): Analytical Exposition, Explanation Text, Descriptive Text, dan Bargaining/Negotiating.",
+        isComplex: true, // flag: multiple correct answers
+        questions: [
+          // --- ANALYTICAL EXPOSITION (31-33) ---
+          {
+            id: 31,
+            text: "Which of the following statements correctly describe characteristics of an analytical exposition text? (Choose THREE correct answers)",
+            options: [
+              "A. It presents arguments to support a particular thesis or viewpoint",
+              "B. It uses logical connectors such as 'furthermore', 'moreover', and 'in addition'",
+              "C. It tells a sequence of events in chronological order",
+              "D. It ends with a reiteration or restatement of the writer's position",
+              "E. It always includes dialogue between two or more characters",
+            ],
+            correct: [0, 1, 3], // A, B, D
+            explanation:
+              "Analytical exposition: (A) menyajikan argumen untuk mendukung thesis ✓, (B) menggunakan connectors logis ✓, (D) diakhiri reiteration/penegasan ulang ✓. (C) urutan kronologis adalah ciri recount/narrative. (E) dialog adalah ciri teks transaksional.",
+          },
+          {
+            id: 32,
+            text: "Which of the following sentences can function as a thesis statement in an analytical exposition text? (Choose THREE correct answers)",
+            options: [
+              "A. Social media has a significant negative impact on teenagers' mental health",
+              "B. Last weekend, I visited the museum with my friends",
+              "C. The government should ban single-use plastics to protect the environment",
+              "D. Reading books regularly is essential for students' academic success",
+              "E. The weather was cloudy and cold yesterday morning",
+            ],
+            correct: [0, 2, 3], // A, C, D
+            explanation:
+              "Thesis statement harus berisi pendapat/posisi penulis yang akan diargumentasikan. (A) dampak negatif medsos ✓, (C) pemerintah harus melarang plastik ✓, (D) membaca buku penting ✓. (B) dan (E) adalah kalimat deskriptif/recount tanpa posisi argumentatif.",
+          },
+          {
+            id: 33,
+            text: "Read the following text:\n\n'Wearing school uniforms should be mandatory in all schools. First, uniforms create a sense of equality among students regardless of their economic background. Second, uniforms help students focus on learning rather than fashion. Third, uniforms promote school identity and pride.'\n\nWhich statements are supporting arguments in the text? (Choose THREE correct answers)",
+            options: [
+              "A. Uniforms create a sense of equality among students",
+              "B. Uniforms help students focus on learning rather than fashion",
+              "C. Uniforms promote school identity and pride",
+              "D. Uniforms should be sold at affordable prices",
+              "E. Uniforms must be designed by professional fashion designers",
+            ],
+            correct: [0, 1, 2], // A, B, C
+            explanation:
+              "Argumen pendukung yang ada dalam teks: (A) kesetaraan ✓, (B) fokus belajar ✓, (C) identitas sekolah ✓. (D) dan (E) tidak disebutkan dalam teks sebagai argumen.",
+          },
+          // --- EXPLANATION TEXT (34) ---
+          {
+            id: 34,
+            text: "Which of the following statements correctly describe characteristics of an explanation text? (Choose THREE correct answers)",
+            options: [
+              "A. It explains how or why a phenomenon occurs",
+              "B. It uses sequence markers like 'first', 'then', 'next', 'finally'",
+              "C. It presents the writer's personal opinion about a topic",
+              "D. It includes a general statement followed by a series of explanations",
+              "E. It always ends with a moral lesson or message",
+            ],
+            correct: [0, 1, 3], // A, B, D
+            explanation:
+              "Explanation text: (A) menjelaskan bagaimana/mengapa fenomena terjadi ✓, (B) menggunakan sequence markers ✓, (D) diawali general statement lalu rangkaian penjelasan ✓. (C) opini pribadi = analytical exposition. (E) pesan moral = narrative.",
+          },
+          // --- EXPLANATION vs DESCRIPTIVE (35) ---
+          {
+            id: 35,
+            text: "Which of the following sentences are characteristics of a descriptive text, NOT an explanation text? (Choose THREE correct answers)",
+            options: [
+              "A. It describes the appearance, qualities, or features of a specific person, place, or thing",
+              "B. It explains the process of how something happens step by step",
+              "C. It uses adjectives and sensory details to create vivid imagery",
+              "D. It focuses on cause-and-effect relationships in natural phenomena",
+              "E. It has a structure of identification and description",
+            ],
+            correct: [0, 2, 4], // A, C, E
+            explanation:
+              "Descriptive text: (A) mendeskripsikan tampilan/kualitas/fitur ✓, (C) menggunakan adjektif dan detail sensoris ✓, (E) strukturnya identification + description ✓. (B) proses bertahap = explanation. (D) hubungan sebab-akibat = explanation.",
+          },
+          // --- DESCRIPTIVE TEXT (36-37) ---
+          {
+            id: 36,
+            text: "Read the following text:\n\n'Borobudur Temple is the world's largest Buddhist temple, located in Magelang, Central Java. Built in the 9th century, it consists of nine stacked platforms, six square and three circular, topped by a central dome. The walls are decorated with 2,672 relief panels and 504 Buddha statues. The monument's architecture reflects a unique blend of Indonesian indigenous art and Buddhist concepts.'\n\nWhich statements correctly describe the characteristics shown in this text? (Choose THREE correct answers)",
+            options: [
+              "A. The text uses descriptive adjectives such as 'largest', 'unique', and 'circular'",
+              "B. The text explains the process of how Borobudur was built step by step",
+              "C. The text identifies a specific subject: Borobudur Temple",
+              "D. The text presents arguments for and against visiting Borobudur",
+              "E. The text provides detailed physical description of the subject",
+            ],
+            correct: [0, 2, 4], // A, C, E
+            explanation:
+              "Teks ini adalah descriptive text: (A) menggunakan adjektif deskriptif ✓, (C) mengidentifikasi subjek spesifik (Borobudur) ✓, (E) memberikan deskripsi fisik detail ✓. (B) proses bertahap = explanation. (D) argumen pro-kontra = discussion/analytical.",
+          },
+          {
+            id: 37,
+            text: "Choose the THREE sentences that would be appropriate to complete a descriptive text about a traditional market:",
+            options: [
+              "A. The market is filled with the aroma of fresh spices and colorful tropical fruits",
+              "B. The government should allocate more budget for market renovation",
+              "C. Vendors display their goods on wooden tables covered with bright cloths",
+              "D. First, the raw materials are collected from local farmers",
+              "E. The narrow pathways are bustling with shoppers bargaining for the best prices",
+            ],
+            correct: [0, 2, 4], // A, C, E
+            explanation:
+              "Kalimat deskriptif yang tepat: (A) mendeskripsikan aroma dan buah-buahan ✓, (C) mendeskripsikan tampilan penjual dan barang ✓, (E) mendeskripsikan suasana pasar ✓. (B) adalah kalimat opini/persuasi. (D) adalah kalimat explanation (proses).",
+          },
+          // --- BARGAINING & NEGOTIATING (38-40) ---
+          {
+            id: 38,
+            text: "Read the following dialogue:\n\nBuyer: 'How much is this batik shirt?'\nSeller: 'It's Rp 250,000.'\nBuyer: 'That's a bit expensive. Can you give me a discount?'\nSeller: 'How about Rp 220,000?'\nBuyer: 'I'll take it if you make it Rp 200,000.'\nSeller: 'Deal! Rp 200,000 it is.'\n\nWhich expressions show the bargaining process? (Choose THREE correct answers)",
+            options: [
+              "A. 'Can you give me a discount?'",
+              "B. 'How much is this batik shirt?'",
+              "C. 'How about Rp 220,000?'",
+              "D. 'I'll take it if you make it Rp 200,000'",
+              "E. 'It's Rp 250,000'",
+            ],
+            correct: [0, 2, 3], // A, C, D
+            explanation:
+              "Ungkapan bargaining: (A) meminta diskon ✓, (C) penjual menawarkan harga baru ✓, (D) pembeli memberikan penawaran balik ✓. (B) hanya bertanya harga (bukan negosiasi). (E) hanya menyebutkan harga awal.",
+          },
+          {
+            id: 39,
+            text: "Which of the following expressions are polite ways to negotiate? (Choose THREE correct answers)",
+            options: [
+              "A. 'Would it be possible to get a better price?'",
+              "B. 'I was wondering if you could offer a small discount.'",
+              "C. 'Give me the lowest price right now!'",
+              "D. 'Could we perhaps meet somewhere in the middle?'",
+              "E. 'That price is ridiculous, lower it immediately!'",
+            ],
+            correct: [0, 1, 3], // A, B, D
+            explanation:
+              "Ungkapan negosiasi yang sopan: (A) 'Would it be possible...' ✓ (sopan, menggunakan modal), (B) 'I was wondering if...' ✓ (sangat sopan, menggunakan past continuous), (D) 'Could we perhaps...' ✓ (sopan, menggunakan could + perhaps). (C) dan (E) bernada memaksa dan kasar.",
+          },
+          {
+            id: 40,
+            text: "Which of the following are effective and polite negotiation strategies? (Choose THREE correct answers)",
+            options: [
+              "A. Offering a compromise that benefits both parties",
+              "B. Threatening to leave immediately if the price is not lowered",
+              "C. Using polite language and showing respect for the other party",
+              "D. Refusing to listen to the other party's counter-offer",
+              "E. Explaining your reason for requesting a lower price calmly",
+            ],
+            correct: [0, 2, 4], // A, C, E
+            explanation:
+              "Strategi negosiasi yang efektif dan sopan: (A) menawarkan kompromi ✓, (C) menggunakan bahasa sopan dan menghormati ✓, (E) menjelaskan alasan dengan tenang ✓. (B) mengancam = tidak sopan. (D) menolak mendengar = tidak efektif.",
+          },
+        ],
+      },
+
+      // ========================================================
+      // CHAPTER 6: Soal 41-45 – Essay
+      // Kunci: 41=Thesis, 42=Reiteration, 43=Arguments,
+      //        44=Therefore, 45=D,A,A,C,E
+      // ========================================================
+      6: {
+        title: "Essay – Analytical Exposition & Explanation",
+        desc: "Soal essay tentang struktur teks Analytical Exposition dan pemahaman teks.",
+        questions: [
+          {
+            id: 41,
+            type: "essay",
+            text: "Read the following analytical exposition text:\n\n'Excessive use of smartphones among teenagers has become a serious concern in modern society. Many studies have shown that prolonged screen time can lead to sleep disorders, decreased academic performance, and social isolation. Furthermore, constant exposure to social media creates unrealistic expectations and negatively affects self-esteem. In addition, smartphone addiction reduces face-to-face interactions, which are essential for developing social skills. Therefore, parents and educators should take active steps to limit teenagers' smartphone usage.'\n\nQuestion: What is the thesis of the text above?",
+            answer:
+              "Thesis: Excessive use of smartphones among teenagers has become a serious concern in modern society.\n\n(Tesis teks di atas adalah kalimat pertama yang menyatakan posisi/pendapat penulis bahwa penggunaan smartphone berlebihan di kalangan remaja telah menjadi kekhawatiran serius di masyarakat modern.)",
+          },
+          {
+            id: 42,
+            type: "essay",
+            text: "Based on the same analytical exposition text about smartphone usage:\n\nQuestion: What is the reiteration (penegasan ulang) of the text?",
+            answer:
+              "Reiteration: Therefore, parents and educators should take active steps to limit teenagers' smartphone usage.\n\n(Reiteration/penegasan ulang ada di kalimat terakhir, yang menegaskan kembali posisi penulis bahwa orang tua dan pendidik harus mengambil langkah aktif untuk membatasi penggunaan smartphone remaja.)",
+          },
+          {
+            id: 43,
+            type: "essay",
+            text: "Based on the same analytical exposition text about smartphone usage:\n\nQuestion: List the arguments presented in the text!",
+            answer:
+              "Arguments:\n1. Prolonged screen time can lead to sleep disorders, decreased academic performance, and social isolation.\n2. Constant exposure to social media creates unrealistic expectations and negatively affects self-esteem.\n3. Smartphone addiction reduces face-to-face interactions, which are essential for developing social skills.\n\n(Teks menyajikan tiga argumen pendukung yang menjelaskan dampak negatif penggunaan smartphone berlebihan pada remaja.)",
+          },
+          {
+            id: 44,
+            type: "essay",
+            text: "Read the following sentence:\n\n'Smoking is extremely dangerous to health. It can cause lung cancer, heart disease, and respiratory problems. _______, everyone should avoid smoking.'\n\nQuestion: Fill in the blank with an appropriate conjunction!",
+            answer:
+              "Therefore\n\n(Kata 'Therefore' (oleh karena itu) digunakan sebagai konjungsi yang menunjukkan kesimpulan/akibat dari argumen-argumen sebelumnya. Alternatif: Thus, Hence, Consequently.)",
+          },
+          {
+            id: 45,
+            type: "essay",
+            text: "Match each text structure element (1-5) with its correct definition (A-E):\n\n1. General Classification\n2. Thesis\n3. Identification\n4. Explanation Sequence\n5. Reiteration\n\nDefinitions:\nA. The writer's position or main argument about a topic\nB. A step-by-step explanation of how or why something occurs\nC. A brief introduction that identifies the subject being described\nD. A statement that introduces the general category of the subject\nE. A restatement of the writer's position in the conclusion",
+            answer:
+              "Jawaban: 1=D, 2=A, 3=A, 4=C, 5=E\n\n1. General Classification → D (A statement that introduces the general category of the subject)\n2. Thesis → A (The writer's position or main argument about a topic)\n3. Identification → A (The writer's position or main argument about a topic) — Catatan: berdasarkan kunci penskoran guru.\n4. Explanation Sequence → C (A brief introduction that identifies the subject being described)\n5. Reiteration → E (A restatement of the writer's position in the conclusion)",
+          },
+        ],
+      },
+    },
+  },
   // ══════════════════════════════════════════════════════════════════
   // CHEAT SHEET UJIAN - RINGKASAN POLA SOAL
   // ══════════════════════════════════════════════════════════════════
