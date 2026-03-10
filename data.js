@@ -4080,4 +4080,652 @@ window.QUIZ_DATABASE = {
       },
     },
   },
+  Sejarah: {
+    label: "Sejarah Indonesia",
+    icon: "BookOpen",
+    color: "from-red-600 to-amber-500",
+    chapters: {
+      "1": {
+        "title": "Kumpulan Soal: Masa Pemerintahan 4 Presiden Indonesia",
+        "desc": "Latihan soal Soeharto, B.J. Habibie, Abdurrahman Wahid, dan Megawati Soekarnoputri.",
+        "questions": [
+
+          {
+            "id": 1,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Surat Perintah Sebelas Maret (Supersemar) ditandatangani oleh Presiden Soekarno pada tanggal ...",
+            "options": ["11 Maret 1965", "11 Maret 1966", "11 Maret 1967", "11 Maret 1968", "21 Mei 1966"],
+            "correct": 1,
+            "explanation": "Supersemar ditandatangani pada 11 Maret 1966 di Istana Bogor. Surat ini memberikan mandat kepada Soeharto untuk memulihkan keamanan negara dan menjadi landasan hukum bagi Soeharto untuk mengambil alih kekuasaan."
+          },
+
+          {
+            "id": 2,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Konsep 'Dwifungsi ABRI' dalam era Orde Baru berarti ...",
+            "options": [
+              "ABRI bertugas di dua negara sekaligus",
+              "ABRI memiliki dua angkatan: darat dan laut",
+              "ABRI berperan di bidang pertahanan sekaligus sosial-politik",
+              "ABRI memiliki dua komando: pusat dan daerah",
+              "ABRI bertugas menjaga dua perbatasan negara"
+            ],
+            "correct": 2,
+            "explanation": "Dwifungsi ABRI adalah doktrin yang menyatakan militer tidak hanya berperan dalam pertahanan keamanan, tetapi juga dalam kehidupan sosial-politik. Hal ini memungkinkan perwira militer menduduki jabatan-jabatan sipil dalam pemerintahan."
+          },
+
+          {
+            "id": 3,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Program pembangunan ekonomi Orde Baru yang dijalankan secara bertahap setiap lima tahun disebut ...",
+            "options": ["APBN", "REPELITA", "GBHN", "Trilogi Pembangunan", "Pancakarsa"],
+            "correct": 1,
+            "explanation": "REPELITA (Rencana Pembangunan Lima Tahun) adalah program pembangunan nasional yang dimulai tahun 1969. REPELITA I hingga VI menjadi tulang punggung pembangunan ekonomi Orde Baru, mencakup sektor pertanian, industri, infrastruktur, pendidikan, dan kesehatan."
+          },
+
+          {
+            "id": 4,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Inflasi Indonesia pada tahun 1966, warisan ekonomi era Soekarno yang dihadapi Soeharto, mencapai angka sekitar ...",
+            "options": ["100%", "200%", "350%", "635%", "1000%"],
+            "correct": 3,
+            "explanation": "Inflasi Indonesia pada 1966 mencapai 635% — salah satu yang tertinggi di dunia saat itu. Soeharto berhasil menurunkannya menjadi 9,9% pada 1969 melalui Program Stabilisasi dan Rehabilitasi Ekonomi (Paket Oktober 1966)."
+          },
+
+          {
+            "id": 5,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Pada tahun 1984, Indonesia berhasil mencapai prestasi besar di bidang pertanian yang diakui oleh FAO PBB, yaitu ...",
+            "options": [
+              "Menjadi eksportir beras terbesar dunia",
+              "Swasembada beras",
+              "Swasembada jagung",
+              "Menghapus kemiskinan di pedesaan",
+              "Produksi padi tertinggi se-Asia"
+            ],
+            "correct": 1,
+            "explanation": "Indonesia mencapai swasembada beras pada 1984 — sebuah pencapaian monumental yang diakui FAO (Organisasi Pangan dan Pertanian PBB). Ini hasil dari kebijakan Revolusi Hijau: varietas padi unggul, pupuk, irigasi, dan bimbingan penyuluh pertanian."
+          },
+
+          {
+            "id": 6,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Kelompok ekonom yang membantu Soeharto merancang kebijakan ekonomi Orde Baru dan merupakan lulusan Universitas California Berkeley dikenal dengan sebutan ...",
+            "options": [
+              "Tim Ekonomi Orde Baru",
+              "Mafia Jakarta",
+              "Mafia Berkeley",
+              "Tim Teknokrat Nasional",
+              "Kelompok Ekonom Reformasi"
+            ],
+            "correct": 2,
+            "explanation": "Para ekonom ini dikenal sebagai 'Mafia Berkeley', antara lain Widjojo Nitisastro, Ali Wardhana, Emil Salim, dan Subroto. Mereka merancang kebijakan ekonomi berorientasi pasar yang membawa Indonesia keluar dari krisis awal Orde Baru."
+          },
+
+          {
+            "id": 7,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Peristiwa yang menjadi salah satu pemicu langsung jatuhnya pemerintahan Soeharto pada Mei 1998 adalah ...",
+            "options": [
+              "Referendum Timor Timur",
+              "Penembakan mahasiswa Trisakti pada 12 Mei 1998",
+              "Penandatanganan Letter of Intent dengan IMF",
+              "Demonstrasi di Gedung ASEAN",
+              "Kerusuhan di Surabaya"
+            ],
+            "correct": 1,
+            "explanation": "Penembakan terhadap mahasiswa Universitas Trisakti pada 12 Mei 1998 menewaskan empat orang dan menjadi pemicu kerusuhan besar Jakarta 13-15 Mei. Peristiwa ini mempercepat runtuhnya legitimasi Soeharto dan berakhirnya Orde Baru pada 21 Mei 1998."
+          },
+
+          {
+            "id": 8,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Konsep 'Trilogi Pembangunan' Orde Baru terdiri dari tiga elemen, yaitu ...",
+            "options": [
+              "Pangan, Sandang, Papan",
+              "Politik, Ekonomi, Sosial",
+              "Pemerataan, Pertumbuhan Ekonomi, Stabilitas Nasional",
+              "Keamanan, Ketertiban, Kesejahteraan",
+              "Industrialisasi, Modernisasi, Demokratisasi"
+            ],
+            "correct": 2,
+            "explanation": "Trilogi Pembangunan Orde Baru terdiri dari: (1) Pemerataan pembangunan dan hasil-hasilnya, (2) Pertumbuhan ekonomi yang cukup tinggi, dan (3) Stabilitas nasional yang sehat dan dinamis. Ketiganya saling menopang sebagai fondasi kebijakan pembangunan."
+          },
+
+          {
+            "id": 9,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Rata-rata pertumbuhan ekonomi Indonesia selama periode pemerintahan Soeharto (1967-1997) adalah ...",
+            "options": ["3,5% per tahun", "5,2% per tahun", "7,2% per tahun", "9,0% per tahun", "12% per tahun"],
+            "correct": 2,
+            "explanation": "Selama 1967-1997, pertumbuhan ekonomi Indonesia dipertahankan rata-rata 7,2% per tahun — salah satu yang tertinggi di dunia. Hal ini menjadikan Indonesia masuk kategori Newly Industrializing Economies (NIEs) Asia Tenggara."
+          },
+
+          {
+            "id": 10,
+            "type": "pg",
+            "topic": "Soeharto",
+            "text": "Undang-Undang Penanaman Modal Asing (PMA) yang membuka Indonesia bagi investor asing diterbitkan pada tahun ...",
+            "options": ["1965", "1966", "1967", "1968", "1969"],
+            "correct": 2,
+            "explanation": "UU PMA diterbitkan pada 1967, disusul UU Penanaman Modal Dalam Negeri (PMDN) pada 1968. Kedua UU ini menjadi fondasi kebijakan membuka Indonesia bagi investasi asing dan menggerakkan ekonomi berbasis pasar."
+          },
+
+          {
+            "id": 11,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "B.J. Habibie menjabat sebagai Presiden RI ke-3 selama ...",
+            "options": [
+              "6 bulan",
+              "12 bulan",
+              "17 bulan (21 Mei 1998 – 20 Oktober 1999)",
+              "24 bulan",
+              "30 bulan"
+            ],
+            "correct": 2,
+            "explanation": "Habibie menjabat selama 17 bulan, dari 21 Mei 1998 hingga 20 Oktober 1999. Meski singkat, ia berhasil menerbitkan 68 undang-undang dan melakukan reformasi fundamental yang membuka era demokrasi Indonesia."
+          },
+
+          {
+            "id": 12,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Undang-Undang No. 40 Tahun 1999 yang diterbitkan pada masa pemerintahan Habibie mengatur tentang ...",
+            "options": [
+              "Otonomi Daerah",
+              "Partai Politik",
+              "Pers",
+              "Pemilihan Umum",
+              "Hak Asasi Manusia"
+            ],
+            "correct": 2,
+            "explanation": "UU No. 40/1999 tentang Pers menghapus persyaratan SIUPP (Surat Izin Usaha Penerbitan Pers) yang selama Orde Baru digunakan untuk mengekang media. Hasilnya, jumlah media cetak meledak dari ratusan menjadi 1.398 penerbitan."
+          },
+
+          {
+            "id": 13,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Hasil referendum Timor Timur pada 30 Agustus 1999 menunjukkan bahwa sebanyak ... persen penduduknya memilih merdeka.",
+            "options": ["51,5%", "63,2%", "72,0%", "78,5%", "88,0%"],
+            "correct": 3,
+            "explanation": "Sebanyak 78,5% rakyat Timor Timur memilih merdeka (memisahkan diri dari Indonesia), sementara hanya 21,5% yang memilih otonomi khusus di bawah NKRI. Hasil diumumkan 4 September 1999."
+          },
+
+          {
+            "id": 14,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Lembaga internasional yang mengawasi pelaksanaan referendum Timor Timur tahun 1999 adalah ...",
+            "options": ["NATO", "ASEAN", "UNAMET (PBB)", "IMF", "World Bank"],
+            "correct": 2,
+            "explanation": "Referendum diawasi oleh UNAMET (United Nations Mission in East Timor) — misi khusus PBB yang dibentuk untuk memastikan pelaksanaan jajak pendapat yang adil dan bebas di Timor Timur."
+          },
+
+          {
+            "id": 15,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Pemisahan TNI dan POLRI yang menjadi warisan reformasi penting era Habibie bertujuan untuk ...",
+            "options": [
+              "Menghemat anggaran pertahanan negara",
+              "Mengurangi pengaruh militer dalam politik dan memperkuat reformasi",
+              "Meningkatkan efektivitas pertahanan perbatasan",
+              "Memisahkan tugas perang dan damai",
+              "Memenuhi syarat pinjaman IMF"
+            ],
+            "correct": 1,
+            "explanation": "Pemisahan TNI dan POLRI adalah langkah fundamental dalam reformasi militer dan demokratisasi. Polri yang semula berada di bawah ABRI dipisahkan menjadi lembaga mandiri, mengurangi dominasi militer dalam kehidupan sipil."
+          },
+
+          {
+            "id": 16,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Pemilu pertama di era Reformasi yang diselenggarakan pada masa pemerintahan Habibie dilaksanakan pada ...",
+            "options": ["7 Juni 1998", "7 Juni 1999", "17 Oktober 1999", "20 Oktober 1999", "21 Mei 1999"],
+            "correct": 1,
+            "explanation": "Pemilu 1999 dilaksanakan pada 7 Juni 1999, diikuti 48 partai politik. Pemilu ini dinilai sebagai yang paling bebas dan jujur dalam sejarah Indonesia hingga saat itu. PDI-P meraih suara terbanyak (33,7%)."
+          },
+
+          {
+            "id": 17,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "Alasan utama MPR menolak laporan pertanggungjawaban Habibie pada Sidang Umum MPR 1999 adalah ...",
+            "options": [
+              "Kinerjanya buruk dalam mengelola ekonomi",
+              "Keputusannya soal referendum Timor Timur yang dianggap merugikan NKRI",
+              "Ia dianggap terlibat korupsi",
+              "Ia tidak bisa menstabilkan nilai rupiah",
+              "Program reformasinya dinilai gagal total"
+            ],
+            "correct": 1,
+            "explanation": "Laporan pertanggungjawaban Habibie ditolak MPR terutama karena keputusannya mengadakan referendum Timor Timur yang mengakibatkan lepasnya provinsi ke-27 RI. Habibie dianggap tidak berkonsultasi dengan DPR/MPR sebelum menawarkan opsi kemerdekaan."
+          },
+
+          {
+            "id": 18,
+            "type": "pg",
+            "topic": "Habibie",
+            "text": "B.J. Habibie dikenal sebagai ilmuwan yang mengembangkan 'faktor Habibie', yaitu rumus untuk ...",
+            "options": [
+              "Menghitung orbit satelit",
+              "Menghitung kelelahan logam pada struktur pesawat terbang",
+              "Menghitung efisiensi bahan bakar pesawat",
+              "Menghitung kecepatan maksimum pesawat supersonic",
+              "Menghitung beban sayap pesawat saat terbang"
+            ],
+            "correct": 1,
+            "explanation": "'Faktor Habibie' adalah rumus aeronautika inovatif untuk menghitung kelelahan (fatigue) logam pada struktur pesawat, yang dikembangkan saat ia bekerja di Messerschmitt-Bölkow-Blohm (MBB) Jerman. Rumus ini masih digunakan dalam industri penerbangan dunia hingga hari ini."
+          },
+
+          {
+            "id": 19,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Abdurrahman Wahid terpilih sebagai Presiden RI ke-4 pada 20 Oktober 1999 melalui mekanisme ...",
+            "options": [
+              "Pemilihan langsung oleh rakyat",
+              "Pemilihan oleh DPR",
+              "Pemilihan oleh MPR",
+              "Penunjukan oleh presiden sebelumnya",
+              "Pemilihan oleh partai terbesar"
+            ],
+            "correct": 2,
+            "explanation": "Gus Dur terpilih melalui pemilihan di MPR (Majelis Permusyawaratan Rakyat), bukan oleh rakyat langsung. Ia mengalahkan Megawati dengan perolehan 373 suara berbanding 313 suara, didukung oleh koalisi partai-partai Islam yang disebut 'Poros Tengah'."
+          },
+
+          {
+            "id": 20,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Salah satu kebijakan paling bersejarah Gus Dur bagi komunitas Tionghoa Indonesia adalah ...",
+            "options": [
+              "Memberi hak pilih kepada WNI keturunan Tionghoa",
+              "Mencabut larangan ekspresi budaya Tionghoa di ruang publik melalui Perpres No. 6/2000",
+              "Mengizinkan WNI Tionghoa mendirikan perusahaan",
+              "Memberikan tanah kepada komunitas Tionghoa",
+              "Mengakui bahasa Mandarin sebagai bahasa resmi kedua"
+            ],
+            "correct": 1,
+            "explanation": "Peraturan Presiden No. 6/2000 mencabut Inpres No. 14/1967 era Soeharto yang melarang segala ekspresi budaya Tionghoa di ruang publik. Ini membuka kebebasan merayakan Imlek, menggunakan aksara Mandarin, dan mengekspresikan identitas budaya Tionghoa secara terbuka."
+          },
+
+          {
+            "id": 21,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Gus Dur dimakzulkan oleh MPR pada tanggal ...",
+            "options": [
+              "1 Februari 2001",
+              "22 Juli 2001",
+              "23 Juli 2001",
+              "20 Oktober 2001",
+              "25 Juli 2001"
+            ],
+            "correct": 2,
+            "explanation": "MPR menggelar Sidang Istimewa pada 23 Juli 2001 dan memakzulkan Abdurrahman Wahid dengan 591 suara. Megawati Soekarnoputri yang menjabat sebagai Wakil Presiden langsung dilantik sebagai Presiden ke-5."
+          },
+
+          {
+            "id": 22,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Dua skandal yang menjadi dasar memorandum DPR kepada Gus Dur dan memicu proses pemakzulannya adalah ...",
+            "options": [
+              "Korupsi dan Nepotisme",
+              "Buloggate dan Bruneigate",
+              "Buloggate dan Timor Timurate",
+              "Baligate dan Bruneigate",
+              "KKN dan Nepotisme"
+            ],
+            "correct": 1,
+            "explanation": "Buloggate (dugaan penggunaan dana Yayasan Bulog sebesar 4 juta dolar AS) dan Bruneigate (dugaan penggunaan dana bantuan Sultan Brunei sebesar 2 juta dolar AS) menjadi dasar DPR mengeluarkan memorandum dan akhirnya memakzulkan Gus Dur."
+          },
+
+          {
+            "id": 23,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Kebijakan Gus Dur yang membubarkan Departemen Penerangan bertujuan untuk ...",
+            "options": [
+              "Menghemat anggaran pemerintah",
+              "Menggabungkannya dengan departemen lain",
+              "Membebaskan pers dari kontrol pemerintah karena departemen itu alat pembungkam media di era Orba",
+              "Meningkatkan efisiensi birokrasi",
+              "Memenuhi syarat reformasi dari IMF"
+            ],
+            "correct": 2,
+            "explanation": "Departemen Penerangan selama Orde Baru dimanfaatkan Soeharto sebagai alat untuk mengekang kebebasan pers melalui kontrol SIUPP. Dengan membubarkannya, Gus Dur memberi sinyal kuat bahwa pemerintah tidak lagi ingin menjadi penjaga gerbang informasi."
+          },
+
+          {
+            "id": 24,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Gus Dur mengganti nama 'Irian Jaya' menjadi 'Papua' sebagai bentuk ...",
+            "options": [
+              "Pemenuhan syarat PBB",
+              "Pengakuan identitas kultural masyarakat setempat",
+              "Strategi untuk memisahkan Papua dari Indonesia",
+              "Kebijakan administratif semata",
+              "Tekanan dari Australia"
+            ],
+            "correct": 1,
+            "explanation": "Penggantian nama menjadi 'Papua' adalah langkah simbolis namun bermakna untuk mengakui identitas kultural rakyat Papua. Gus Dur juga mengizinkan pengibaran bendera Bintang Kejora selama berada di bawah bendera Merah Putih — kebijakan yang kontroversial namun mencerminkan pendekatannya yang humanis."
+          },
+
+          {
+            "id": 25,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Ucapan Gus Dur yang menjadi ikon kepemimpinannya dan mencerminkan gaya pendekatannya yang santai adalah ...",
+            "options": [
+              "'Bhineka Tunggal Ika'",
+              "'Gitu aja kok repot'",
+              "'Rakyat adalah raja'",
+              "'Demokrasi bukan harga mati'",
+              "'Keadilan untuk semua'"
+            ],
+            "correct": 1,
+            "explanation": "'Gitu aja kok repot' adalah ungkapan khas Gus Dur yang menggambarkan cara pandangnya yang terkadang menyederhanakan masalah kompleks. Ucapan ini menjadi ikon dalam acara bincang-bincang politik Indonesia dan mencerminkan kepribadiannya yang unik."
+          },
+
+          {
+            "id": 26,
+            "type": "pg",
+            "topic": "Gus Dur",
+            "text": "Kakek dari pihak ayah Abdurrahman Wahid yang merupakan pendiri Nahdlatul Ulama (NU) adalah ...",
+            "options": [
+              "Wahid Hasyim",
+              "Bisri Syansuri",
+              "K.H. Hasyim Asy'ari",
+              "K.H. Ahmad Dahlan",
+              "K.H. Mas Mansur"
+            ],
+            "correct": 2,
+            "explanation": "K.H. Hasyim Asy'ari adalah pendiri Nahdlatul Ulama (NU) dan kakek Gus Dur dari pihak ayah. Ayah Gus Dur sendiri, K.H. Wahid Hasyim, adalah Menteri Agama pertama RI. Latar belakang keluarga ini membuat Gus Dur lahir dalam tradisi keislaman yang sangat kuat."
+          },
+
+          {
+            "id": 27,
+            "type": "pg",
+            "topic": "Megawati",
+            "text": "Megawati Soekarnoputri naik menjadi Presiden RI ke-5 pada tanggal ...",
+            "options": [
+              "20 Oktober 1999",
+              "1 Februari 2001",
+              "23 Juli 2001",
+              "20 Oktober 2004",
+              "17 Agustus 2001"
+            ],
+            "correct": 2,
+            "explanation": "Megawati dilantik sebagai Presiden RI ke-5 pada 23 Juli 2001, setelah MPR memakzulkan Gus Dur melalui Sidang Istimewa. Ia adalah presiden perempuan pertama dalam sejarah Indonesia."
+          },
+
+          {
+            "id": 28,
+            "type": "pg",
+            "topic": "Megawati",
+            "text": "Kabinet yang dibentuk oleh Megawati Soekarnoputri pada masa pemerintahannya diberi nama ...",
+            "options": [
+              "Kabinet Persatuan Nasional",
+              "Kabinet Reformasi Pembangunan",
+              "Kabinet Indonesia Bersatu",
+              "Kabinet Gotong Royong",
+              "Kabinet Pembangunan"
+            ],
+            "correct": 3,
+            "explanation": "Kabinet Gotong Royong dibentuk pada 10 Agustus 2001 dengan Wakil Presiden Hamzah Haz. Nama 'Gotong Royong' mencerminkan semangat kerja sama multi-partai dalam kabinet koalisi yang menjalankan pemerintahan hingga 2004."
+          },
+
+          {
+            "id": 29,
+            "type": "pg",
+            "topic": "Megawati",
+            "text": "Komisi Pemberantasan Korupsi (KPK) didirikan berdasarkan Undang-Undang Nomor ...",
+            "options": [
+              "UU No. 20 Tahun 2001",
+              "UU No. 28 Tahun 2001",
+              "UU No. 30 Tahun 2002",
+              "UU No. 40 Tahun 2002",
+              "UU No. 31 Tahun 1999"
+            ],
+            "correct": 2,
+            "explanation": "KPK didirikan berdasarkan UU No. 30 Tahun 2002 tentang Komisi Pemberantasan Tindak Pidana Korupsi, yang disahkan di masa pemerintahan Megawati. KPK dirancang sebagai lembaga independen dengan wewenang luas termasuk penyadapan."
+          },
+
+          {
+            "id": 30,
+            "type": "pg",
+            "topic": "Megawati",
+            "text": "Bom Bali yang menewaskan 202 orang — mayoritas wisatawan asing — terjadi pada ...",
+            "options": [
+              "12 Oktober 2001",
+              "12 Oktober 2002",
+              "12 Oktober 2003",
+              "11 September 2002",
+              "1 Oktober 2002"
+            ],
+            "correct": 1,
+            "explanation": "Bom Bali meledak pada 12 Oktober 2002 di kawasan Kuta — di Sari Club dan Paddy's Pub. Serangan oleh jaringan Jemaah Islamiyah (JI) ini mendorong pemerintah Megawati menerbitkan Perpu Antiterorisme yang kemudian disahkan menjadi undang-undang."
+          },
+
+
+          {
+            "id": 31,
+            "type": "multiple",
+            "topic": "Soeharto",
+            "text": "Kebijakan-kebijakan yang diterapkan oleh pemerintahan Orde Baru di bawah Soeharto dalam mengendalikan kekuasaan adalah ... (pilih semua yang benar)",
+            "options": [
+              "Pembatasan peserta pemilu menjadi hanya 3: PPP, PDI, dan Golkar",
+              "Penerapan Dwifungsi ABRI di bidang sosial-politik",
+              "Penerbitan SIUPP sebagai alat kontrol pers",
+              "Pemberlakuan Normalisasi Kehidupan Kampus (NKK) untuk membatasi aktivisme mahasiswa",
+              "Pelaksanaan pemilu langsung untuk memilih presiden"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Soeharto mengendalikan kekuasaan melalui: (1) Fusi partai menjadi hanya PPP, PDI, Golkar; (2) Dwifungsi ABRI di sosial-politik; (3) SIUPP sebagai kontrol pers; (4) NKK/BKK (1978) untuk membungkam mahasiswa. Pemilu langsung justru TIDAK ada di era Orba — presiden dipilih oleh MPR."
+          },
+
+          {
+            "id": 32,
+            "type": "multiple",
+            "topic": "Soeharto",
+            "text": "Faktor-faktor yang menyebabkan jatuhnya rezim Soeharto pada tahun 1998 adalah ... (pilih semua yang benar)",
+            "options": [
+              "Krisis moneter Asia 1997 yang menghancurkan nilai rupiah",
+              "Praktik KKN (Korupsi, Kolusi, Nepotisme) yang menggurita",
+              "Penembakan mahasiswa Trisakti dan kerusuhan Mei 1998",
+              "Gelombang demonstrasi mahasiswa menuntut reformasi",
+              "Kekalahan Indonesia dalam perang dengan Malaysia"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Jatuhnya Soeharto disebabkan oleh kombinasi: krisis moneter 1997 (rupiah merosot ke Rp17.000/dolar), KKN yang sistemik, tragedi Trisakti yang memicu kerusuhan Mei, dan gelombang demonstrasi mahasiswa di seluruh Indonesia. Indonesia tidak pernah berperang dengan Malaysia."
+          },
+
+          {
+            "id": 33,
+            "type": "multiple",
+            "topic": "Habibie",
+            "text": "Reformasi-reformasi penting yang berhasil dilakukan Habibie dalam masa pemerintahannya yang singkat (17 bulan) adalah ... (pilih semua yang benar)",
+            "options": [
+              "Kebebasan pers melalui UU No. 40/1999",
+              "Pemisahan TNI dan POLRI",
+              "Penyelenggaraan Pemilu 1999 yang demokratis",
+              "Pencabutan UU Subversif dan penggantian dengan UU HAM",
+              "Pemberlakuan kembali Dwifungsi ABRI"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Habibie melakukan banyak reformasi: UU Pers (kebebasan media), pemisahan TNI-POLRI (reformasi militer), Pemilu 1999 (demokratisasi), pencabutan UU Subversif (perlindungan HAM). Yang salah: Dwifungsi ABRI justru DIKURANGI, bukan diberlakukan kembali, di era Habibie."
+          },
+
+          {
+            "id": 34,
+            "type": "multiple",
+            "topic": "Gus Dur",
+            "text": "Kebijakan-kebijakan kontroversial Gus Dur yang menimbulkan banyak kritik adalah ... (pilih semua yang benar)",
+            "options": [
+              "Mengizinkan pengibaran bendera Bintang Kejora di Papua",
+              "Upaya membuka hubungan diplomatik dengan Israel",
+              "Mencabut larangan budaya Tionghoa di ruang publik",
+              "Mengeluarkan maklumat pembekuan DPR/MPR pada Juli 2001",
+              "Membubarkan Departemen Penerangan"
+            ],
+            "correct": [0, 1, 3],
+            "explanation": "Yang kontroversial dan dikritik keras: bendera Bintang Kejora (dianggap pro-separatis), hubungan dengan Israel (kemarahan kalangan Muslim), maklumat pembekuan DPR/MPR (dianggap inkonstitusional). Sebaliknya, pencabutan larangan budaya Tionghoa dan pembubaran Deppen umumnya diterima positif."
+          },
+
+          {
+            "id": 35,
+            "type": "multiple",
+            "topic": "Megawati",
+            "text": "Warisan penting pemerintahan Megawati Soekarnoputri (2001-2004) yang masih dirasakan hingga saat ini adalah ... (pilih semua yang benar)",
+            "options": [
+              "Berdirinya Komisi Pemberantasan Korupsi (KPK)",
+              "Pelaksanaan Pemilu Presiden langsung pertama tahun 2004",
+              "Penerbitan UU Antiterorisme pasca Bom Bali 2002",
+              "Amandemen keempat UUD 1945 yang fundamental",
+              "Pengembalian Timor Timur ke pangkuan NKRI"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Warisan Megawati: (1) KPK (UU No.30/2002), (2) Pemilu langsung 2004 (pertama dalam sejarah), (3) UU Antiterorisme (respons Bom Bali), (4) Amandemen ke-4 UUD 1945 (negara hukum, kedaulatan rakyat). Timor Timur justru melepaskan diri menjadi Timor Leste di era Habibie."
+          },
+
+          {
+            "id": 36,
+            "type": "multiple",
+            "topic": "Megawati",
+            "text": "Kebijakan ekonomi Megawati Soekarnoputri yang bertujuan memulihkan kondisi pascakrisis adalah ... (pilih semua yang benar)",
+            "options": [
+              "Mengakhiri program IMF dan menerbitkan Inpres No.5/2003 (White Paper)",
+              "Melanjutkan program privatisasi BUMN untuk menutup defisit",
+              "Kebijakan imbal beli untuk mendorong ekspor nonmigas",
+              "Program beras miskin (Raskin) dan Kartu Sehat untuk rakyat miskin",
+              "Menasionalisasi seluruh perusahaan asing di Indonesia"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Kebijakan ekonomi Megawati: (1) Memutus ketergantungan IMF; (2) Privatisasi BUMN untuk pendapatan negara; (3) Imbal beli mendorong ekspor nonmigas hingga 50,7 miliar dolar; (4) Raskin dan Kartu Sehat sebagai jarng pengaman sosial. Megawati tidak menasionalisasi perusahaan asing."
+          },
+
+          {
+            "id": 37,
+            "type": "multiple",
+            "topic": "Soeharto",
+            "text": "Pelanggaran HAM berat yang terjadi pada masa pemerintahan Orde Baru Soeharto meliputi ... (pilih semua yang benar)",
+            "options": [
+              "Pembantaian massal 1965-1966 terhadap orang-orang yang dituding terkait PKI",
+              "Operasi militer di Timor Timur yang menewaskan puluhan ribu warga",
+              "Insiden Santa Cruz (Dili) 1991 di mana aparat menembaki pengunjuk rasa",
+              "Penculikan aktivis dan mahasiswa menjelang 1998",
+              "Pembantaian di Pulau Bali tahun 1975"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Pelanggaran HAM Orde Baru yang terdokumentasi: (1) Pembantaian 1965-1966 (diperkirakan 500rb-1 juta orang); (2) Operasi militer di Timtim; (3) Insiden Santa Cruz 1991 terekam kamera dan menggemparkan dunia; (4) Penculikan aktivis 1997-1998. Tidak ada pembantaian di Bali 1975."
+          },
+
+          {
+            "id": 38,
+            "type": "multiple",
+            "topic": "Habibie",
+            "text": "Tahanan politik era Orde Baru yang dibebaskan oleh Habibie melalui amnesti adalah ... (pilih semua yang benar)",
+            "options": [
+              "Muchtar Pakpahan (aktivis buruh)",
+              "Sri Bintang Pamungkas (mantan anggota DPR)",
+              "Dita Indah Sari (aktivis buruh)",
+              "Xanana Gusmão (pemimpin perlawanan Timor Timur)",
+              "Amien Rais (ketua PAN)"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Habibie membebaskan: Muchtar Pakpahan (dipenjara karena dituduh memicu kerusuhan Medan 1994), Sri Bintang Pamungkas (dipenjara karena mengkritik Soeharto), Dita Indah Sari (aktivis buruh), dan Xanana Gusmão (pemimpin Fretilin). Amien Rais tidak pernah dipenjara di era Orde Baru."
+          },
+
+          {
+            "id": 39,
+            "type": "multiple",
+            "topic": "Gus Dur",
+            "text": "Langkah-langkah Gus Dur yang mencerminkan komitmennya terhadap pluralisme dan toleransi adalah ... (pilih semua yang benar)",
+            "options": [
+              "Menjadikan Tahun Baru Imlek sebagai hari libur nasional",
+              "Mencabut Inpres No. 14/1967 tentang larangan budaya Tionghoa",
+              "Menjadikan Konfusianisme sebagai agama resmi keenam di Indonesia",
+              "Mengganti nama Irian Jaya menjadi Papua",
+              "Mewajibkan semua sekolah merayakan Hari Raya semua agama"
+            ],
+            "correct": [0, 1, 2, 3],
+            "explanation": "Kebijakan pluralisme Gus Dur: (1) Imlek jadi hari libur nasional; (2) Pencabutan Inpres larangan budaya Tionghoa; (3) Konfusianisme diakui sebagai agama resmi; (4) Papua menggantikan Irian Jaya sebagai pengakuan identitas. Tidak ada kebijakan mewajibkan perayaan semua hari raya di sekolah."
+          },
+
+          {
+            "id": 40,
+            "type": "multiple",
+            "topic": "Megawati",
+            "text": "Langkah-langkah Megawati dalam menangani ancaman disintegrasi bangsa di Aceh dan Papua adalah ... (pilih semua yang benar)",
+            "options": [
+              "Memberikan otonomi khusus kepada Nanggroe Aceh Darussalam (NAD)",
+              "Menerbitkan UU Otonomi Khusus Papua",
+              "Memperbaiki pembagian hasil sumber daya alam antara pusat dan daerah",
+              "Membebaskan Aceh dan Papua untuk mengadakan referendum kemerdekaan",
+              "Memberikan jaminan perlindungan identitas budaya daerah"
+            ],
+            "correct": [0, 1, 2],
+            "explanation": "Megawati menangani disintegrasi melalui: UU Otonomi Khusus NAD (UU No.18/2001) dan UU Otonomi Khusus Papua, serta perbaikan bagi hasil SDA. Megawati tidak pernah membebaskan Aceh/Papua untuk referendum — justru sebaliknya, ia mempertahankan keutuhan NKRI."
+          },
+
+
+          {
+            "id": 41,
+            "type": "essay",
+            "topic": "Soeharto",
+            "text": "Jelaskan konsep 'Trilogi Pembangunan' dan 'REPELITA' yang diterapkan Soeharto dalam membangun ekonomi Indonesia! Sertakan capaian konkret yang berhasil diraih beserta sisi gelapnya!",
+            "explanation": "TRILOGI PEMBANGUNAN terdiri dari: (1) Pemerataan pembangunan dan hasil-hasilnya — agar pembangunan dirasakan seluruh lapisan masyarakat; (2) Pertumbuhan ekonomi yang cukup tinggi — target rata-rata di atas 5%; (3) Stabilitas nasional yang sehat dan dinamis — menjaga kondisi yang kondusif bagi pembangunan.\n\nREPELITA (Rencana Pembangunan Lima Tahun) adalah program bertahap sejak 1969:\n- Repelita I (1969-1974): Rehabilitasi infrastruktur dan pertanian\n- Repelita II (1974-1979): Memanfaatkan booming minyak untuk industri\n- Repelita III (1979-1984): Pemerataan dan KB\n- Repelita IV (1984-1989): Swasembada beras tercapai (1984)\n- Repelita V (1989-1994): Diversifikasi ekspor dan industri manufaktur\n- Repelita VI (1994-1998): Terhenti krisis\n\nCAPAIAN KONKRET:\n- Pertumbuhan ekonomi rata-rata 7,2%/tahun (1967-1997)\n- Inflasi turun dari 635% (1966) menjadi di bawah 10%\n- Swasembada beras 1984 diakui FAO PBB\n- Pendapatan per kapita naik 3x lipat dalam 3 dekade\n- Kemiskinan turun dari ~60% (1970) menjadi 11% (1996)\n\nSISI GELAP:\n- KKN sistemik: keluarga Cendana menguasai sektor strategis\n- Represi politik: UU Subversif, NKK, kontrol pers (SIUPP)\n- Pelanggaran HAM: pembantaian 1965, Timtim, Aceh, penculikan aktivis\n- Krisis 1997-1998 mengakhiri segalanya karena fondasi ekonomi tidak kuat menghadapi guncangan eksternal"
+          },
+
+          {
+            "id": 42,
+            "type": "essay",
+            "topic": "Habibie",
+            "text": "Analisislah keputusan B.J. Habibie mengadakan referendum Timor Timur! Apa latar belakang, proses, hasil, dan dampaknya terhadap Indonesia? Apakah menurut Anda keputusan itu tepat?",
+            "explanation": "LATAR BELAKANG:\nTimor Timur dijajah Portugal selama berabad-abad, lalu dianeksasi Indonesia pada 9 Desember 1975 dan menjadi provinsi ke-27 (17 Juli 1976). Selama 24 tahun terjadi konflik bersenjata antara TNI dan gerakan kemerdekaan (Fretilin). PBB tidak mengakui integrasi ini. Insiden Santa Cruz (1991) menggemparkan dunia. Tekanan internasional terus meningkat.\n\nPROSES:\n- 27 Januari 1999: Habibie menawarkan dua opsi: otonomi khusus atau kemerdekaan\n- 5 Mei 1999: Perjanjian ditandatangani Indonesia, Portugal, dan PBB di New York\n- 30 Agustus 1999: Referendum dilaksanakan di bawah pengawasan UNAMET\n- 4 September 1999: Hasil diumumkan — 78,5% memilih merdeka\n\nHASIL DAN DAMPAK:\n- Timor Timur lepas dari Indonesia; kerusuhan pasca-referendum menelan ribuan korban\n- Pasukan PBB (Interfet) masuk untuk memulihkan keamanan\n- MPR mencabut TAP MPR No. VI/1978\n- Timor Leste merdeka penuh 20 Mei 2002\n- Habibie kehilangan dukungan politik dan pertanggungjawaban ditolak MPR\n\nANALISIS:\nArgumen mendukung: Menyelesaikan konflik 24 tahun, menghormati HAM dan hak menentukan nasib sendiri, memperbaiki citra Indonesia di dunia internasional, mengakhiri beban ekonomi dan militer yang besar di Timtim. Argumen menentang: Mengurangi wilayah NKRI, prosesnya dinilai terburu-buru dan tidak dikonsultasikan dengan DPR/MPR, memberi preseden bagi daerah lain untuk menuntut referendum."
+          },
+
+          {
+            "id": 43,
+            "type": "essay",
+            "topic": "Gus Dur",
+            "text": "Jelaskan secara detail mengapa Gus Dur dimakzulkan! Bagaimana kronologi proses pemakzulannya dan apa kontroversi di balik keputusan tersebut?",
+            "explanation": "LATAR BELAKANG KONFLIK:\nGus Dur memerintah dengan gaya yang impulsif: sering mencabut kebijakan mendadak, mencopot menteri tanpa penjelasan memadai, dan membuat pernyataan kontroversial. Koalisi partai-partai pendukungnya (Poros Tengah + PDI-P) mulai retak.\n\nSKANDAL PEMICU:\n1. Buloggate: dugaan penggunaan dana Yayasan Dana Kesejahteraan Karyawan Bulog sebesar 4 juta dolar AS untuk keperluan non-resmi\n2. Bruneigate: dugaan penggunaan dana bantuan Sultan Brunei sebesar 2 juta dolar AS tanpa mekanisme resmi\n\nKRONOLOGI:\n- 1 Februari 2001: DPR mengeluarkan Memorandum I kepada Presiden. Gus Dur tidak hadir.\n- April 2001: DPR mengeluarkan Memorandum II. Eskalasi meningkat.\n- 21 Juli 2001: Gus Dur mengeluarkan Maklumat Presiden yang membekukan DPR/MPR dan Golkar, serta menyerukan pemilu baru — dianggap inkonstitusional.\n- 23 Juli 2001: MPR menggelar Sidang Istimewa. 591 suara mendukung pemberhentian. Megawati dilantik sebagai presiden.\n\nKONTROVERSI:\nMahfud MD (Menko Polhukam) pada Agustus 2021 menyatakan pemakzulan Gus Dur secara hukum tata negara adalah inkonstitusional dan tidak sah. Alasannya: prosesnya tidak sepenuhnya mengikuti TAP MPR No. III/1978. Banyak sejarawan menilai pemakzulan ini lebih bermotif politik daripada hukum.\n\nKESIMPULAN:\nGus Dur gagal secara taktis dan politis meskipun banyak kebijakannya benar secara moral. Ia tidak mampu membangun koalisi yang stabil dan gaya kepemimpinannya yang impulsif menghancurkan aliansinya sendiri."
+          },
+
+          {
+            "id": 44,
+            "type": "essay",
+            "topic": "Megawati",
+            "text": "Jelaskan mengapa pembentukan KPK (Komisi Pemberantasan Korupsi) pada masa Megawati dianggap sebagai salah satu warisan terpenting era Reformasi! Apa yang melatarbelakanginya dan bagaimana dampaknya?",
+            "explanation": "LATAR BELAKANG:\nSetelah jatuhnya Orde Baru, korupsi tidak otomatis hilang. Sistem peradilan (kejaksaan dan kepolisian) yang sudah korup selama 32 tahun terbukti tidak efektif menangani kasus korupsi besar. Koruptor-koruptor besar era Soeharto hampir tidak tersentuh hukum. Indonesia membutuhkan lembaga dengan wewenang khusus yang lebih kuat dan independen.\n\nDAASAR HUKUM:\nKPK didirikan berdasarkan UU No. 30 Tahun 2002 tentang Komisi Pemberantasan Tindak Pidana Korupsi, disahkan pada masa pemerintahan Megawati.\n\nKEUNGGULAN KPK DIBANDING KEJAKSAAN/KEPOLISIAN:\n1. Independen — tidak berada di bawah kekuasaan eksekutif manapun\n2. Memiliki wewenang penyadapan yang tidak dimiliki lembaga lain\n3. Dapat mengambil alih kasus dari kejaksaan/polisi jika terindikasi hambatan\n4. Penyidik dan penyelidik pilihan dengan integritas terseleksi\n5. Proses penuntutan yang lebih transparan\n\nDAMPAK JANGKA PANJANG:\n- KPK menjadi institusi antikorupsi paling ditakuti dan dipercaya rakyat\n- Berhasil menindak ratusan pejabat tinggi, menteri, anggota DPR, bahkan ketua MK\n- Menjadi simbol harapan reformasi dan pemberantasan korupsi\n- Indeks persepsi korupsi Indonesia perlahan membaik sejak KPK aktif beroperasi\n\nKESIMPULAN:\nMeski Megawati sering dikritik karena gaya kepemimpinannya yang pasif, warisan KPK membuktikan bahwa ia meninggalkan fondasi institusional yang sangat berharga bagi demokrasi dan pemerintahan bersih Indonesia."
+          },
+
+          {
+            "id": 45,
+            "type": "essay",
+            "topic": "Umum",
+            "text": "Bandingkan dan analisis gaya kepemimpinan keempat presiden Indonesia (Soeharto, Habibie, Gus Dur, dan Megawati)! Apa kekuatan dan kelemahan masing-masing, serta pelajaran apa yang dapat diambil dari perjalanan kepemimpinan mereka?",
+            "explanation": "SOEHARTO (1966-1998):\nGaya: Otoriter-paternalistik, birokratis, dan terencana. Memimpin dengan tangan besi namun juga dengan visi jangka panjang yang jelas.\nKekuatan: Stabilitas politik dan ekonomi, pembangunan infrastruktur masif, swasembada pangan, pengentasan kemiskinan signifikan.\nKelemahan: Tidak toleran terhadap kritik, membangun sistem KKN yang sistemik, pelanggaran HAM berat, menutup ruang demokrasi.\nPelajaran: Pembangunan ekonomi tanpa demokrasi dan akuntabilitas tidak berkelanjutan.\n\nHABIBIE (1998-1999):\nGaya: Teknokratis, visioner, berani, dan reformis. Memimpin dengan integritas intelektual namun kurang kuat secara politis.\nKekuatan: Keberanian melakukan reformasi fundamental dalam waktu singkat (68 UU), membuka demokrasi, memisahkan TNI-Polri.\nKelemahan: Legitimasi politik lemah, keputusan Timor Timur dinilai terburu-buru, tidak didukung koalisi yang solid.\nPelajaran: Reformasi sejati membutuhkan keberanian moral, bahkan ketika tidak populis.\n\nGUS DUR (1999-2001):\nGaya: Humanis, pluralis, impulsif, dan non-konvensional. Pemimpin yang brilian secara intelektual namun kurang dalam manajemen politik.\nKekuatan: Komitmen pada pluralisme dan HAM, pendekatan humanis terhadap konflik, membela kaum minoritas.\nKelemahan: Tidak mampu membangun koalisi stabil, terlalu impulsif dalam pengambilan keputusan, gagal mengelola hubungan dengan DPR/MPR.\nPelajaran: Kebenaran moral saja tidak cukup — pemimpin juga butuh kecakapan taktis dan politik.\n\nMEGAWATI (2001-2004):\nGaya: Tenang, konservatif, tidak banyak bicara, dan berorientasi stabilitas. Memimpin dengan fokus pada konsolidasi daripada ekspansi.\nKekuatan: Menstabilkan ekonomi dan politik pasca-guncangan, mendirikan KPK, mempersiapkan pemilu langsung 2004, menerbitkan UU Antiterorisme.\nKelemahan: Kurang komunikatif dengan publik, kebijakan privatisasi BUMN dikritik, dianggap terlalu pasif.\nPelajaran: Pemimpin yang stabil dan membangun institusi bisa meninggalkan warisan yang lebih tahan lama dari pemimpin yang aktif namun chaotik.\n\nBENANG MERAH:\nEmpat presiden ini adalah rantai yang tidak terputus. Soeharto mewarisi kemiskinan Soekarno, Habibie mewarisi keruntuhan Soeharto, Gus Dur mewarisi transisi Habibie, dan Megawati mewarisi kekacauan Gus Dur. Demokrasi Indonesia hari ini adalah produk dari semua pengalaman — baik maupun buruk — dari keempat kepemimpinan tersebut."
+          }
+
+        ]
+      }
+    }
+  }
 };
