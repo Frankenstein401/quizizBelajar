@@ -4080,6 +4080,581 @@ window.QUIZ_DATABASE = {
       },
     },
   },
+  BahasaJepang: {
+    label: "Bahasa Jepang",
+    icon: "Languages",
+    color: "from-rose-500 to-pink-600",
+    chapters: {
+      "1": {
+        title: "Kumpulan Soal: Tanggal, Waktu & Jadwal Kegiatan",
+        desc: "Latihan soal dari kisi-kisi: Tanggal (日付), Waktu (時間), dan Jadwal Kegiatan (予定) — Kelas XI Semester Genap.",
+        questions: [
+          {
+            id: 1,
+            text: "Apa arti dari kalimat berikut?\n\n「わたし の たんじょうび は 十一月 十日」",
+            options: [
+              "Ulang tahun saya tanggal 10 November.",
+              "Ulang tahun saya tanggal 11 Oktober.",
+              "Tanggal lahir saya 10 Januari.",
+              "Ulang tahun saya tanggal 11 November.",
+              "Ulang tahun teman saya tanggal 10 November."
+            ],
+            correct: 0,
+            explanation: "わたし の たんじょうび = ulang tahun saya. 十一月 = bulan 11 = November. 十日 = tanggal 10 (とおか). Jadi artinya: Ulang tahun saya tanggal 10 November."
+          },
+          {
+            id: 2,
+            text: "Apa arti dari kalimat berikut?\n\n「わたし の そふ は 一九三六年 五月 六日 に うまれました。」",
+            options: [
+              "Nenek saya lahir tanggal 6 Mei 1963.",
+              "Kakek saya lahir pada tanggal 6 Mei 1936.",
+              "Ayah saya lahir tanggal 5 Juni 1936.",
+              "Kakek saya meninggal tanggal 6 Mei 1936.",
+              "Kakek saya lahir tanggal 6 Maret 1936."
+            ],
+            correct: 1,
+            explanation: "そふ = kakek (sendiri). 一九三六年 = tahun 1936. 五月 = Mei. 六日 = tanggal 6 (むいか). うまれました = lahir (bentuk lampau). Jadi: Kakek saya lahir pada tanggal 6 Mei 1936."
+          },
+          {
+            id: 3,
+            text: "Apa arti dari kalimat berikut?\n\n「さくらさん の おとうさん の せいねんがっぴ は 一九七五年 十二月 二十日。」",
+            options: [
+              "Tanggal lahir ibu Sakura adalah 20 Desember 1975.",
+              "Tanggal lahir ayah Sakura adalah 12 Desember 1975.",
+              "Tanggal lahir ayah Sakura adalah 20 Desember 1975.",
+              "Ulang tahun ayah Sakura tanggal 20 Desember 1957.",
+              "Tanggal lahir kakak Sakura adalah 20 Desember 1975."
+            ],
+            correct: 2,
+            explanation: "さくらさん の おとうさん = ayah Sakura. せいねんがっぴ = tanggal lahir. 一九七五年 = 1975. 十二月 = Desember. 二十日 = tanggal 20 (はつか). Jadi: Tanggal lahir ayah Sakura adalah 20 Desember 1975."
+          },
+          {
+            id: 4,
+            text: "Apa arti dari kalimat berikut?\n\n「イナ せんせい の たんじょうびは 四月 二日 です。」",
+            options: [
+              "Ulang tahun guru Ina adalah tanggal 4 Februari.",
+              "Ulang tahun guru Ina adalah tanggal 2 April.",
+              "Tanggal lahir Ina adalah tanggal 2 April.",
+              "Ulang tahun guru Ina adalah tanggal 4 April.",
+              "Ulang tahun murid Ina adalah tanggal 2 April."
+            ],
+            correct: 1,
+            explanation: "イナ せんせい = guru Ina. たんじょうび = ulang tahun. 四月 = しがつ = April. 二日 = ふつか = tanggal 2. Jadi: Ulang tahun guru Ina adalah tanggal 2 April."
+          },
+          {
+            id: 5,
+            text: "Apa arti dari kalimat berikut?\n\n「たなかさん の せいねんがっぴ は 一九八二年 九月 五日 です。」",
+            options: [
+              "Tanggal lahir Tanaka adalah 9 Mei 1982.",
+              "Tanggal lahir Tanaka adalah 5 November 1982.",
+              "Tanggal lahir Tanaka adalah 5 September 1982.",
+              "Tanggal lahir Tanaka adalah 5 September 1928.",
+              "Ulang tahun Tanaka tanggal 9 Mei 1982."
+            ],
+            correct: 2,
+            explanation: "たなかさん = Tanaka. せいねんがっぴ = tanggal lahir. 一九八二年 = 1982. 九月 = くがつ = September. 五日 = いつか = tanggal 5. Jadi: Tanggal lahir Tanaka adalah 5 September 1982."
+          },
+          {
+            id: 6,
+            text: "Terjemahkan ke bahasa Jepang:\n\"Apakah ulang tahun ibu kamu tanggal 3 April?\"",
+            options: [
+              "おかあさん の たんじょうび は しがつ みっか ですか。",
+              "おかあさん の たんじょうび は さんがつ よっか ですか。",
+              "おかあさん の せいねんがっぴ は しがつ みか ですか。",
+              "おねえさん の たんじょうび は しがつ みっか ですか。",
+              "おかあさん の たんじょうび は しがつ さんにち ですか。"
+            ],
+            correct: 0,
+            explanation: "Ibu (orang lain) = おかあさん. Ulang tahun = たんじょうび. April = しがつ (四月). Tanggal 3 = みっか (pembacaan khusus). Kalimat tanya = ですか。Jadi: おかあさん の たんじょうび は しがつ みっか ですか。"
+          },
+          {
+            id: 7,
+            text: "Terjemahkan ke bahasa Jepang:\n\"Tanggal lahir adik laki-laki saya adalah tanggal 25 Oktober 2001.\"",
+            options: [
+              "わたし の おにいさん の せいねんがっぴ は にせんいちねん じゅうがつ にじゅうごにち です。",
+              "わたし の おとうと の せいねんがっぴ は にせんいちねん じゅうがつ にじゅうごにち です。",
+              "わたし の おとうと の たんじょうび は にせんいちねん じゅうがつ にじゅうごにち です。",
+              "わたし の いもうと の せいねんがっぴ は にせんいちねん じゅうがつ にじゅうごにち です。",
+              "わたし の おとうと の せいねんがっぴ は にせんいちねん じゅういちがつ にじゅうごにち です。"
+            ],
+            correct: 1,
+            explanation: "Adik laki-laki (sendiri) = おとうと. Tanggal lahir = せいねんがっぴ. 2001 = にせんいちねん. Oktober = じゅうがつ (十月). Tanggal 25 = にじゅうごにち. Perhatikan: おにいさん = kakak laki-laki, いもうと = adik perempuan."
+          },
+          {
+            id: 8,
+            text: "Terjemahkan ke bahasa Jepang:\n\"Tanggal lahir adik perempuan Sakura adalah 9 Juni 2008.\"",
+            options: [
+              "さくらさん の いもうと の せいねんがっぴ は にせんはちねん ろくがつ くにち です。",
+              "さくらさん の おねえさん の せいねんがっぴ は にせんはちねん ろくがつ ここのか です。",
+              "さくらさん の いもうと の せいねんがっぴ は にせんはちねん ろくがつ ここのか です。",
+              "さくらさん の いもうと の せいねんがっぴ は にせんはちねん くがつ ここのか です。",
+              "さくらさん の いもうと の たんじょうび は にせんはちねん ろくがつ きゅうにち です。"
+            ],
+            correct: 2,
+            explanation: "Adik perempuan Sakura = さくらさん の いもうと. Tanggal lahir = せいねんがっぴ. 2008 = にせんはちねん. Juni = ろくがつ (六月). Tanggal 9 = ここのか (pembacaan khusus). Perhatikan: くがつ = September bukan Juni. きゅうにち salah, harus ここのか."
+          },
+          {
+            id: 9,
+            text: "Terjemahkan ke bahasa Jepang:\n\"Ulang tahun adik laki-laki saya adalah tanggal 7 Maret.\"",
+            options: [
+              "わたし の おとうと の たんじょうび は さんがつ なのか です。",
+              "わたし の おとうと の たんじょうび は しちがつ みっか です。",
+              "わたし の おにいさん の たんじょうび は さんがつ なのか です。",
+              "わたし の おとうと の たんじょうび は さんがつ ななにち です。",
+              "わたし の おとうと の せいねんがっぴ は さんがつ しちにち です。"
+            ],
+            correct: 0,
+            explanation: "Adik laki-laki (sendiri) = おとうと. Ulang tahun = たんじょうび. Maret = さんがつ (三月). Tanggal 7 = なのか (pembacaan khusus). Perhatikan: しちがつ = Juli bukan Maret. ななにち/しちにち salah — tanggal 7 harus なのか."
+          },
+          {
+            id: 10,
+            text: "Terjemahkan ke bahasa Jepang:\n\"Tanggal lahir kakak perempuan guru Miki adalah 27 Juli 1974.\"",
+            options: [
+              "ミキせんせい の おねえさん の せいねんがっぴ は せんきゅうひゃくななじゅうよねん しちがつ にじゅうしちにち です。",
+              "ミキせんせい の いもうと の せいねんがっぴ は せんきゅうひゃくななじゅうよねん しちがつ にじゅうしちにち です。",
+              "ミキさん の おねえさん の せいねんがっぴ は せんきゅうひゃくななじゅうよねん しちがつ にじゅうしちにち です。",
+              "ミキせんせい の おねえさん の たんじょうび は せんきゅうひゃくななじゅうよねん なながつ にじゅうしちにち です。",
+              "ミキせんせい の おねえさん の せいねんがっぴ は せんきゅうひゃくななじゅうよねん ろくがつ にじゅうしちにち です。"
+            ],
+            correct: 0,
+            explanation: "Guru Miki = ミキせんせい. Kakak perempuan (orang lain) = おねえさん. Tanggal lahir = せいねんがっぴ. 1974 = せんきゅうひゃくななじゅうよねん. Juli = しちがつ (七月). Tanggal 27 = にじゅうしちにち. Perhatikan: いもうと = adik perempuan, ろくがつ = Juni."
+          },
+          {
+            id: 11,
+            text: "きょう は 二月 二十八日 です。あした は なん月 なん日 ですか。\n\n(Hari ini 28 Februari. Besok tanggal berapa?)",
+            options: [
+              "あした は 二月 二十九日 です。",
+              "あした は 三月 ついたち です。",
+              "あした は 二月 三十日 です。",
+              "あした は 三月 ふつか です。",
+              "あした は 二月 二十七日 です。"
+            ],
+            correct: 1,
+            explanation: "Tahun 2026 bukan tahun kabisat, jadi Februari hanya 28 hari. Setelah 28 Februari langsung 1 Maret. Tanggal 1 = ついたち (pembacaan khusus). Jadi: あした は 三月 ついたち です。"
+          },
+          {
+            id: 12,
+            text: "きょう は 四月 三十日 です。あさって は なん月 なん日 ですか。\n\n(Hari ini 30 April. Lusa tanggal berapa?)",
+            options: [
+              "あさって は 五月 ついたち です。",
+              "あさって は 四月 三十二日 です。",
+              "あさって は 五月 ふつか です。",
+              "あさって は 五月 みっか です。",
+              "あさって は 四月 二十八日 です。"
+            ],
+            correct: 2,
+            explanation: "April = 30 hari. Hari ini 30 April → あした (besok) = 1 Mei → あさって (lusa) = 2 Mei. Tanggal 2 = ふつか (pembacaan khusus). Jadi: あさって は 五月 ふつか です。"
+          },
+          {
+            id: 13,
+            text: "きのう は 十二日 です。おととい は なんにち ですか。\n\n(Kemarin tanggal 12. Kemarin lusa tanggal berapa?)",
+            options: [
+              "おととい は とおか です。",
+              "おととい は じゅういちにち です。",
+              "おととい は じゅうさんにち です。",
+              "おととい は ここのか です。",
+              "おととい は じゅうよっか です。"
+            ],
+            correct: 1,
+            explanation: "Kemarin (きのう) = tanggal 12. きょう (hari ini) = tanggal 13. おととい (kemarin lusa) = 1 hari sebelum kemarin = tanggal 11 (じゅういちにち). Urutan: おととい (11) → きのう (12) → きょう (13)."
+          },
+          {
+            id: 14,
+            text: "おととい は 十二月 二十五日 です。あした は なん月 なん日 ですか。\n\n(Kemarin lusa 25 Desember. Besok tanggal berapa?)",
+            options: [
+              "あした は 十二月 二十六日 です。",
+              "あした は 十二月 二十七日 です。",
+              "あした は 十二月 二十八日 です。",
+              "あした は 十二月 二十九日 です。",
+              "あした は 十二月 三十日 です。"
+            ],
+            correct: 2,
+            explanation: "おととい (kemarin lusa) = 25 Des → きのう (kemarin) = 26 Des → きょう (hari ini) = 27 Des → あした (besok) = 28 Des (十二月 二十八日)."
+          },
+          {
+            id: 15,
+            text: "きょう は 五月 十九日 です。きのう は なん月 なん日 ですか。\n\n(Hari ini 19 Mei. Kemarin tanggal berapa?)",
+            options: [
+              "きのう は 五月 二十日 でした。",
+              "きのう は 五月 十七日 でした。",
+              "きのう は 五月 十八日 でした。",
+              "きのう は 四月 十九日 でした。",
+              "きのう は 五月 十六日 でした。"
+            ],
+            correct: 2,
+            explanation: "Hari ini 19 Mei → きのう (kemarin) = 18 Mei = 五月 十八日. Gunakan でした (bentuk lampau) karena kemarin sudah berlalu."
+          },
+          {
+            id: 16,
+            text: "あさって は 六月 三十日 です。きょう は なん月 なん日 ですか。\n\n(Lusa tanggal 30 Juni. Hari ini tanggal berapa?)",
+            options: [
+              "きょう は 六月 二十七日 です。",
+              "きょう は 七月 ふつか です。",
+              "きょう は 六月 二十九日 です。",
+              "きょう は 六月 二十八日 です。",
+              "きょう は 六月 二十六日 です。"
+            ],
+            correct: 3,
+            explanation: "あさって (lusa) = 30 Juni → あした (besok) = 29 Juni → きょう (hari ini) = 28 Juni (六月 二十八日). Hitung mundur 2 hari dari lusa."
+          },
+          {
+            id: 17,
+            text: "Perhatikan tabel acara berikut:\n• Hari Kemerdekaan Indonesia：八月 十七日\n• Festival Budaya (ぶんかさい)：十月 二十八日\n• Hari Guru (せんせい の ひ)：十一月 二十五日\n• Ujian (しけん)：三月 九日 — 十三日\n\nがっこう の しけん は いつ ですか。(Kapan ujian sekolah?)",
+            options: [
+              "三月 ここのか です。",
+              "三月 ここのか から 十三日 まで です。",
+              "十月 二十八日 です。",
+              "十一月 二十五日 です。",
+              "八月 十七日 です。"
+            ],
+            correct: 1,
+            explanation: "Dari tabel: しけん (ujian) = 三月 九日 — 十三日 = 9 Maret sampai 13 Maret. Karena ujian berlangsung beberapa hari, gunakan pola から～まで. Tanggal 9 = ここのか (pembacaan khusus)."
+          },
+          {
+            id: 18,
+            text: "Berdasarkan tabel acara yang sama:\n\nぶんかさい は いつ ですか。(Kapan festival budaya?)",
+            options: [
+              "十月 二十日 です。",
+              "十一月 二十八日 です。",
+              "十月 二十八日 です。",
+              "十月 二十五日 です。",
+              "八月 二十八日 です。"
+            ],
+            correct: 2,
+            explanation: "Dari tabel: ぶんかさい (festival budaya) = 十月 二十八日 = 28 Oktober (じゅうがつ にじゅうはちにち)."
+          },
+          {
+            id: 19,
+            text: "Berdasarkan tabel acara yang sama:\n\nせんせい の ひ は いつ ですか。(Kapan hari guru?)",
+            options: [
+              "十月 二十五日 です。",
+              "十二月 二十五日 です。",
+              "十一月 五日 です。",
+              "十一月 二十五日 です。",
+              "十一月 二十日 です。"
+            ],
+            correct: 3,
+            explanation: "Dari tabel: せんせい の ひ (hari guru) = 十一月 二十五日 = 25 November (じゅういちがつ にじゅうごにち)."
+          },
+          {
+            id: 20,
+            text: "Berdasarkan tabel acara yang sama:\n\nインドネシア の きねんび は いつ ですか。(Kapan hari kemerdekaan Indonesia?)",
+            options: [
+              "八月 十日 です。",
+              "八月 七日 です。",
+              "七月 十七日 です。",
+              "八月 十七日 です。",
+              "八月 二十七日 です。"
+            ],
+            correct: 3,
+            explanation: "Dari tabel: Hari Kemerdekaan Indonesia = 八月 十七日 = 17 Agustus (はちがつ じゅうしちにち)."
+          },
+          {
+            id: 21,
+            text: "Jam dinding menunjukkan pukul 3:00 tepat. Cara membacanya dalam bahasa Jepang adalah ...",
+            options: [
+              "いま さんぷん です。",
+              "いま みじ です。",
+              "いま さんじ です。",
+              "いま さんかん です。",
+              "いま みっつじ です。"
+            ],
+            correct: 2,
+            explanation: "Pukul 3:00 = さんじ (三時). Pola: [angka] + じ. さんぷん = 3 menit (bukan jam). みじ dan みっつじ tidak ada dalam bahasa Jepang."
+          },
+          {
+            id: 22,
+            text: "Jam dinding menunjukkan pukul 6:00 tepat. Cara membacanya dalam bahasa Jepang adalah ...",
+            options: [
+              "いま むいじ です。",
+              "いま ろくじ です。",
+              "いま ろっぷん です。",
+              "いま むじ です。",
+              "いま ろくかん です。"
+            ],
+            correct: 1,
+            explanation: "Pukul 6:00 = ろくじ (六時). Angka 6 untuk jam dibaca ろく. むいか = tanggal 6 (konteks tanggal). ろっぷん = 6 menit."
+          },
+          {
+            id: 23,
+            text: "Jam digital menunjukkan 20:58. Cara membacanya dalam bahasa Jepang adalah ...",
+            options: [
+              "ごぜん はちじ ごじゅうはっぷん です。",
+              "ごご はちじ ごじゅうはっぷん です。",
+              "にじゅうじ ごじゅうはちふん です。",
+              "ごご はちじ ごじゅうはちふん です。",
+              "よる はちじ ごじゅうはっぷん です。"
+            ],
+            correct: 1,
+            explanation: "20:58 → ごご (PM) 8時 58分. Menit 58 = ごじゅうはっぷん (angka berakhiran 8 → はっぷん bukan はちふん). ごぜん = AM jadi salah. Jadi: ごご はちじ ごじゅうはっぷん です。"
+          },
+          {
+            id: 24,
+            text: "「いま 一時 十五分 まえ です」\n\nKalimat di atas berarti sekarang pukul berapa?",
+            options: [
+              "Pukul 1:15",
+              "Pukul 12:45",
+              "Pukul 1:45",
+              "Pukul 11:15",
+              "Pukul 0:45"
+            ],
+            correct: 1,
+            explanation: "まえ = sebelum. 一時 十五分 まえ = 15 menit sebelum pukul 1 = pukul 12:45. Pola: [jam] [menit] まえ = [menit] sebelum [jam tersebut]."
+          },
+          {
+            id: 25,
+            text: "「いま 十二時 五分 まえ です」\n\nKalimat di atas berarti sekarang pukul berapa?",
+            options: [
+              "Pukul 12:05",
+              "Pukul 12:55",
+              "Pukul 11:55",
+              "Pukul 11:05",
+              "Pukul 7:00"
+            ],
+            correct: 2,
+            explanation: "十二時 五分 まえ = 5 menit sebelum pukul 12 = pukul 11:55. まえ artinya sebelum, jadi kurangi menit dari jam yang disebutkan."
+          },
+          {
+            id: 26,
+            text: "Bacalah teks berikut:\n\n「まいにち、わたし は 六時に おきます。かお を あらって、あさごはん を たべます。七時半 に いえを でて、でんしゃで がっこうへ いきます。がっこうは 九時 から 三時 までです。ともだちと べんきょうして、ひるごはんに べんとう を たべます。ごご 五時 ごろ かえります。よる、シャワーをあびて、テレビ を みて、十一時 にねます。」\n\nJam berapa 'saya' keluar rumah?",
+            options: [
+              "六時 (pukul 6:00)",
+              "七時 (pukul 7:00)",
+              "七時半 (pukul 7:30)",
+              "八時 (pukul 8:00)",
+              "六時半 (pukul 6:30)"
+            ],
+            correct: 2,
+            explanation: "Dari teks: 七時半 に いえを でて = pukul 7:30 keluar rumah. しちじはん = 7:30. 六時 adalah jam bangun, bukan jam keluar rumah."
+          },
+          {
+            id: 27,
+            text: "Dari teks bacaan yang sama:\n\nJam berapa kegiatan sekolah berlangsung?",
+            options: [
+              "Dari pukul 6:00 sampai 15:00",
+              "Dari pukul 9:00 sampai 13:00",
+              "Dari pukul 9:00 sampai 15:00",
+              "Dari pukul 7:30 sampai 15:00",
+              "Dari pukul 9:00 sampai 17:00"
+            ],
+            correct: 2,
+            explanation: "がっこうは 九時 から 三時 まで = sekolah dari jam 9 sampai jam 3 sore (15:00). から = dari, まで = sampai."
+          },
+          {
+            id: 28,
+            text: "Dari teks bacaan yang sama:\n\nBerapa jam 'saya' belajar bersama teman di sekolah?",
+            options: [
+              "3 jam (さんじかん)",
+              "5 jam (ごじかん)",
+              "6 jam (ろくじかん)",
+              "7 jam (しちじかん)",
+              "8 jam (はちじかん)"
+            ],
+            correct: 2,
+            explanation: "Sekolah dari 九時 (9:00) sampai 三時 (15:00). Durasi = 15:00 - 9:00 = 6 jam = ろくじかん. Di sekolah: ともだちと べんきょうして (belajar bersama teman)."
+          },
+          {
+            id: 29,
+            text: "Dari teks bacaan yang sama:\n\nKegiatan apa yang dilakukan SETELAH mandi (シャワー)?",
+            options: [
+              "Belajar (べんきょうする)",
+              "Makan malam (ばんごはん を たべる)",
+              "Menonton TV (テレビ を みる)",
+              "Langsung tidur (ねる)",
+              "Membaca buku (ほん を よむ)"
+            ],
+            correct: 2,
+            explanation: "Dari teks: シャワーをあびて → テレビ を みて → 十一時 にねます. Bentuk ～て menghubungkan kegiatan berurutan. Setelah mandi = menonton TV."
+          },
+          {
+            id: 30,
+            text: "Dari teks bacaan yang sama:\n\nJam berapa 'saya' bangun tidur?",
+            options: [
+              "五時 (pukul 5:00)",
+              "六時 (pukul 6:00)",
+              "六時半 (pukul 6:30)",
+              "七時 (pukul 7:00)",
+              "七時半 (pukul 7:30)"
+            ],
+            correct: 1,
+            explanation: "Kalimat pertama: まいにち、わたし は 六時に おきます = Setiap hari saya bangun pukul 6. 六時 = ろくじ = jam 6. おきます = bangun tidur."
+          },
+
+          {
+            id: 31,
+            type: "multi",
+            text: "Hari ini adalah 二〇二六年 三月 十日（火曜日）. Pilih semua pernyataan yang BENAR.",
+            options: [
+              "あしたは 三月十一日です。(Besok tanggal 11 Maret)",
+              "きのうは 三月八日でした。(Kemarin tanggal 8 Maret)",
+              "あさっては 三月十二日です。(Lusa tanggal 12 Maret)",
+              "きょうは すいようびです。(Hari ini Rabu)",
+              "きのうは げつようびでした。(Kemarin Senin)"
+            ],
+            correct: [0, 2, 4],
+            explanation: "Hari ini 10 Maret (Selasa/火曜日). (a) Besok = 11 Maret ✓; (b) Kemarin = 9 Maret, bukan 8 ✗; (c) Lusa = 12 Maret ✓; (d) Hari ini Selasa (かようび), bukan Rabu ✗; (e) Kemarin Selasa mundur 1 = Senin (げつようび) ✓."
+          },
+          {
+            id: 32,
+            type: "multi",
+            text: "いべんと の ことば は どれですか。(Kosakata yang berhubungan dengan acara adalah ...)",
+            options: [
+              "パーティー (pesta)",
+              "えいが (bioskop)",
+              "まつり (festival)",
+              "きょうしつ (ruang kelas)",
+              "コンサート (konser)"
+            ],
+            correct: [0, 2, 4],
+            explanation: "Kosakata acara: パーティー (pesta) ✓, まつり (festival) ✓, コンサート (konser) ✓. えいが (映画) = film/bioskop dan きょうしつ (教室) = ruang kelas bukan acara."
+          },
+          {
+            id: 33,
+            type: "multi",
+            text: "Perhatikan jadwal:\nテスト：七月 二十日\nりょこう：七月 十八日\n\nPilih semua pernyataan yang BENAR.",
+            options: [
+              "りょこうは テストの まえです。(Wisata sebelum ujian)",
+              "テストは りょこうの あとです。(Ujian setelah wisata)",
+              "テストは りょこうの ふつかまえです。(Ujian 2 hari sebelum wisata)",
+              "りょこうは テストの ふつかあとです。(Wisata 2 hari setelah ujian)",
+              "テストは 7月 18日です。(Ujian tanggal 18 Juli)"
+            ],
+            correct: [0, 1, 2],
+            explanation: "りょこう (wisata) 18 Juli < テスト (ujian) 20 Juli. (a) Wisata sebelum ujian ✓; (b) Ujian setelah wisata ✓; (c) Selisih 2 hari ✓; (d) Wisata sebelum ujian, bukan setelah ✗; (e) Ujian tanggal 20, bukan 18 ✗."
+          },
+          {
+            id: 34,
+            type: "multi",
+            text: "がっこう の いべんと は どれですか。(Acara sekolah adalah ...)",
+            options: [
+              "ぶんかさい (festival budaya)",
+              "しけん (ujian)",
+              "そつぎょうしき (wisuda)",
+              "ぎんこう (bank)",
+              "スーパー (supermarket)"
+            ],
+            correct: [0, 1, 2],
+            explanation: "Acara sekolah: ぶんかさい (festival budaya) ✓, しけん (ujian) ✓, そつぎょうしき (upacara wisuda) ✓. ぎんこう (bank) dan スーパー (supermarket) bukan acara sekolah."
+          },
+          {
+            id: 35,
+            type: "multi",
+            text: "Pilih semua kalimat yang BENAR secara tata bahasa DAN logika waktu. (Asumsi: sekarang tahun 2026)",
+            options: [
+              "らいねんは 2027ねんです。(Tahun depan adalah 2027)",
+              "きょねんは 2025ねんでした。(Tahun lalu adalah 2025)",
+              "あしたは きのうです。(Besok adalah kemarin)",
+              "せんしゅうは とても ひまでした。(Minggu lalu sangat senggang)",
+              "まいにちは にちようびです。(Setiap hari adalah Minggu)"
+            ],
+            correct: [0, 1, 3],
+            explanation: "(a) 2026+1 = 2027 + です ✓; (b) 2026-1 = 2025 + でした (lampau) ✓; (c) Besok ≠ kemarin ✗; (d) Minggu lalu senggang + でした ✓; (e) Tidak mungkin tiap hari = Minggu ✗."
+          },
+          {
+            id: 36,
+            type: "multi",
+            text: "いちにち の じかん は どれですか。(Waktu dalam satu hari adalah ...)",
+            options: [
+              "あさ (pagi)",
+              "ひる (siang)",
+              "よる (malam)",
+              "えき (stasiun)",
+              "ほん (buku)"
+            ],
+            correct: [0, 1, 2],
+            explanation: "Pembagian waktu satu hari: あさ (pagi) ✓, ひる (siang) ✓, よる (malam) ✓. えき (stasiun) dan ほん (buku) bukan pembagian waktu."
+          },
+          {
+            id: 37,
+            type: "multi",
+            text: "Sekarang pukul 9:45. Pilih semua penulisan waktu yang BENAR.",
+            options: [
+              "くじ よんじゅうごふん (9時45分)",
+              "くじ はん (9時半)",
+              "じゅうじ じゅうごふん まえ (10時15分前)",
+              "くじ ごじゅっぷん (9時50分)",
+              "ごぜんくじ よんじゅうごふん (午前9時45分)"
+            ],
+            correct: [0, 2, 4],
+            explanation: "(a) くじ よんじゅうごふん = 9:45 ✓; (b) くじ はん = 9:30 ✗; (c) 15 menit sebelum jam 10 = 9:45 ✓; (d) くじ ごじゅっぷん = 9:50 ✗; (e) AM 9:45 ✓ (jika pagi)."
+          },
+          {
+            id: 38,
+            type: "multi",
+            text: "Jika sekarang pukul 14:00, maka dua jam setengah kemudian adalah ... Pilih semua yang BENAR.",
+            options: [
+              "ごご四時半 (PM 4:30)",
+              "ごご四時三十分 (PM 4 lewat 30 menit)",
+              "十六じ三十分 (16:30)",
+              "ごぜん四時半 (AM 4:30)",
+              "ごごろくじ (PM 6:00)"
+            ],
+            correct: [0, 1],
+            explanation: "14:00 + 2.5 jam = 16:30 = ごご 4:30. (a) ごご四時半 ✓; (b) ごご四時三十分 = sama saja ✓; (c) 十六じ bukan cara natural ✗; (d) ごぜん = AM, salah ✗; (e) ろくじ = jam 6, bukan 4 ✗."
+          },
+          {
+            id: 39,
+            type: "multi",
+            text: "Pilih semua kalimat yang BENAR secara tata bahasa dan makna.",
+            options: [
+              "わたしは まいばん 10じに ねます。(Setiap malam tidur jam 10)",
+              "わたしは きのう 10じに ねました。(Kemarin tidur jam 10)",
+              "わたしは あした 10じに ねました。(Besok tidur jam 10 — lampau)",
+              "わたしは まいあさ 7じに おきます。(Setiap pagi bangun jam 7)",
+              "わたしは まいにち 24じに ねます。(Setiap hari tidur jam 24)"
+            ],
+            correct: [0, 1, 3],
+            explanation: "(a) まいばん + ねます (kebiasaan) ✓; (b) きのう + ねました (lampau) ✓; (c) あした + ねました = kontradiksi ✗; (d) まいあさ + おきます (kebiasaan) ✓; (e) 24じ tidak lazim ✗."
+          },
+          {
+            id: 40,
+            type: "multi",
+            text: "Perhatikan jadwal: えいが：18:30 — 21:00. Pilih semua pernyataan yang BENAR.",
+            options: [
+              "えいがは ごごろくじはんからです。(Film dari pukul 6:30 sore)",
+              "えいがは ごごくじまでです。(Film sampai pukul 9 malam)",
+              "えいがは 2じかんはんです。(Film berdurasi 2 jam setengah)",
+              "えいがは 3じかんです。(Film berdurasi 3 jam)",
+              "えいがは ごぜんろくじはんからです。(Film dari pukul 6:30 pagi)"
+            ],
+            correct: [0, 1, 2],
+            explanation: "18:30 = ごご 6:30 ✓; 21:00 = ごご 9:00 ✓; 21:00-18:30 = 2.5 jam = にじかんはん ✓; (d) 3 jam salah hitung ✗; (e) ごぜん = pagi, 18:30 = sore ✗."
+          },
+
+          {
+            id: 41,
+            type: "essay",
+            text: "Hari ini adalah 2026年 4月 15日（水曜日）.\n\na) Tuliskan tanggal dan hari TIGA HARI SEBELUMNYA dalam bahasa Jepang.\nb) Tuliskan tanggal dan hari LIMA HARI SETELAHNYA dalam bahasa Jepang.\nc) Jelaskan proses berpikir kamu dalam menghitung tanggal dan hari tersebut.",
+            explanation: "JAWABAN:\n\na) Tiga hari sebelum 15 April (Rabu) = 12 April (Minggu)\n→ 四月 じゅうににち にちようび です。\nCara hitung: 15 - 3 = 12. Hari: Rabu mundur 3 = Selasa → Senin → Minggu.\n\nb) Lima hari setelah 15 April (Rabu) = 20 April (Senin)\n→ 四月 はつか げつようび です。\nCara hitung: 15 + 5 = 20. Hari: Rabu maju 5 = Kamis → Jumat → Sabtu → Minggu → Senin.\nCatatan: Tanggal 20 dibaca はつか (pembacaan khusus).\n\nc) Proses berpikir:\n- Hitung tanggal: tambah/kurangi angka dari tanggal yang diketahui.\n- Hitung hari: maju/mundur sesuai jumlah hari.\n- Perhatikan pembacaan khusus tanggal (1-10日, 14日, 20日, 24日).\n- Perhatikan batas bulan (April = 30 hari)."
+          },
+          {
+            id: 42,
+            type: "essay",
+            text: "Tahun sekarang adalah 2026年.\n\na) Tuliskan 'tahun lalu' dalam bahasa Jepang beserta tahunnya.\nb) Tuliskan 'tahun depan' dalam bahasa Jepang beserta tahunnya.\nc) Tuliskan 'dua tahun yang akan datang' dalam bahasa Jepang beserta tahunnya.\nd) Jelaskan perbedaan penggunaan kata きょねん, ことし, らいねん, dan さらいねん!",
+            explanation: "JAWABAN:\n\na) きょねん は 二〇二五年 でした。\nTahun lalu (去年) = 2025. Gunakan でした (bentuk lampau).\n\nb) らいねん は 二〇二七年 です。\nTahun depan (来年) = 2027. Gunakan です (non-past).\n\nc) さらいねん は 二〇二八年 です。\nDua tahun lagi (再来年) = 2028. Gunakan です.\n\nd) Perbedaan:\n- きょねん (去年) = tahun lalu → lampau, pakai ～ました/でした\n- ことし (今年) = tahun ini → sedang berjalan, pakai ～ます/です\n- らいねん (来年) = tahun depan → belum terjadi, pakai ～ます/です\n- さらいねん (再来年) = 2 tahun lagi → lebih jauh ke depan, pakai ～ます/です\n\nPola: き～/せん～ = lalu, こん～ = sekarang, らい～ = depan, さらい～ = depannya lagi."
+          },
+          {
+            id: 43,
+            type: "essay",
+            text: "Aさん の たんじょうび：9月 3日\nBさん の たんじょうび：9月 8日\n\na) Siapa yang ulang tahunnya lebih dulu? Jawab dalam bahasa Jepang.\nb) Berapa hari selisihnya? Jawab dalam bahasa Jepang.\nc) Tuliskan jawaban dalam satu kalimat lengkap bahasa Jepang.",
+            explanation: "JAWABAN:\n\na) Aさん の たんじょうび の ほう が はやい です。\n(Ulang tahun A-san yang lebih dulu — 3 September < 8 September.)\n\nb) いつかかん の さ が あります。\n(Selisih 5 hari. Hitungan: 8 - 3 = 5.)\n\nc) Aさん の たんじょうび は Bさん の たんじょうび の いつかまえ です。\n(Ulang tahun A 5 hari sebelum ulang tahun B.)\n\nAtau: Bさん の たんじょうび は Aさん の たんじょうび の いつかあと です。\n(Ulang tahun B 5 hari setelah ulang tahun A.)\n\nKosakata: まえ (前) = sebelum, あと (後) = setelah."
+          },
+          {
+            id: 44,
+            type: "essay",
+            text: "Anda belajar dari pukul 16:45 sampai 19:15.\n\na) Tuliskan waktu mulai dan selesai dalam bahasa Jepang (gunakan sistem ごご).\nb) Hitung berapa lama durasi belajar.\nc) Tuliskan dalam satu kalimat lengkap bahasa Jepang.",
+            explanation: "JAWABAN:\n\na) Mulai: ごご よじ よんじゅうごふん (午後4時45分 = PM 4:45)\nSelesai: ごご しちじ じゅうごふん (午後7時15分 = PM 7:15)\nCatatan: 4時 = よじ (bukan よんじ), 7時 = しちじ.\n\nb) 19:15 - 16:45 = 2 jam 30 menit = にじかんはん (2時間半)\n\nc) ごご よじ よんじゅうごふん から ごご しちじ じゅうごふん まで にじかんはん べんきょうします。\n(Belajar 2 jam setengah dari PM 4:45 sampai PM 7:15.)\n\nPola: [waktu mulai] から [waktu selesai] まで [durasi] [kegiatan]します。"
+          },
+          {
+            id: 45,
+            type: "essay",
+            text: "Sekarang pukul 8:20 pagi (ごぜん はちじ にじゅっぷん).\n\na) Tuliskan waktu tersebut dalam bahasa Jepang.\nb) Jika Anda berangkat ke sekolah 40 menit kemudian, pukul berapa Anda berangkat? Tuliskan dalam bahasa Jepang.\nc) Buatlah 3 kalimat bahasa Jepang yang menggambarkan kegiatan pagi Anda dari bangun tidur hingga berangkat sekolah.",
+            explanation: "JAWABAN:\n\na) いま ごぜん はちじ にじゅっぷん です。\n(Sekarang pukul 8:20 pagi.)\n\nb) 8:20 + 40 menit = 9:00\n→ ごぜん くじ に がっこう へ いきます。\n(Berangkat ke sekolah pukul 9 pagi.)\n\nc) Contoh 3 kalimat:\n① まいあさ しちじ に おきます。\n(Setiap pagi bangun jam 7.)\n② しちじはん に あさごはん を たべます。\n(Pukul 7:30 makan sarapan.)\n③ くじ に いえ を でて、でんしゃ で がっこう へ いきます。\n(Pukul 9 keluar rumah, naik kereta ke sekolah.)\n\nPartikel: に (waktu), を (objek), で (alat), へ (tujuan)."
+          }
+        ]
+      }
+    }
+  },
   Sejarah: {
     label: "Sejarah Indonesia",
     icon: "BookOpen",
